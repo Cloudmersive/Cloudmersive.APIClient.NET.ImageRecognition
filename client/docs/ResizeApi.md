@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="resizepost"></a>
 # **ResizePost**
-> Object ResizePost (int? maxWidth, int? maxHeight, System.IO.Stream imageFile)
+> byte[] ResizePost (int? maxWidth, int? maxHeight, System.IO.Stream imageFile)
 
 Resize an image with parameters
 
@@ -42,7 +42,7 @@ namespace Example
             try
             {
                 // Resize an image with parameters
-                Object result = apiInstance.ResizePost(maxWidth, maxHeight, imageFile);
+                byte[] result = apiInstance.ResizePost(maxWidth, maxHeight, imageFile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 

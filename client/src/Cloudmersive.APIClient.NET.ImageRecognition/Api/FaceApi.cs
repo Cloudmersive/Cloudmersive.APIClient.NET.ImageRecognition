@@ -32,8 +32,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Object</returns>
-        Object FaceCropFirst (System.IO.Stream imageFile);
+        /// <returns>byte[]</returns>
+        byte[] FaceCropFirst (System.IO.Stream imageFile);
 
         /// <summary>
         /// Crop image to face (square)
@@ -43,8 +43,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> FaceCropFirstWithHttpInfo (System.IO.Stream imageFile);
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> FaceCropFirstWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
         /// Crop image to face (round)
         /// </summary>
@@ -53,8 +53,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Object</returns>
-        Object FaceCropFirstRound (System.IO.Stream imageFile);
+        /// <returns>byte[]</returns>
+        byte[] FaceCropFirstRound (System.IO.Stream imageFile);
 
         /// <summary>
         /// Crop image to face (round)
@@ -64,8 +64,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> FaceCropFirstRoundWithHttpInfo (System.IO.Stream imageFile);
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> FaceCropFirstRoundWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
         /// Detect the age of people in an image
         /// </summary>
@@ -118,8 +118,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> FaceCropFirstAsync (System.IO.Stream imageFile);
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> FaceCropFirstAsync (System.IO.Stream imageFile);
 
         /// <summary>
         /// Crop image to face (square)
@@ -129,8 +129,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> FaceCropFirstAsyncWithHttpInfo (System.IO.Stream imageFile);
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> FaceCropFirstAsyncWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
         /// Crop image to face (round)
         /// </summary>
@@ -139,8 +139,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> FaceCropFirstRoundAsync (System.IO.Stream imageFile);
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> FaceCropFirstRoundAsync (System.IO.Stream imageFile);
 
         /// <summary>
         /// Crop image to face (round)
@@ -150,8 +150,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> FaceCropFirstRoundAsyncWithHttpInfo (System.IO.Stream imageFile);
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> FaceCropFirstRoundAsyncWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
         /// Detect the age of people in an image
         /// </summary>
@@ -299,10 +299,10 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Object</returns>
-        public Object FaceCropFirst (System.IO.Stream imageFile)
+        /// <returns>byte[]</returns>
+        public byte[] FaceCropFirst (System.IO.Stream imageFile)
         {
-             ApiResponse<Object> localVarResponse = FaceCropFirstWithHttpInfo(imageFile);
+             ApiResponse<byte[]> localVarResponse = FaceCropFirstWithHttpInfo(imageFile);
              return localVarResponse.Data;
         }
 
@@ -311,8 +311,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > FaceCropFirstWithHttpInfo (System.IO.Stream imageFile)
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > FaceCropFirstWithHttpInfo (System.IO.Stream imageFile)
         {
             // verify the required parameter 'imageFile' is set
             if (imageFile == null)
@@ -361,9 +361,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -371,10 +371,10 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> FaceCropFirstAsync (System.IO.Stream imageFile)
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> FaceCropFirstAsync (System.IO.Stream imageFile)
         {
-             ApiResponse<Object> localVarResponse = await FaceCropFirstAsyncWithHttpInfo(imageFile);
+             ApiResponse<byte[]> localVarResponse = await FaceCropFirstAsyncWithHttpInfo(imageFile);
              return localVarResponse.Data;
 
         }
@@ -384,8 +384,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> FaceCropFirstAsyncWithHttpInfo (System.IO.Stream imageFile)
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> FaceCropFirstAsyncWithHttpInfo (System.IO.Stream imageFile)
         {
             // verify the required parameter 'imageFile' is set
             if (imageFile == null)
@@ -434,9 +434,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -444,10 +444,10 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Object</returns>
-        public Object FaceCropFirstRound (System.IO.Stream imageFile)
+        /// <returns>byte[]</returns>
+        public byte[] FaceCropFirstRound (System.IO.Stream imageFile)
         {
-             ApiResponse<Object> localVarResponse = FaceCropFirstRoundWithHttpInfo(imageFile);
+             ApiResponse<byte[]> localVarResponse = FaceCropFirstRoundWithHttpInfo(imageFile);
              return localVarResponse.Data;
         }
 
@@ -456,8 +456,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > FaceCropFirstRoundWithHttpInfo (System.IO.Stream imageFile)
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > FaceCropFirstRoundWithHttpInfo (System.IO.Stream imageFile)
         {
             // verify the required parameter 'imageFile' is set
             if (imageFile == null)
@@ -506,9 +506,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -516,10 +516,10 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> FaceCropFirstRoundAsync (System.IO.Stream imageFile)
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> FaceCropFirstRoundAsync (System.IO.Stream imageFile)
         {
-             ApiResponse<Object> localVarResponse = await FaceCropFirstRoundAsyncWithHttpInfo(imageFile);
+             ApiResponse<byte[]> localVarResponse = await FaceCropFirstRoundAsyncWithHttpInfo(imageFile);
              return localVarResponse.Data;
 
         }
@@ -529,8 +529,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> FaceCropFirstRoundAsyncWithHttpInfo (System.IO.Stream imageFile)
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> FaceCropFirstRoundAsyncWithHttpInfo (System.IO.Stream imageFile)
         {
             // verify the required parameter 'imageFile' is set
             if (imageFile == null)
@@ -579,9 +579,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>

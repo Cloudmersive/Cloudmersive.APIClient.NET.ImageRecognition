@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="facecropfirst"></a>
 # **FaceCropFirst**
-> Object FaceCropFirst (System.IO.Stream imageFile)
+> byte[] FaceCropFirst (System.IO.Stream imageFile)
 
 Crop image to face (square)
 
@@ -43,7 +43,7 @@ namespace Example
             try
             {
                 // Crop image to face (square)
-                Object result = apiInstance.FaceCropFirst(imageFile);
+                byte[] result = apiInstance.FaceCropFirst(imageFile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 <a name="facecropfirstround"></a>
 # **FaceCropFirstRound**
-> Object FaceCropFirstRound (System.IO.Stream imageFile)
+> byte[] FaceCropFirstRound (System.IO.Stream imageFile)
 
 Crop image to face (round)
 
@@ -109,7 +109,7 @@ namespace Example
             try
             {
                 // Crop image to face (round)
-                Object result = apiInstance.FaceCropFirstRound(imageFile);
+                byte[] result = apiInstance.FaceCropFirstRound(imageFile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 

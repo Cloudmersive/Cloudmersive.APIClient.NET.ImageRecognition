@@ -32,8 +32,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="style">The style of the painting to apply.  To start, try \&quot;udnie\&quot; a painting style.  Possible values are: \&quot;udnie\&quot;, \&quot;wave\&quot;, \&quot;la_muse\&quot;, \&quot;rain_princess\&quot;.</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Object</returns>
-        Object ArtisticPainting (string style, System.IO.Stream imageFile);
+        /// <returns>byte[]</returns>
+        byte[] ArtisticPainting (string style, System.IO.Stream imageFile);
 
         /// <summary>
         /// Transform an image into an artistic painting automatically
@@ -44,8 +44,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="style">The style of the painting to apply.  To start, try \&quot;udnie\&quot; a painting style.  Possible values are: \&quot;udnie\&quot;, \&quot;wave\&quot;, \&quot;la_muse\&quot;, \&quot;rain_princess\&quot;.</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ArtisticPaintingWithHttpInfo (string style, System.IO.Stream imageFile);
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> ArtisticPaintingWithHttpInfo (string style, System.IO.Stream imageFile);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -57,8 +57,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="style">The style of the painting to apply.  To start, try \&quot;udnie\&quot; a painting style.  Possible values are: \&quot;udnie\&quot;, \&quot;wave\&quot;, \&quot;la_muse\&quot;, \&quot;rain_princess\&quot;.</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ArtisticPaintingAsync (string style, System.IO.Stream imageFile);
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> ArtisticPaintingAsync (string style, System.IO.Stream imageFile);
 
         /// <summary>
         /// Transform an image into an artistic painting automatically
@@ -69,8 +69,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="style">The style of the painting to apply.  To start, try \&quot;udnie\&quot; a painting style.  Possible values are: \&quot;udnie\&quot;, \&quot;wave\&quot;, \&quot;la_muse\&quot;, \&quot;rain_princess\&quot;.</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ArtisticPaintingAsyncWithHttpInfo (string style, System.IO.Stream imageFile);
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> ArtisticPaintingAsyncWithHttpInfo (string style, System.IO.Stream imageFile);
         #endregion Asynchronous Operations
     }
 
@@ -177,10 +177,10 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="style">The style of the painting to apply.  To start, try \&quot;udnie\&quot; a painting style.  Possible values are: \&quot;udnie\&quot;, \&quot;wave\&quot;, \&quot;la_muse\&quot;, \&quot;rain_princess\&quot;.</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Object</returns>
-        public Object ArtisticPainting (string style, System.IO.Stream imageFile)
+        /// <returns>byte[]</returns>
+        public byte[] ArtisticPainting (string style, System.IO.Stream imageFile)
         {
-             ApiResponse<Object> localVarResponse = ArtisticPaintingWithHttpInfo(style, imageFile);
+             ApiResponse<byte[]> localVarResponse = ArtisticPaintingWithHttpInfo(style, imageFile);
              return localVarResponse.Data;
         }
 
@@ -190,8 +190,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="style">The style of the painting to apply.  To start, try \&quot;udnie\&quot; a painting style.  Possible values are: \&quot;udnie\&quot;, \&quot;wave\&quot;, \&quot;la_muse\&quot;, \&quot;rain_princess\&quot;.</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ArtisticPaintingWithHttpInfo (string style, System.IO.Stream imageFile)
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > ArtisticPaintingWithHttpInfo (string style, System.IO.Stream imageFile)
         {
             // verify the required parameter 'style' is set
             if (style == null)
@@ -244,9 +244,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -255,10 +255,10 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="style">The style of the painting to apply.  To start, try \&quot;udnie\&quot; a painting style.  Possible values are: \&quot;udnie\&quot;, \&quot;wave\&quot;, \&quot;la_muse\&quot;, \&quot;rain_princess\&quot;.</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ArtisticPaintingAsync (string style, System.IO.Stream imageFile)
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> ArtisticPaintingAsync (string style, System.IO.Stream imageFile)
         {
-             ApiResponse<Object> localVarResponse = await ArtisticPaintingAsyncWithHttpInfo(style, imageFile);
+             ApiResponse<byte[]> localVarResponse = await ArtisticPaintingAsyncWithHttpInfo(style, imageFile);
              return localVarResponse.Data;
 
         }
@@ -269,8 +269,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="style">The style of the painting to apply.  To start, try \&quot;udnie\&quot; a painting style.  Possible values are: \&quot;udnie\&quot;, \&quot;wave\&quot;, \&quot;la_muse\&quot;, \&quot;rain_princess\&quot;.</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ArtisticPaintingAsyncWithHttpInfo (string style, System.IO.Stream imageFile)
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ArtisticPaintingAsyncWithHttpInfo (string style, System.IO.Stream imageFile)
         {
             // verify the required parameter 'style' is set
             if (style == null)
@@ -323,9 +323,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
     }

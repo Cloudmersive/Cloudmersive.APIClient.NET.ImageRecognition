@@ -74,7 +74,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
             //int? maxHeight = null;
             //System.IO.Stream imageFile = null;
             //var response = instance.ResizePost(maxWidth, maxHeight, imageFile);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
     }

@@ -33,8 +33,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="maxWidth">Maximum width of the output image - final image will be as large as possible while less than or equial to this width</param>
         /// <param name="maxHeight">Maximum height of the output image - final image will be as large as possible while less than or equial to this height</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Object</returns>
-        Object ResizePost (int? maxWidth, int? maxHeight, System.IO.Stream imageFile);
+        /// <returns>byte[]</returns>
+        byte[] ResizePost (int? maxWidth, int? maxHeight, System.IO.Stream imageFile);
 
         /// <summary>
         /// Resize an image with parameters
@@ -46,8 +46,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="maxWidth">Maximum width of the output image - final image will be as large as possible while less than or equial to this width</param>
         /// <param name="maxHeight">Maximum height of the output image - final image will be as large as possible while less than or equial to this height</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ResizePostWithHttpInfo (int? maxWidth, int? maxHeight, System.IO.Stream imageFile);
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> ResizePostWithHttpInfo (int? maxWidth, int? maxHeight, System.IO.Stream imageFile);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -60,8 +60,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="maxWidth">Maximum width of the output image - final image will be as large as possible while less than or equial to this width</param>
         /// <param name="maxHeight">Maximum height of the output image - final image will be as large as possible while less than or equial to this height</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ResizePostAsync (int? maxWidth, int? maxHeight, System.IO.Stream imageFile);
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> ResizePostAsync (int? maxWidth, int? maxHeight, System.IO.Stream imageFile);
 
         /// <summary>
         /// Resize an image with parameters
@@ -73,8 +73,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="maxWidth">Maximum width of the output image - final image will be as large as possible while less than or equial to this width</param>
         /// <param name="maxHeight">Maximum height of the output image - final image will be as large as possible while less than or equial to this height</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ResizePostAsyncWithHttpInfo (int? maxWidth, int? maxHeight, System.IO.Stream imageFile);
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> ResizePostAsyncWithHttpInfo (int? maxWidth, int? maxHeight, System.IO.Stream imageFile);
         #endregion Asynchronous Operations
     }
 
@@ -182,10 +182,10 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="maxWidth">Maximum width of the output image - final image will be as large as possible while less than or equial to this width</param>
         /// <param name="maxHeight">Maximum height of the output image - final image will be as large as possible while less than or equial to this height</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Object</returns>
-        public Object ResizePost (int? maxWidth, int? maxHeight, System.IO.Stream imageFile)
+        /// <returns>byte[]</returns>
+        public byte[] ResizePost (int? maxWidth, int? maxHeight, System.IO.Stream imageFile)
         {
-             ApiResponse<Object> localVarResponse = ResizePostWithHttpInfo(maxWidth, maxHeight, imageFile);
+             ApiResponse<byte[]> localVarResponse = ResizePostWithHttpInfo(maxWidth, maxHeight, imageFile);
              return localVarResponse.Data;
         }
 
@@ -196,8 +196,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="maxWidth">Maximum width of the output image - final image will be as large as possible while less than or equial to this width</param>
         /// <param name="maxHeight">Maximum height of the output image - final image will be as large as possible while less than or equial to this height</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ResizePostWithHttpInfo (int? maxWidth, int? maxHeight, System.IO.Stream imageFile)
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > ResizePostWithHttpInfo (int? maxWidth, int? maxHeight, System.IO.Stream imageFile)
         {
             // verify the required parameter 'maxWidth' is set
             if (maxWidth == null)
@@ -254,9 +254,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -266,10 +266,10 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="maxWidth">Maximum width of the output image - final image will be as large as possible while less than or equial to this width</param>
         /// <param name="maxHeight">Maximum height of the output image - final image will be as large as possible while less than or equial to this height</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ResizePostAsync (int? maxWidth, int? maxHeight, System.IO.Stream imageFile)
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> ResizePostAsync (int? maxWidth, int? maxHeight, System.IO.Stream imageFile)
         {
-             ApiResponse<Object> localVarResponse = await ResizePostAsyncWithHttpInfo(maxWidth, maxHeight, imageFile);
+             ApiResponse<byte[]> localVarResponse = await ResizePostAsyncWithHttpInfo(maxWidth, maxHeight, imageFile);
              return localVarResponse.Data;
 
         }
@@ -281,8 +281,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="maxWidth">Maximum width of the output image - final image will be as large as possible while less than or equial to this width</param>
         /// <param name="maxHeight">Maximum height of the output image - final image will be as large as possible while less than or equial to this height</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ResizePostAsyncWithHttpInfo (int? maxWidth, int? maxHeight, System.IO.Stream imageFile)
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ResizePostAsyncWithHttpInfo (int? maxWidth, int? maxHeight, System.IO.Stream imageFile)
         {
             // verify the required parameter 'maxWidth' is set
             if (maxWidth == null)
@@ -339,9 +339,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
     }

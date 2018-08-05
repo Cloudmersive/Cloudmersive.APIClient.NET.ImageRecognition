@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
             //string style = null;
             //System.IO.Stream imageFile = null;
             //var response = instance.ArtisticPainting(style, imageFile);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
     }

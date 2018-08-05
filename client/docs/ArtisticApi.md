@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="artisticpainting"></a>
 # **ArtisticPainting**
-> Object ArtisticPainting (string style, System.IO.Stream imageFile)
+> byte[] ArtisticPainting (string style, System.IO.Stream imageFile)
 
 Transform an image into an artistic painting automatically
 
@@ -41,7 +41,7 @@ namespace Example
             try
             {
                 // Transform an image into an artistic painting automatically
-                Object result = apiInstance.ArtisticPainting(style, imageFile);
+                byte[] result = apiInstance.ArtisticPainting(style, imageFile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 
