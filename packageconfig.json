@@ -1,7 +1,7 @@
 ﻿{
 
   "packageName" : "Cloudmersive.APIClient.NET.ImageRecognition",
-  "packageVersion": "1.2.6",
+  "packageVersion": "1.2.7",
   "netCoreProjectFile": "false",
   "packageGuid": "a235fa3f-f1ba-40dc-8df2-23d9c98829b3"
 }  
