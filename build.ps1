@@ -7,6 +7,9 @@
 
 
 $csprojpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.ImageRecognition/Cloudmersive.APIClient.NET.ImageRecognition.csproj
+$nuspecpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.ImageRecognition/Cloudmersive.APIClient.NET.ImageRecognition.nuspec
+
+(Get-Content $nuspecpath).replace('<title>Swagger Library</title>', "<title>Cloudmersive Image Recognition and Processing API Client</title>") | Set-Content $nuspecpath
 
 
 (Get-Content $csprojpath).replace('<Authors>Swagger</Authors>', "<Authors>Cloudmersive</Authors>") | Set-Content $csprojpath
