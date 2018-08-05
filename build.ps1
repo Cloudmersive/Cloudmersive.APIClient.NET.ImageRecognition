@@ -22,5 +22,7 @@
 
 C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe ./client/Cloudmersive.APIClient.NET.ImageRecognition.sln /t:rebuild 
 
+./nuget.exe pack ./client/src/Cloudmersive.APIClient.NET.ImageRecognition/Cloudmersive.APIClient.NET.ImageRecognition.nuspec
+
 #& dotnet build ./client/src/Cloudmersive.APIClient.NET.ImageRecognition/Cloudmersive.APIClient.NET.ImageRecognition.csproj -c Release
 #& dotnet pack ./client/src/Cloudmersive.APIClient.NET.ImageRecognition/Cloudmersive.APIClient.NET.ImageRecognition.csproj -c Release
