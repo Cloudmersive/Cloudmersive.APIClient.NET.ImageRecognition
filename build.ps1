@@ -18,6 +18,8 @@
 
 ./nuget.exe restore ./client/src/Cloudmersive.APIClient.NET.ImageRecognition/Cloudmersive.APIClient.NET.ImageRecognition.csproj -SolutionDirectory ./client
 
+./nuget.exe restore ./client/src/Cloudmersive.APIClient.NET.ImageRecognition.Test/Cloudmersive.APIClient.NET.ImageRecognition.Test.csproj -SolutionDirectory ./client
+
 C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe ./client/Cloudmersive.APIClient.NET.ImageRecognition.sln /t:rebuild 
 
 #& dotnet build ./client/src/Cloudmersive.APIClient.NET.ImageRecognition/Cloudmersive.APIClient.NET.ImageRecognition.csproj -c Release
