@@ -77,6 +77,19 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
         }
         
         /// <summary>
+        /// Test RecognizeDetectAndUnskewDocument
+        /// </summary>
+        [Test]
+        public void RecognizeDetectAndUnskewDocumentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream imageFile = null;
+            //string postProcessingEffect = null;
+            //var response = instance.RecognizeDetectAndUnskewDocument(imageFile, postProcessingEffect);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test RecognizeDetectObjects
         /// </summary>
         [Test]
@@ -98,6 +111,18 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
             //System.IO.Stream imageFile = null;
             //var response = instance.RecognizeDetectPeople(imageFile);
             //Assert.IsInstanceOf<ObjectDetectionResult> (response, "response is ObjectDetectionResult");
+        }
+        
+        /// <summary>
+        /// Test RecognizeDetectVehicleLicensePlates
+        /// </summary>
+        [Test]
+        public void RecognizeDetectVehicleLicensePlatesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream imageFile = null;
+            //var response = instance.RecognizeDetectVehicleLicensePlates(imageFile);
+            //Assert.IsInstanceOf<VehicleLicensePlateDetectionResult> (response, "response is VehicleLicensePlateDetectionResult");
         }
         
     }
