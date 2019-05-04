@@ -65,6 +65,19 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
 
         
         /// <summary>
+        /// Test FaceCompare
+        /// </summary>
+        [Test]
+        public void FaceCompareTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputImage = null;
+            //System.IO.Stream matchFace = null;
+            //var response = instance.FaceCompare(inputImage, matchFace);
+            //Assert.IsInstanceOf<FaceCompareResponse> (response, "response is FaceCompareResponse");
+        }
+        
+        /// <summary>
         /// Test FaceCropFirst
         /// </summary>
         [Test]
@@ -110,6 +123,18 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
             //System.IO.Stream imageFile = null;
             //var response = instance.FaceLocate(imageFile);
             //Assert.IsInstanceOf<FaceLocateResponse> (response, "response is FaceLocateResponse");
+        }
+        
+        /// <summary>
+        /// Test FaceLocateWithLandmarks
+        /// </summary>
+        [Test]
+        public void FaceLocateWithLandmarksTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream imageFile = null;
+            //var response = instance.FaceLocateWithLandmarks(imageFile);
+            //Assert.IsInstanceOf<FaceLocateWithLandmarksResponse> (response, "response is FaceLocateWithLandmarksResponse");
         }
         
     }

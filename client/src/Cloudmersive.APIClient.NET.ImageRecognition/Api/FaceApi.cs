@@ -25,6 +25,29 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Compare and match faces
+        /// </summary>
+        /// <remarks>
+        /// Find the faces in an input image, and compare against a reference image to determine if there is a match against the face in the reference image.  The reference image (second parameter) should contain exactly one face.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputImage">Image file to perform the operation on; this image can contain one or more faces which will be matched against face provided in the second image.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="matchFace">Image of a single face to compare and match against.</param>
+        /// <returns>FaceCompareResponse</returns>
+        FaceCompareResponse FaceCompare (System.IO.Stream inputImage, System.IO.Stream matchFace);
+
+        /// <summary>
+        /// Compare and match faces
+        /// </summary>
+        /// <remarks>
+        /// Find the faces in an input image, and compare against a reference image to determine if there is a match against the face in the reference image.  The reference image (second parameter) should contain exactly one face.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputImage">Image file to perform the operation on; this image can contain one or more faces which will be matched against face provided in the second image.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="matchFace">Image of a single face to compare and match against.</param>
+        /// <returns>ApiResponse of FaceCompareResponse</returns>
+        ApiResponse<FaceCompareResponse> FaceCompareWithHttpInfo (System.IO.Stream inputImage, System.IO.Stream matchFace);
+        /// <summary>
         /// Crop image to face (square)
         /// </summary>
         /// <remarks>
@@ -108,8 +131,52 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>ApiResponse of FaceLocateResponse</returns>
         ApiResponse<FaceLocateResponse> FaceLocateWithHttpInfo (System.IO.Stream imageFile);
+        /// <summary>
+        /// Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image
+        /// </summary>
+        /// <remarks>
+        /// Locate the positions of all faces in an image, along with the eyes, eye brows, nose and mouth components of each
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>FaceLocateWithLandmarksResponse</returns>
+        FaceLocateWithLandmarksResponse FaceLocateWithLandmarks (System.IO.Stream imageFile);
+
+        /// <summary>
+        /// Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image
+        /// </summary>
+        /// <remarks>
+        /// Locate the positions of all faces in an image, along with the eyes, eye brows, nose and mouth components of each
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ApiResponse of FaceLocateWithLandmarksResponse</returns>
+        ApiResponse<FaceLocateWithLandmarksResponse> FaceLocateWithLandmarksWithHttpInfo (System.IO.Stream imageFile);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Compare and match faces
+        /// </summary>
+        /// <remarks>
+        /// Find the faces in an input image, and compare against a reference image to determine if there is a match against the face in the reference image.  The reference image (second parameter) should contain exactly one face.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputImage">Image file to perform the operation on; this image can contain one or more faces which will be matched against face provided in the second image.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="matchFace">Image of a single face to compare and match against.</param>
+        /// <returns>Task of FaceCompareResponse</returns>
+        System.Threading.Tasks.Task<FaceCompareResponse> FaceCompareAsync (System.IO.Stream inputImage, System.IO.Stream matchFace);
+
+        /// <summary>
+        /// Compare and match faces
+        /// </summary>
+        /// <remarks>
+        /// Find the faces in an input image, and compare against a reference image to determine if there is a match against the face in the reference image.  The reference image (second parameter) should contain exactly one face.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputImage">Image file to perform the operation on; this image can contain one or more faces which will be matched against face provided in the second image.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="matchFace">Image of a single face to compare and match against.</param>
+        /// <returns>Task of ApiResponse (FaceCompareResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FaceCompareResponse>> FaceCompareAsyncWithHttpInfo (System.IO.Stream inputImage, System.IO.Stream matchFace);
         /// <summary>
         /// Crop image to face (square)
         /// </summary>
@@ -194,6 +261,27 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>Task of ApiResponse (FaceLocateResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<FaceLocateResponse>> FaceLocateAsyncWithHttpInfo (System.IO.Stream imageFile);
+        /// <summary>
+        /// Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image
+        /// </summary>
+        /// <remarks>
+        /// Locate the positions of all faces in an image, along with the eyes, eye brows, nose and mouth components of each
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of FaceLocateWithLandmarksResponse</returns>
+        System.Threading.Tasks.Task<FaceLocateWithLandmarksResponse> FaceLocateWithLandmarksAsync (System.IO.Stream imageFile);
+
+        /// <summary>
+        /// Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image
+        /// </summary>
+        /// <remarks>
+        /// Locate the positions of all faces in an image, along with the eyes, eye brows, nose and mouth components of each
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ApiResponse (FaceLocateWithLandmarksResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FaceLocateWithLandmarksResponse>> FaceLocateWithLandmarksAsyncWithHttpInfo (System.IO.Stream imageFile);
         #endregion Asynchronous Operations
     }
 
@@ -292,6 +380,169 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Compare and match faces Find the faces in an input image, and compare against a reference image to determine if there is a match against the face in the reference image.  The reference image (second parameter) should contain exactly one face.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputImage">Image file to perform the operation on; this image can contain one or more faces which will be matched against face provided in the second image.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="matchFace">Image of a single face to compare and match against.</param>
+        /// <returns>FaceCompareResponse</returns>
+        public FaceCompareResponse FaceCompare (System.IO.Stream inputImage, System.IO.Stream matchFace)
+        {
+             ApiResponse<FaceCompareResponse> localVarResponse = FaceCompareWithHttpInfo(inputImage, matchFace);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Compare and match faces Find the faces in an input image, and compare against a reference image to determine if there is a match against the face in the reference image.  The reference image (second parameter) should contain exactly one face.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputImage">Image file to perform the operation on; this image can contain one or more faces which will be matched against face provided in the second image.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="matchFace">Image of a single face to compare and match against.</param>
+        /// <returns>ApiResponse of FaceCompareResponse</returns>
+        public ApiResponse< FaceCompareResponse > FaceCompareWithHttpInfo (System.IO.Stream inputImage, System.IO.Stream matchFace)
+        {
+            // verify the required parameter 'inputImage' is set
+            if (inputImage == null)
+                throw new ApiException(400, "Missing required parameter 'inputImage' when calling FaceApi->FaceCompare");
+            // verify the required parameter 'matchFace' is set
+            if (matchFace == null)
+                throw new ApiException(400, "Missing required parameter 'matchFace' when calling FaceApi->FaceCompare");
+
+            var localVarPath = "/image/face/compare-and-match";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputImage != null) localVarFileParams.Add("inputImage", Configuration.ApiClient.ParameterToFile("inputImage", inputImage));
+            if (matchFace != null) localVarFileParams.Add("matchFace", Configuration.ApiClient.ParameterToFile("matchFace", matchFace));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FaceCompare", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FaceCompareResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FaceCompareResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaceCompareResponse)));
+        }
+
+        /// <summary>
+        /// Compare and match faces Find the faces in an input image, and compare against a reference image to determine if there is a match against the face in the reference image.  The reference image (second parameter) should contain exactly one face.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputImage">Image file to perform the operation on; this image can contain one or more faces which will be matched against face provided in the second image.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="matchFace">Image of a single face to compare and match against.</param>
+        /// <returns>Task of FaceCompareResponse</returns>
+        public async System.Threading.Tasks.Task<FaceCompareResponse> FaceCompareAsync (System.IO.Stream inputImage, System.IO.Stream matchFace)
+        {
+             ApiResponse<FaceCompareResponse> localVarResponse = await FaceCompareAsyncWithHttpInfo(inputImage, matchFace);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Compare and match faces Find the faces in an input image, and compare against a reference image to determine if there is a match against the face in the reference image.  The reference image (second parameter) should contain exactly one face.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputImage">Image file to perform the operation on; this image can contain one or more faces which will be matched against face provided in the second image.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="matchFace">Image of a single face to compare and match against.</param>
+        /// <returns>Task of ApiResponse (FaceCompareResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FaceCompareResponse>> FaceCompareAsyncWithHttpInfo (System.IO.Stream inputImage, System.IO.Stream matchFace)
+        {
+            // verify the required parameter 'inputImage' is set
+            if (inputImage == null)
+                throw new ApiException(400, "Missing required parameter 'inputImage' when calling FaceApi->FaceCompare");
+            // verify the required parameter 'matchFace' is set
+            if (matchFace == null)
+                throw new ApiException(400, "Missing required parameter 'matchFace' when calling FaceApi->FaceCompare");
+
+            var localVarPath = "/image/face/compare-and-match";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputImage != null) localVarFileParams.Add("inputImage", Configuration.ApiClient.ParameterToFile("inputImage", inputImage));
+            if (matchFace != null) localVarFileParams.Add("matchFace", Configuration.ApiClient.ParameterToFile("matchFace", matchFace));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FaceCompare", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FaceCompareResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FaceCompareResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaceCompareResponse)));
         }
 
         /// <summary>
@@ -884,6 +1135,157 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
             return new ApiResponse<FaceLocateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (FaceLocateResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaceLocateResponse)));
+        }
+
+        /// <summary>
+        /// Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image Locate the positions of all faces in an image, along with the eyes, eye brows, nose and mouth components of each
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>FaceLocateWithLandmarksResponse</returns>
+        public FaceLocateWithLandmarksResponse FaceLocateWithLandmarks (System.IO.Stream imageFile)
+        {
+             ApiResponse<FaceLocateWithLandmarksResponse> localVarResponse = FaceLocateWithLandmarksWithHttpInfo(imageFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image Locate the positions of all faces in an image, along with the eyes, eye brows, nose and mouth components of each
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ApiResponse of FaceLocateWithLandmarksResponse</returns>
+        public ApiResponse< FaceLocateWithLandmarksResponse > FaceLocateWithLandmarksWithHttpInfo (System.IO.Stream imageFile)
+        {
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling FaceApi->FaceLocateWithLandmarks");
+
+            var localVarPath = "/image/face/locate-with-landmarks";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (imageFile != null) localVarFileParams.Add("imageFile", Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FaceLocateWithLandmarks", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FaceLocateWithLandmarksResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FaceLocateWithLandmarksResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaceLocateWithLandmarksResponse)));
+        }
+
+        /// <summary>
+        /// Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image Locate the positions of all faces in an image, along with the eyes, eye brows, nose and mouth components of each
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of FaceLocateWithLandmarksResponse</returns>
+        public async System.Threading.Tasks.Task<FaceLocateWithLandmarksResponse> FaceLocateWithLandmarksAsync (System.IO.Stream imageFile)
+        {
+             ApiResponse<FaceLocateWithLandmarksResponse> localVarResponse = await FaceLocateWithLandmarksAsyncWithHttpInfo(imageFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image Locate the positions of all faces in an image, along with the eyes, eye brows, nose and mouth components of each
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ApiResponse (FaceLocateWithLandmarksResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FaceLocateWithLandmarksResponse>> FaceLocateWithLandmarksAsyncWithHttpInfo (System.IO.Stream imageFile)
+        {
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling FaceApi->FaceLocateWithLandmarks");
+
+            var localVarPath = "/image/face/locate-with-landmarks";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (imageFile != null) localVarFileParams.Add("imageFile", Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FaceLocateWithLandmarks", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FaceLocateWithLandmarksResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FaceLocateWithLandmarksResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FaceLocateWithLandmarksResponse)));
         }
 
     }
