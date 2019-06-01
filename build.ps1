@@ -14,6 +14,7 @@ $nuspecpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.ImageRecognit
 (Get-Content $nuspecpath).replace('<owners>$author$</owners>', "<owners>Cloudmersive</owners>") | Set-Content $nuspecpath
 (Get-Content $nuspecpath).replace('<description>A library generated from a Swagger doc</description>', "<description>Image Recognition and Processing APIs let you use Machine Learning to recognize and process images, and also perform useful image modification operations.</description>") | Set-Content $nuspecpath
 (Get-Content $nuspecpath).replace('<!-- Authors contain text that appears directly on the gallery -->', "<iconUrl>https://cloudmersive.com/images/cmsdk.png</iconUrl>") | Set-Content $nuspecpath
+(Get-Content $nuspecpath).replace('<dependencies>', "<projectUrl>https://cloudmersive.com/image-recognition-and-processing-api</projectUrl><dependencies>") | Set-Content $nuspecpath
 
 
 (Get-Content $csprojpath).replace('<Authors>Swagger</Authors>', "<Authors>Cloudmersive</Authors>") | Set-Content $csprojpath
