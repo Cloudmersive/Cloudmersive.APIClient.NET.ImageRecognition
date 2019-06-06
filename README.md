@@ -5,7 +5,7 @@ Image Recognition and Processing APIs let you use Machine Learning to recognize 
 This C# SDK is:
 
 - API version: v1
-- SDK version: 1.3.3
+- SDK version: 1.3.4
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -117,6 +117,8 @@ Class | Method | HTTP request | Description
 *RecognizeApi* | [**RecognizeDetectAndUnskewDocument**](docs/RecognizeApi.md#recognizedetectandunskewdocument) | **POST** /image/recognize/detect-document/unskew | Detect and unskew a photo of a document
 *RecognizeApi* | [**RecognizeDetectObjects**](docs/RecognizeApi.md#recognizedetectobjects) | **POST** /image/recognize/detect-objects | Detect objects, including types and locations, in an image
 *RecognizeApi* | [**RecognizeDetectPeople**](docs/RecognizeApi.md#recognizedetectpeople) | **POST** /image/recognize/detect-people | Detect people, including locations, in an image
+*RecognizeApi* | [**RecognizeDetectTextFine**](docs/RecognizeApi.md#recognizedetecttextfine) | **POST** /image/recognize/detect-text/fine | Detect fine text in a photo of a document
+*RecognizeApi* | [**RecognizeDetectTextLarge**](docs/RecognizeApi.md#recognizedetecttextlarge) | **POST** /image/recognize/detect-text/large | Detect large text in a photo
 *RecognizeApi* | [**RecognizeDetectVehicleLicensePlates**](docs/RecognizeApi.md#recognizedetectvehiclelicenseplates) | **POST** /image/recognize/detect-vehicle-license-plates | Detect vehicle license plates in an image
 *ResizeApi* | [**ResizePost**](docs/ResizeApi.md#resizepost) | **POST** /image/resize/preserveAspectRatio/{maxWidth}/{maxHeight} | Resize an image with parameters
 
@@ -138,11 +140,15 @@ Class | Method | HTTP request | Description
  - [Model.FaceMatch](docs/FaceMatch.md)
  - [Model.FacePoint](docs/FacePoint.md)
  - [Model.FaceWithLandmarks](docs/FaceWithLandmarks.md)
+ - [Model.FineTextDetectionResult](docs/FineTextDetectionResult.md)
+ - [Model.FineTextItem](docs/FineTextItem.md)
  - [Model.ImageDescriptionResponse](docs/ImageDescriptionResponse.md)
  - [Model.NsfwResult](docs/NsfwResult.md)
  - [Model.ObjectDetectionResult](docs/ObjectDetectionResult.md)
  - [Model.PersonWithAge](docs/PersonWithAge.md)
  - [Model.RecognitionOutcome](docs/RecognitionOutcome.md)
+ - [Model.TextDetectionResult](docs/TextDetectionResult.md)
+ - [Model.TextItem](docs/TextItem.md)
  - [Model.VehicleLicensePlateDetectionResult](docs/VehicleLicensePlateDetectionResult.md)
 
 
