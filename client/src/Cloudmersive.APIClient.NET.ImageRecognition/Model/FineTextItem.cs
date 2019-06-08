@@ -41,7 +41,10 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <param name="BottomLeftY">Y coordinate of the bottom/left text location; 0 represents the top edge of the input image.</param>
         /// <param name="BottomRightX">X coordinate of the bottom/right text location; 0 represents the left edge of the input image.</param>
         /// <param name="BottomRightY">Y coordinate of the bottom/right text location; 0 represents the top edge of the input image.</param>
-        public FineTextItem(int? TopLeftX = default(int?), int? TopLeftY = default(int?), int? TopRightX = default(int?), int? TopRightY = default(int?), int? BottomLeftX = default(int?), int? BottomLeftY = default(int?), int? BottomRightX = default(int?), int? BottomRightY = default(int?))
+        /// <param name="Width">Width in pixels of the text.</param>
+        /// <param name="Height">Height in pixels of the text.</param>
+        /// <param name="Angle">Rotation Angle in radians of the text.</param>
+        public FineTextItem(int? TopLeftX = default(int?), int? TopLeftY = default(int?), int? TopRightX = default(int?), int? TopRightY = default(int?), int? BottomLeftX = default(int?), int? BottomLeftY = default(int?), int? BottomRightX = default(int?), int? BottomRightY = default(int?), int? Width = default(int?), int? Height = default(int?), double? Angle = default(double?))
         {
             this.TopLeftX = TopLeftX;
             this.TopLeftY = TopLeftY;
@@ -51,6 +54,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
             this.BottomLeftY = BottomLeftY;
             this.BottomRightX = BottomRightX;
             this.BottomRightY = BottomRightY;
+            this.Width = Width;
+            this.Height = Height;
+            this.Angle = Angle;
         }
         
         /// <summary>
@@ -110,6 +116,27 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         public int? BottomRightY { get; set; }
 
         /// <summary>
+        /// Width in pixels of the text
+        /// </summary>
+        /// <value>Width in pixels of the text</value>
+        [DataMember(Name="Width", EmitDefaultValue=false)]
+        public int? Width { get; set; }
+
+        /// <summary>
+        /// Height in pixels of the text
+        /// </summary>
+        /// <value>Height in pixels of the text</value>
+        [DataMember(Name="Height", EmitDefaultValue=false)]
+        public int? Height { get; set; }
+
+        /// <summary>
+        /// Rotation Angle in radians of the text
+        /// </summary>
+        /// <value>Rotation Angle in radians of the text</value>
+        [DataMember(Name="Angle", EmitDefaultValue=false)]
+        public double? Angle { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -125,6 +152,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
             sb.Append("  BottomLeftY: ").Append(BottomLeftY).Append("\n");
             sb.Append("  BottomRightX: ").Append(BottomRightX).Append("\n");
             sb.Append("  BottomRightY: ").Append(BottomRightY).Append("\n");
+            sb.Append("  Width: ").Append(Width).Append("\n");
+            sb.Append("  Height: ").Append(Height).Append("\n");
+            sb.Append("  Angle: ").Append(Angle).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -198,6 +228,21 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
                     this.BottomRightY == input.BottomRightY ||
                     (this.BottomRightY != null &&
                     this.BottomRightY.Equals(input.BottomRightY))
+                ) && 
+                (
+                    this.Width == input.Width ||
+                    (this.Width != null &&
+                    this.Width.Equals(input.Width))
+                ) && 
+                (
+                    this.Height == input.Height ||
+                    (this.Height != null &&
+                    this.Height.Equals(input.Height))
+                ) && 
+                (
+                    this.Angle == input.Angle ||
+                    (this.Angle != null &&
+                    this.Angle.Equals(input.Angle))
                 );
         }
 
@@ -226,6 +271,12 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
                     hashCode = hashCode * 59 + this.BottomRightX.GetHashCode();
                 if (this.BottomRightY != null)
                     hashCode = hashCode * 59 + this.BottomRightY.GetHashCode();
+                if (this.Width != null)
+                    hashCode = hashCode * 59 + this.Width.GetHashCode();
+                if (this.Height != null)
+                    hashCode = hashCode * 59 + this.Height.GetHashCode();
+                if (this.Angle != null)
+                    hashCode = hashCode * 59 + this.Angle.GetHashCode();
                 return hashCode;
             }
         }
