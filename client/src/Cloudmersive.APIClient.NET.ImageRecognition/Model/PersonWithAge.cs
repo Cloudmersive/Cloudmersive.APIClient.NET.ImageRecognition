@@ -33,14 +33,14 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PersonWithAge" /> class.
         /// </summary>
-        /// <param name="FaceLocation">Location and other information about the person&#39;s face corresponding to this age classification.</param>
-        /// <param name="AgeClassificationConfidence">Confidence level of age classification; possible values are between 0.0 and 1.0; higher is better, with values &amp;gt; 0.50 being high confidence results.</param>
-        /// <param name="AgeClass">The person&#39;s age range classification result in years; possible values are \&quot;0-2\&quot;, \&quot;4-6\&quot;, \&quot;8-13\&quot;, \&quot;15-20\&quot;, \&quot;25-32\&quot;, \&quot;38-43\&quot;, \&quot;48-53\&quot;, \&quot;60+\&quot;.</param>
-        public PersonWithAge(Face FaceLocation = default(Face), double? AgeClassificationConfidence = default(double?), string AgeClass = default(string))
+        /// <param name="faceLocation">Location and other information about the person&#39;s face corresponding to this age classification.</param>
+        /// <param name="ageClassificationConfidence">Confidence level of age classification; possible values are between 0.0 and 1.0; higher is better, with values &amp;gt; 0.50 being high confidence results.</param>
+        /// <param name="ageClass">The person&#39;s age range classification result in years; possible values are \&quot;0-2\&quot;, \&quot;4-6\&quot;, \&quot;8-13\&quot;, \&quot;15-20\&quot;, \&quot;25-32\&quot;, \&quot;38-43\&quot;, \&quot;48-53\&quot;, \&quot;60+\&quot;.</param>
+        public PersonWithAge(Face faceLocation = default(Face), double? ageClassificationConfidence = default(double?), string ageClass = default(string))
         {
-            this.FaceLocation = FaceLocation;
-            this.AgeClassificationConfidence = AgeClassificationConfidence;
-            this.AgeClass = AgeClass;
+            this.FaceLocation = faceLocation;
+            this.AgeClassificationConfidence = ageClassificationConfidence;
+            this.AgeClass = ageClass;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

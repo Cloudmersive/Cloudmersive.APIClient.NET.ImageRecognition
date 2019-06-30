@@ -130,6 +130,30 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
         {
             // TODO unit test for the property 'BottomRightY'
         }
+        /// <summary>
+        /// Test the property 'Width'
+        /// </summary>
+        [Test]
+        public void WidthTest()
+        {
+            // TODO unit test for the property 'Width'
+        }
+        /// <summary>
+        /// Test the property 'Height'
+        /// </summary>
+        [Test]
+        public void HeightTest()
+        {
+            // TODO unit test for the property 'Height'
+        }
+        /// <summary>
+        /// Test the property 'Angle'
+        /// </summary>
+        [Test]
+        public void AngleTest()
+        {
+            // TODO unit test for the property 'Angle'
+        }
 
     }
 

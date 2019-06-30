@@ -33,20 +33,20 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DetectedObject" /> class.
         /// </summary>
-        /// <param name="ObjectClassName">Class of the object.  Example values are \&quot;person\&quot;, \&quot;car\&quot;, \&quot;dining table\&quot;, etc..</param>
-        /// <param name="Height">Height, in pixels, of the object.</param>
-        /// <param name="Width">Width, in pixels, of the object.</param>
-        /// <param name="Score">Confidence score of detected object; possible values are between 0.0 and 1.0; values closer to 1.0 are higher confidence.</param>
-        /// <param name="X">X location, in pixels, of the left side location of the object, with the right side being X + Width.</param>
-        /// <param name="Y">Y location, in pixels, of the top side location of the object, with the bottom side being Y + Height.</param>
-        public DetectedObject(string ObjectClassName = default(string), int? Height = default(int?), int? Width = default(int?), double? Score = default(double?), int? X = default(int?), int? Y = default(int?))
+        /// <param name="objectClassName">Class of the object.  Example values are \&quot;person\&quot;, \&quot;car\&quot;, \&quot;dining table\&quot;, etc..</param>
+        /// <param name="height">Height, in pixels, of the object.</param>
+        /// <param name="width">Width, in pixels, of the object.</param>
+        /// <param name="score">Confidence score of detected object; possible values are between 0.0 and 1.0; values closer to 1.0 are higher confidence.</param>
+        /// <param name="x">X location, in pixels, of the left side location of the object, with the right side being X + Width.</param>
+        /// <param name="y">Y location, in pixels, of the top side location of the object, with the bottom side being Y + Height.</param>
+        public DetectedObject(string objectClassName = default(string), int? height = default(int?), int? width = default(int?), double? score = default(double?), int? x = default(int?), int? y = default(int?))
         {
-            this.ObjectClassName = ObjectClassName;
-            this.Height = Height;
-            this.Width = Width;
-            this.Score = Score;
-            this.X = X;
-            this.Y = Y;
+            this.ObjectClassName = objectClassName;
+            this.Height = height;
+            this.Width = width;
+            this.Score = score;
+            this.X = x;
+            this.Y = y;
         }
         
         /// <summary>
@@ -113,7 +113,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

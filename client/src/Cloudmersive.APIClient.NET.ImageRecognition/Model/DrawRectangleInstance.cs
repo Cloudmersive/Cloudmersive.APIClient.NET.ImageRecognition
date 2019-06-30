@@ -33,22 +33,22 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DrawRectangleInstance" /> class.
         /// </summary>
-        /// <param name="BorderColor">Border Color to use - can be a hex value (with #) or HTML common color name.  Transparent colors are supported..</param>
-        /// <param name="BorderWidth">Width in pixels of the border.  Pass in 0 to draw a rectangle with no border.</param>
-        /// <param name="FillColor">Fill Color to use - can be a hex value (with #) or HTML common color name.  Transparent colors are supported.  Leave blank to not fill the rectangle..</param>
-        /// <param name="X">Pixel location of the left edge of the rectangle location.</param>
-        /// <param name="Y">Pixel location of the top edge of the rectangle location.</param>
-        /// <param name="Width">Width in pixels of the rectangle.</param>
-        /// <param name="Height">Height in pixels of the rectangle.</param>
-        public DrawRectangleInstance(string BorderColor = default(string), double? BorderWidth = default(double?), string FillColor = default(string), double? X = default(double?), double? Y = default(double?), double? Width = default(double?), double? Height = default(double?))
+        /// <param name="borderColor">Border Color to use - can be a hex value (with #) or HTML common color name.  Transparent colors are supported..</param>
+        /// <param name="borderWidth">Width in pixels of the border.  Pass in 0 to draw a rectangle with no border.</param>
+        /// <param name="fillColor">Fill Color to use - can be a hex value (with #) or HTML common color name.  Transparent colors are supported.  Leave blank to not fill the rectangle..</param>
+        /// <param name="x">Pixel location of the left edge of the rectangle location.</param>
+        /// <param name="y">Pixel location of the top edge of the rectangle location.</param>
+        /// <param name="width">Width in pixels of the rectangle.</param>
+        /// <param name="height">Height in pixels of the rectangle.</param>
+        public DrawRectangleInstance(string borderColor = default(string), double? borderWidth = default(double?), string fillColor = default(string), double? x = default(double?), double? y = default(double?), double? width = default(double?), double? height = default(double?))
         {
-            this.BorderColor = BorderColor;
-            this.BorderWidth = BorderWidth;
-            this.FillColor = FillColor;
-            this.X = X;
-            this.Y = Y;
-            this.Width = Width;
-            this.Height = Height;
+            this.BorderColor = borderColor;
+            this.BorderWidth = borderWidth;
+            this.FillColor = fillColor;
+            this.X = x;
+            this.Y = y;
+            this.Width = width;
+            this.Height = height;
         }
         
         /// <summary>
@@ -123,7 +123,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

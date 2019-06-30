@@ -33,16 +33,16 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ImageDescriptionResponse" /> class.
         /// </summary>
-        /// <param name="Successful">Was the image processed successfully?.</param>
-        /// <param name="Highconfidence">Is the resulting best outcome recognition a high confidence outcome?.</param>
-        /// <param name="BestOutcome">The best Machine Learning outcome.</param>
-        /// <param name="RunnerUpOutcome">Best backup (\&quot;runner up\&quot;) Machine Learning outcome.</param>
-        public ImageDescriptionResponse(bool? Successful = default(bool?), bool? Highconfidence = default(bool?), RecognitionOutcome BestOutcome = default(RecognitionOutcome), RecognitionOutcome RunnerUpOutcome = default(RecognitionOutcome))
+        /// <param name="successful">Was the image processed successfully?.</param>
+        /// <param name="highconfidence">Is the resulting best outcome recognition a high confidence outcome?.</param>
+        /// <param name="bestOutcome">The best Machine Learning outcome.</param>
+        /// <param name="runnerUpOutcome">Best backup (\&quot;runner up\&quot;) Machine Learning outcome.</param>
+        public ImageDescriptionResponse(bool? successful = default(bool?), bool? highconfidence = default(bool?), RecognitionOutcome bestOutcome = default(RecognitionOutcome), RecognitionOutcome runnerUpOutcome = default(RecognitionOutcome))
         {
-            this.Successful = Successful;
-            this.Highconfidence = Highconfidence;
-            this.BestOutcome = BestOutcome;
-            this.RunnerUpOutcome = RunnerUpOutcome;
+            this.Successful = successful;
+            this.Highconfidence = highconfidence;
+            this.BestOutcome = bestOutcome;
+            this.RunnerUpOutcome = runnerUpOutcome;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

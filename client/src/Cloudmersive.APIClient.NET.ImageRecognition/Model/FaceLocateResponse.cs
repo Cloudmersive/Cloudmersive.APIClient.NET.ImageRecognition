@@ -33,16 +33,16 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FaceLocateResponse" /> class.
         /// </summary>
-        /// <param name="ErrorDetails">ErrorDetails.</param>
-        /// <param name="Successful">True if the operation was successful, false otherwise.</param>
-        /// <param name="Faces">Array of faces found in the image.</param>
-        /// <param name="FaceCount">Number of faces found in the image.</param>
-        public FaceLocateResponse(string ErrorDetails = default(string), bool? Successful = default(bool?), List<Face> Faces = default(List<Face>), int? FaceCount = default(int?))
+        /// <param name="errorDetails">errorDetails.</param>
+        /// <param name="successful">True if the operation was successful, false otherwise.</param>
+        /// <param name="faces">Array of faces found in the image.</param>
+        /// <param name="faceCount">Number of faces found in the image.</param>
+        public FaceLocateResponse(string errorDetails = default(string), bool? successful = default(bool?), List<Face> faces = default(List<Face>), int? faceCount = default(int?))
         {
-            this.ErrorDetails = ErrorDetails;
-            this.Successful = Successful;
-            this.Faces = Faces;
-            this.FaceCount = FaceCount;
+            this.ErrorDetails = errorDetails;
+            this.Successful = successful;
+            this.Faces = faces;
+            this.FaceCount = faceCount;
         }
         
         /// <summary>
@@ -92,7 +92,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

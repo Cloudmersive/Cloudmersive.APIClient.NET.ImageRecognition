@@ -33,20 +33,20 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FaceMatch" /> class.
         /// </summary>
-        /// <param name="LeftX">X coordinate of the left side of the face.</param>
-        /// <param name="TopY">Y coordinate of the top side of the face.</param>
-        /// <param name="RightX">X coordinate of the right side of the face.</param>
-        /// <param name="BottomY">Y coordinate of the bottom side of the face.</param>
-        /// <param name="HighConfidenceMatch">True if there is a high confidence match, false otherwise.</param>
-        /// <param name="MatchScore">Match score from 0.0 to 1.0 with higher scores indicating a greater match; scores above 0.7 indicate a match.</param>
-        public FaceMatch(int? LeftX = default(int?), int? TopY = default(int?), int? RightX = default(int?), int? BottomY = default(int?), bool? HighConfidenceMatch = default(bool?), double? MatchScore = default(double?))
+        /// <param name="leftX">X coordinate of the left side of the face.</param>
+        /// <param name="topY">Y coordinate of the top side of the face.</param>
+        /// <param name="rightX">X coordinate of the right side of the face.</param>
+        /// <param name="bottomY">Y coordinate of the bottom side of the face.</param>
+        /// <param name="highConfidenceMatch">True if there is a high confidence match, false otherwise.</param>
+        /// <param name="matchScore">Match score from 0.0 to 1.0 with higher scores indicating a greater match; scores above 0.7 indicate a match.</param>
+        public FaceMatch(int? leftX = default(int?), int? topY = default(int?), int? rightX = default(int?), int? bottomY = default(int?), bool? highConfidenceMatch = default(bool?), double? matchScore = default(double?))
         {
-            this.LeftX = LeftX;
-            this.TopY = TopY;
-            this.RightX = RightX;
-            this.BottomY = BottomY;
-            this.HighConfidenceMatch = HighConfidenceMatch;
-            this.MatchScore = MatchScore;
+            this.LeftX = leftX;
+            this.TopY = topY;
+            this.RightX = rightX;
+            this.BottomY = bottomY;
+            this.HighConfidenceMatch = highConfidenceMatch;
+            this.MatchScore = matchScore;
         }
         
         /// <summary>
@@ -113,7 +113,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

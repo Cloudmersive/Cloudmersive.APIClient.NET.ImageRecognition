@@ -33,14 +33,14 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FineTextDetectionResult" /> class.
         /// </summary>
-        /// <param name="Successful">True if the operation was successful, false otherwise.</param>
-        /// <param name="TextItems">Text items found in the input image.</param>
-        /// <param name="TextItemsCount">Count of text items found in the input image.</param>
-        public FineTextDetectionResult(bool? Successful = default(bool?), List<FineTextItem> TextItems = default(List<FineTextItem>), int? TextItemsCount = default(int?))
+        /// <param name="successful">True if the operation was successful, false otherwise.</param>
+        /// <param name="textItems">Text items found in the input image.</param>
+        /// <param name="textItemsCount">Count of text items found in the input image.</param>
+        public FineTextDetectionResult(bool? successful = default(bool?), List<FineTextItem> textItems = default(List<FineTextItem>), int? textItemsCount = default(int?))
         {
-            this.Successful = Successful;
-            this.TextItems = TextItems;
-            this.TextItemsCount = TextItemsCount;
+            this.Successful = successful;
+            this.TextItems = textItems;
+            this.TextItemsCount = textItemsCount;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

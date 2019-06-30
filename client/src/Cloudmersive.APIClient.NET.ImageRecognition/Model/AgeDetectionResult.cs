@@ -33,14 +33,14 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AgeDetectionResult" /> class.
         /// </summary>
-        /// <param name="Successful">True if the operation was successful, false otherwise.</param>
-        /// <param name="PeopleWithAge">People in the image annotated with age information.</param>
-        /// <param name="PeopleIdentified">Number of people identified in the image with an age.</param>
-        public AgeDetectionResult(bool? Successful = default(bool?), List<PersonWithAge> PeopleWithAge = default(List<PersonWithAge>), int? PeopleIdentified = default(int?))
+        /// <param name="successful">True if the operation was successful, false otherwise.</param>
+        /// <param name="peopleWithAge">People in the image annotated with age information.</param>
+        /// <param name="peopleIdentified">Number of people identified in the image with an age.</param>
+        public AgeDetectionResult(bool? successful = default(bool?), List<PersonWithAge> peopleWithAge = default(List<PersonWithAge>), int? peopleIdentified = default(int?))
         {
-            this.Successful = Successful;
-            this.PeopleWithAge = PeopleWithAge;
-            this.PeopleIdentified = PeopleIdentified;
+            this.Successful = successful;
+            this.PeopleWithAge = peopleWithAge;
+            this.PeopleIdentified = peopleIdentified;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

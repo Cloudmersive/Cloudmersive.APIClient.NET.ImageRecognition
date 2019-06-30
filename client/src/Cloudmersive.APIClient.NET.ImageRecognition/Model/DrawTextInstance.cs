@@ -33,24 +33,24 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DrawTextInstance" /> class.
         /// </summary>
-        /// <param name="Text">Text string to draw.</param>
-        /// <param name="FontFamilyName">Font Family to use.  Leave blank to default to \&quot;Arial\&quot;..</param>
-        /// <param name="FontSize">Font size to use..</param>
-        /// <param name="Color">Color to use - can be a hex value (with #) or HTML common color name.</param>
-        /// <param name="X">Pixel location of the left edge of the text location.</param>
-        /// <param name="Y">Pixel location of the top edge of the text location.</param>
-        /// <param name="Width">Width in pixels of the text box to draw the text in; text will wrap inside this box.</param>
-        /// <param name="Height">Height in pixels of the text box to draw the text in; text will wrap inside this box.</param>
-        public DrawTextInstance(string Text = default(string), string FontFamilyName = default(string), double? FontSize = default(double?), string Color = default(string), double? X = default(double?), double? Y = default(double?), double? Width = default(double?), double? Height = default(double?))
+        /// <param name="text">Text string to draw.</param>
+        /// <param name="fontFamilyName">Font Family to use.  Leave blank to default to \&quot;Arial\&quot;..</param>
+        /// <param name="fontSize">Font size to use..</param>
+        /// <param name="color">Color to use - can be a hex value (with #) or HTML common color name.</param>
+        /// <param name="x">Pixel location of the left edge of the text location.</param>
+        /// <param name="y">Pixel location of the top edge of the text location.</param>
+        /// <param name="width">Width in pixels of the text box to draw the text in; text will wrap inside this box.</param>
+        /// <param name="height">Height in pixels of the text box to draw the text in; text will wrap inside this box.</param>
+        public DrawTextInstance(string text = default(string), string fontFamilyName = default(string), double? fontSize = default(double?), string color = default(string), double? x = default(double?), double? y = default(double?), double? width = default(double?), double? height = default(double?))
         {
-            this.Text = Text;
-            this.FontFamilyName = FontFamilyName;
-            this.FontSize = FontSize;
-            this.Color = Color;
-            this.X = X;
-            this.Y = Y;
-            this.Width = Width;
-            this.Height = Height;
+            this.Text = text;
+            this.FontFamilyName = fontFamilyName;
+            this.FontSize = fontSize;
+            this.Color = color;
+            this.X = x;
+            this.Y = y;
+            this.Width = width;
+            this.Height = height;
         }
         
         /// <summary>
@@ -133,7 +133,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

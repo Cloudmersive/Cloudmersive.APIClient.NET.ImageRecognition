@@ -33,14 +33,14 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VehicleLicensePlateDetectionResult" /> class.
         /// </summary>
-        /// <param name="Successful">Was the image processed successfully?.</param>
-        /// <param name="DetectedLicensePlates">License plates found in the image.</param>
-        /// <param name="DetectedLicensePlateCount">The number of license plates detected in the image.</param>
-        public VehicleLicensePlateDetectionResult(bool? Successful = default(bool?), List<DetectedLicensePlate> DetectedLicensePlates = default(List<DetectedLicensePlate>), int? DetectedLicensePlateCount = default(int?))
+        /// <param name="successful">Was the image processed successfully?.</param>
+        /// <param name="detectedLicensePlates">License plates found in the image.</param>
+        /// <param name="detectedLicensePlateCount">The number of license plates detected in the image.</param>
+        public VehicleLicensePlateDetectionResult(bool? successful = default(bool?), List<DetectedLicensePlate> detectedLicensePlates = default(List<DetectedLicensePlate>), int? detectedLicensePlateCount = default(int?))
         {
-            this.Successful = Successful;
-            this.DetectedLicensePlates = DetectedLicensePlates;
-            this.DetectedLicensePlateCount = DetectedLicensePlateCount;
+            this.Successful = successful;
+            this.DetectedLicensePlates = detectedLicensePlates;
+            this.DetectedLicensePlateCount = detectedLicensePlateCount;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

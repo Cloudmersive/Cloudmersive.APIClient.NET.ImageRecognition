@@ -33,16 +33,16 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TextItem" /> class.
         /// </summary>
-        /// <param name="LeftX">Left X coordinate of the text location; 0 represents the left edge of the input image.</param>
-        /// <param name="TopY">Top Y coordinate of the text location; 0 represents the top edge of the input image.</param>
-        /// <param name="Width">Width in pixels of the text item.</param>
-        /// <param name="Height">Height in pixels of the text item.</param>
-        public TextItem(int? LeftX = default(int?), int? TopY = default(int?), int? Width = default(int?), int? Height = default(int?))
+        /// <param name="leftX">Left X coordinate of the text location; 0 represents the left edge of the input image.</param>
+        /// <param name="topY">Top Y coordinate of the text location; 0 represents the top edge of the input image.</param>
+        /// <param name="width">Width in pixels of the text item.</param>
+        /// <param name="height">Height in pixels of the text item.</param>
+        public TextItem(int? leftX = default(int?), int? topY = default(int?), int? width = default(int?), int? height = default(int?))
         {
-            this.LeftX = LeftX;
-            this.TopY = TopY;
-            this.Width = Width;
-            this.Height = Height;
+            this.LeftX = leftX;
+            this.TopY = topY;
+            this.Width = width;
+            this.Height = height;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,34 +33,34 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FaceWithLandmarks" /> class.
         /// </summary>
-        /// <param name="LeftEyebrow">LeftEyebrow.</param>
-        /// <param name="RightEyebrow">RightEyebrow.</param>
-        /// <param name="LeftEye">LeftEye.</param>
-        /// <param name="RightEye">RightEye.</param>
-        /// <param name="BottomAndSidesOfFace">BottomAndSidesOfFace.</param>
-        /// <param name="NoseBridge">NoseBridge.</param>
-        /// <param name="NoseBottom">NoseBottom.</param>
-        /// <param name="LipsInnerOutline">LipsInnerOutline.</param>
-        /// <param name="LipsOuterOutline">LipsOuterOutline.</param>
-        /// <param name="LeftX">X coordinate of the left side of the face.</param>
-        /// <param name="TopY">Y coordinate of the top side of the face.</param>
-        /// <param name="RightX">X coordinate of the right side of the face.</param>
-        /// <param name="BottomY">Y coordinate of the bottom side of the face.</param>
-        public FaceWithLandmarks(List<FacePoint> LeftEyebrow = default(List<FacePoint>), List<FacePoint> RightEyebrow = default(List<FacePoint>), List<FacePoint> LeftEye = default(List<FacePoint>), List<FacePoint> RightEye = default(List<FacePoint>), List<FacePoint> BottomAndSidesOfFace = default(List<FacePoint>), List<FacePoint> NoseBridge = default(List<FacePoint>), List<FacePoint> NoseBottom = default(List<FacePoint>), List<FacePoint> LipsInnerOutline = default(List<FacePoint>), List<FacePoint> LipsOuterOutline = default(List<FacePoint>), int? LeftX = default(int?), int? TopY = default(int?), int? RightX = default(int?), int? BottomY = default(int?))
+        /// <param name="leftEyebrow">leftEyebrow.</param>
+        /// <param name="rightEyebrow">rightEyebrow.</param>
+        /// <param name="leftEye">leftEye.</param>
+        /// <param name="rightEye">rightEye.</param>
+        /// <param name="bottomAndSidesOfFace">bottomAndSidesOfFace.</param>
+        /// <param name="noseBridge">noseBridge.</param>
+        /// <param name="noseBottom">noseBottom.</param>
+        /// <param name="lipsInnerOutline">lipsInnerOutline.</param>
+        /// <param name="lipsOuterOutline">lipsOuterOutline.</param>
+        /// <param name="leftX">X coordinate of the left side of the face.</param>
+        /// <param name="topY">Y coordinate of the top side of the face.</param>
+        /// <param name="rightX">X coordinate of the right side of the face.</param>
+        /// <param name="bottomY">Y coordinate of the bottom side of the face.</param>
+        public FaceWithLandmarks(List<FacePoint> leftEyebrow = default(List<FacePoint>), List<FacePoint> rightEyebrow = default(List<FacePoint>), List<FacePoint> leftEye = default(List<FacePoint>), List<FacePoint> rightEye = default(List<FacePoint>), List<FacePoint> bottomAndSidesOfFace = default(List<FacePoint>), List<FacePoint> noseBridge = default(List<FacePoint>), List<FacePoint> noseBottom = default(List<FacePoint>), List<FacePoint> lipsInnerOutline = default(List<FacePoint>), List<FacePoint> lipsOuterOutline = default(List<FacePoint>), int? leftX = default(int?), int? topY = default(int?), int? rightX = default(int?), int? bottomY = default(int?))
         {
-            this.LeftEyebrow = LeftEyebrow;
-            this.RightEyebrow = RightEyebrow;
-            this.LeftEye = LeftEye;
-            this.RightEye = RightEye;
-            this.BottomAndSidesOfFace = BottomAndSidesOfFace;
-            this.NoseBridge = NoseBridge;
-            this.NoseBottom = NoseBottom;
-            this.LipsInnerOutline = LipsInnerOutline;
-            this.LipsOuterOutline = LipsOuterOutline;
-            this.LeftX = LeftX;
-            this.TopY = TopY;
-            this.RightX = RightX;
-            this.BottomY = BottomY;
+            this.LeftEyebrow = leftEyebrow;
+            this.RightEyebrow = rightEyebrow;
+            this.LeftEye = leftEye;
+            this.RightEye = rightEye;
+            this.BottomAndSidesOfFace = bottomAndSidesOfFace;
+            this.NoseBridge = noseBridge;
+            this.NoseBottom = noseBottom;
+            this.LipsInnerOutline = lipsInnerOutline;
+            this.LipsOuterOutline = lipsOuterOutline;
+            this.LeftX = leftX;
+            this.TopY = topY;
+            this.RightX = rightX;
+            this.BottomY = bottomY;
         }
         
         /// <summary>
@@ -174,7 +174,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

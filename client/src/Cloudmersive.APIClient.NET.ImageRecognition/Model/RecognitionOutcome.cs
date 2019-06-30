@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RecognitionOutcome" /> class.
         /// </summary>
-        /// <param name="ConfidenceScore">Scores closer to 1 are better than scores closer to 0.</param>
-        /// <param name="Description">English language description of the image.</param>
-        public RecognitionOutcome(double? ConfidenceScore = default(double?), string Description = default(string))
+        /// <param name="confidenceScore">Scores closer to 1 are better than scores closer to 0.</param>
+        /// <param name="description">English language description of the image.</param>
+        public RecognitionOutcome(double? confidenceScore = default(double?), string description = default(string))
         {
-            this.ConfidenceScore = ConfidenceScore;
-            this.Description = Description;
+            this.ConfidenceScore = confidenceScore;
+            this.Description = description;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

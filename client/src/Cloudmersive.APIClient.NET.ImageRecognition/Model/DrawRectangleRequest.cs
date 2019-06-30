@@ -33,14 +33,14 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DrawRectangleRequest" /> class.
         /// </summary>
-        /// <param name="BaseImageBytes">Image to draw rectangles on, in bytes.  You can also use the BaseImageUrl instead to supply image input as a URL.</param>
-        /// <param name="BaseImageUrl">Image to draw rectangles on, as an HTTP or HTTPS fully-qualified URL.</param>
-        /// <param name="RectanglesToDraw">Rectangles to draw on the image.  Rectangles are drawn in index order..</param>
-        public DrawRectangleRequest(byte[] BaseImageBytes = default(byte[]), string BaseImageUrl = default(string), List<DrawRectangleInstance> RectanglesToDraw = default(List<DrawRectangleInstance>))
+        /// <param name="baseImageBytes">Image to draw rectangles on, in bytes.  You can also use the BaseImageUrl instead to supply image input as a URL.</param>
+        /// <param name="baseImageUrl">Image to draw rectangles on, as an HTTP or HTTPS fully-qualified URL.</param>
+        /// <param name="rectanglesToDraw">Rectangles to draw on the image.  Rectangles are drawn in index order..</param>
+        public DrawRectangleRequest(byte[] baseImageBytes = default(byte[]), string baseImageUrl = default(string), List<DrawRectangleInstance> rectanglesToDraw = default(List<DrawRectangleInstance>))
         {
-            this.BaseImageBytes = BaseImageBytes;
-            this.BaseImageUrl = BaseImageUrl;
-            this.RectanglesToDraw = RectanglesToDraw;
+            this.BaseImageBytes = baseImageBytes;
+            this.BaseImageUrl = baseImageUrl;
+            this.RectanglesToDraw = rectanglesToDraw;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

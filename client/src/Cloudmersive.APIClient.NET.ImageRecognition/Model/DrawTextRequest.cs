@@ -33,14 +33,14 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DrawTextRequest" /> class.
         /// </summary>
-        /// <param name="BaseImageBytes">Image to draw text on, in bytes.  You can also use the BaseImageUrl instead to supply image input as a URL.</param>
-        /// <param name="BaseImageUrl">Image to draw text on, as an HTTP or HTTPS fully-qualified URL.</param>
-        /// <param name="TextToDraw">One or more pieces of text to draw onto the image.</param>
-        public DrawTextRequest(byte[] BaseImageBytes = default(byte[]), string BaseImageUrl = default(string), List<DrawTextInstance> TextToDraw = default(List<DrawTextInstance>))
+        /// <param name="baseImageBytes">Image to draw text on, in bytes.  You can also use the BaseImageUrl instead to supply image input as a URL.</param>
+        /// <param name="baseImageUrl">Image to draw text on, as an HTTP or HTTPS fully-qualified URL.</param>
+        /// <param name="textToDraw">One or more pieces of text to draw onto the image.</param>
+        public DrawTextRequest(byte[] baseImageBytes = default(byte[]), string baseImageUrl = default(string), List<DrawTextInstance> textToDraw = default(List<DrawTextInstance>))
         {
-            this.BaseImageBytes = BaseImageBytes;
-            this.BaseImageUrl = BaseImageUrl;
-            this.TextToDraw = TextToDraw;
+            this.BaseImageBytes = baseImageBytes;
+            this.BaseImageUrl = baseImageUrl;
+            this.TextToDraw = textToDraw;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

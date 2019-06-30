@@ -33,30 +33,30 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FineTextItem" /> class.
         /// </summary>
-        /// <param name="TopLeftX">X coordinate of the top/left text location; 0 represents the left edge of the input image.</param>
-        /// <param name="TopLeftY">Y coordinate of the top/left text location; 0 represents the top edge of the input image.</param>
-        /// <param name="TopRightX">X coordinate of the top/right text location; 0 represents the left edge of the input image.</param>
-        /// <param name="TopRightY">Y coordinate of the top/right text location; 0 represents the top edge of the input image.</param>
-        /// <param name="BottomLeftX">X coordinate of the bottom/left text location; 0 represents the left edge of the input image.</param>
-        /// <param name="BottomLeftY">Y coordinate of the bottom/left text location; 0 represents the top edge of the input image.</param>
-        /// <param name="BottomRightX">X coordinate of the bottom/right text location; 0 represents the left edge of the input image.</param>
-        /// <param name="BottomRightY">Y coordinate of the bottom/right text location; 0 represents the top edge of the input image.</param>
-        /// <param name="Width">Width in pixels of the text.</param>
-        /// <param name="Height">Height in pixels of the text.</param>
-        /// <param name="Angle">Rotation Angle in radians of the text.</param>
-        public FineTextItem(int? TopLeftX = default(int?), int? TopLeftY = default(int?), int? TopRightX = default(int?), int? TopRightY = default(int?), int? BottomLeftX = default(int?), int? BottomLeftY = default(int?), int? BottomRightX = default(int?), int? BottomRightY = default(int?), int? Width = default(int?), int? Height = default(int?), double? Angle = default(double?))
+        /// <param name="topLeftX">X coordinate of the top/left text location; 0 represents the left edge of the input image.</param>
+        /// <param name="topLeftY">Y coordinate of the top/left text location; 0 represents the top edge of the input image.</param>
+        /// <param name="topRightX">X coordinate of the top/right text location; 0 represents the left edge of the input image.</param>
+        /// <param name="topRightY">Y coordinate of the top/right text location; 0 represents the top edge of the input image.</param>
+        /// <param name="bottomLeftX">X coordinate of the bottom/left text location; 0 represents the left edge of the input image.</param>
+        /// <param name="bottomLeftY">Y coordinate of the bottom/left text location; 0 represents the top edge of the input image.</param>
+        /// <param name="bottomRightX">X coordinate of the bottom/right text location; 0 represents the left edge of the input image.</param>
+        /// <param name="bottomRightY">Y coordinate of the bottom/right text location; 0 represents the top edge of the input image.</param>
+        /// <param name="width">Width in pixels of the text.</param>
+        /// <param name="height">Height in pixels of the text.</param>
+        /// <param name="angle">Rotation Angle in radians of the text.</param>
+        public FineTextItem(int? topLeftX = default(int?), int? topLeftY = default(int?), int? topRightX = default(int?), int? topRightY = default(int?), int? bottomLeftX = default(int?), int? bottomLeftY = default(int?), int? bottomRightX = default(int?), int? bottomRightY = default(int?), int? width = default(int?), int? height = default(int?), double? angle = default(double?))
         {
-            this.TopLeftX = TopLeftX;
-            this.TopLeftY = TopLeftY;
-            this.TopRightX = TopRightX;
-            this.TopRightY = TopRightY;
-            this.BottomLeftX = BottomLeftX;
-            this.BottomLeftY = BottomLeftY;
-            this.BottomRightX = BottomRightX;
-            this.BottomRightY = BottomRightY;
-            this.Width = Width;
-            this.Height = Height;
-            this.Angle = Angle;
+            this.TopLeftX = topLeftX;
+            this.TopLeftY = topLeftY;
+            this.TopRightX = topRightX;
+            this.TopRightY = topRightY;
+            this.BottomLeftX = bottomLeftX;
+            this.BottomLeftY = bottomLeftY;
+            this.BottomRightX = bottomRightX;
+            this.BottomRightY = bottomRightY;
+            this.Width = width;
+            this.Height = height;
+            this.Angle = angle;
         }
         
         /// <summary>
@@ -163,7 +163,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

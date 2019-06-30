@@ -114,6 +114,29 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
         }
         
         /// <summary>
+        /// Test RecognizeDetectTextFine
+        /// </summary>
+        [Test]
+        public void RecognizeDetectTextFineTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream imageFile = null;
+            //var response = instance.RecognizeDetectTextFine(imageFile);
+            //Assert.IsInstanceOf<FineTextDetectionResult> (response, "response is FineTextDetectionResult");
+        }
+        
+        /// <summary>
+        /// Test RecognizeDetectTextLarge
+        /// </summary>
+        [Test]
+        public void RecognizeDetectTextLargeTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.RecognizeDetectTextLarge();
+            //Assert.IsInstanceOf<TextDetectionResult> (response, "response is TextDetectionResult");
+        }
+        
+        /// <summary>
         /// Test RecognizeDetectVehicleLicensePlates
         /// </summary>
         [Test]

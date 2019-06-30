@@ -33,14 +33,14 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ObjectDetectionResult" /> class.
         /// </summary>
-        /// <param name="Successful">Was the image processed successfully?.</param>
-        /// <param name="Objects">Array of objects detected in the scene.</param>
-        /// <param name="ObjectCount">Number of objects detected in the scene.</param>
-        public ObjectDetectionResult(bool? Successful = default(bool?), List<DetectedObject> Objects = default(List<DetectedObject>), int? ObjectCount = default(int?))
+        /// <param name="successful">Was the image processed successfully?.</param>
+        /// <param name="objects">Array of objects detected in the scene.</param>
+        /// <param name="objectCount">Number of objects detected in the scene.</param>
+        public ObjectDetectionResult(bool? successful = default(bool?), List<DetectedObject> objects = default(List<DetectedObject>), int? objectCount = default(int?))
         {
-            this.Successful = Successful;
-            this.Objects = Objects;
-            this.ObjectCount = ObjectCount;
+            this.Successful = successful;
+            this.Objects = objects;
+            this.ObjectCount = objectCount;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,14 +33,14 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NsfwResult" /> class.
         /// </summary>
-        /// <param name="Successful">True if the classification was successfully run, false otherwise.</param>
-        /// <param name="Score">Score between 0.0 and 1.0.  Scores of 0.0-0.2 represent high probability safe content, while scores 0.8-1.0 represent high probability unsafe content.  Content between 0.2 and 0.8 is of increasing raciness..</param>
-        /// <param name="ClassificationOutcome">Classification result into four categories: SafeContent_HighProbability, UnsafeContent_HighProbability, RacyContent, SafeContent_ModerateProbability.</param>
-        public NsfwResult(bool? Successful = default(bool?), double? Score = default(double?), string ClassificationOutcome = default(string))
+        /// <param name="successful">True if the classification was successfully run, false otherwise.</param>
+        /// <param name="score">Score between 0.0 and 1.0.  Scores of 0.0-0.2 represent high probability safe content, while scores 0.8-1.0 represent high probability unsafe content.  Content between 0.2 and 0.8 is of increasing raciness..</param>
+        /// <param name="classificationOutcome">Classification result into four categories: SafeContent_HighProbability, UnsafeContent_HighProbability, RacyContent, SafeContent_ModerateProbability.</param>
+        public NsfwResult(bool? successful = default(bool?), double? score = default(double?), string classificationOutcome = default(string))
         {
-            this.Successful = Successful;
-            this.Score = Score;
-            this.ClassificationOutcome = ClassificationOutcome;
+            this.Successful = successful;
+            this.Score = score;
+            this.ClassificationOutcome = classificationOutcome;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

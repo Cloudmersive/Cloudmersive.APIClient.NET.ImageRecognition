@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FacePoint" /> class.
         /// </summary>
-        /// <param name="X">X location, where 0 is the left-most pixel.</param>
-        /// <param name="Y">Y location, where 0 is the top-most pixel.</param>
-        public FacePoint(int? X = default(int?), int? Y = default(int?))
+        /// <param name="x">X location, where 0 is the left-most pixel.</param>
+        /// <param name="y">Y location, where 0 is the top-most pixel.</param>
+        public FacePoint(int? x = default(int?), int? y = default(int?))
         {
-            this.X = X;
-            this.Y = Y;
+            this.X = x;
+            this.Y = y;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

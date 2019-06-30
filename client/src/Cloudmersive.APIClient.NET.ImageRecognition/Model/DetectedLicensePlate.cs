@@ -33,22 +33,22 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DetectedLicensePlate" /> class.
         /// </summary>
-        /// <param name="LocationX">LocationX.</param>
-        /// <param name="LocationY">LocationY.</param>
-        /// <param name="Width">Width.</param>
-        /// <param name="Height">Height.</param>
-        /// <param name="LicensePlateTextBestMatch">Text from the license plate, highest-confidence result.</param>
-        /// <param name="LicensePlateTextRunnerUp">Alternate text from the license plate, based on second-highest-confidence result.</param>
-        /// <param name="LicensePlateRecognitionConfidenceLevel">Confidence score on a range of 0.0 - 1.0 of the accuracy of the detected license plate, with higher scores being better; values about 0.75 are high confidence.</param>
-        public DetectedLicensePlate(int? LocationX = default(int?), int? LocationY = default(int?), int? Width = default(int?), int? Height = default(int?), string LicensePlateTextBestMatch = default(string), string LicensePlateTextRunnerUp = default(string), double? LicensePlateRecognitionConfidenceLevel = default(double?))
+        /// <param name="locationX">locationX.</param>
+        /// <param name="locationY">locationY.</param>
+        /// <param name="width">width.</param>
+        /// <param name="height">height.</param>
+        /// <param name="licensePlateTextBestMatch">Text from the license plate, highest-confidence result.</param>
+        /// <param name="licensePlateTextRunnerUp">Alternate text from the license plate, based on second-highest-confidence result.</param>
+        /// <param name="licensePlateRecognitionConfidenceLevel">Confidence score on a range of 0.0 - 1.0 of the accuracy of the detected license plate, with higher scores being better; values about 0.75 are high confidence.</param>
+        public DetectedLicensePlate(int? locationX = default(int?), int? locationY = default(int?), int? width = default(int?), int? height = default(int?), string licensePlateTextBestMatch = default(string), string licensePlateTextRunnerUp = default(string), double? licensePlateRecognitionConfidenceLevel = default(double?))
         {
-            this.LocationX = LocationX;
-            this.LocationY = LocationY;
-            this.Width = Width;
-            this.Height = Height;
-            this.LicensePlateTextBestMatch = LicensePlateTextBestMatch;
-            this.LicensePlateTextRunnerUp = LicensePlateTextRunnerUp;
-            this.LicensePlateRecognitionConfidenceLevel = LicensePlateRecognitionConfidenceLevel;
+            this.LocationX = locationX;
+            this.LocationY = locationY;
+            this.Width = width;
+            this.Height = height;
+            this.LicensePlateTextBestMatch = licensePlateTextBestMatch;
+            this.LicensePlateTextRunnerUp = licensePlateTextRunnerUp;
+            this.LicensePlateRecognitionConfidenceLevel = licensePlateRecognitionConfidenceLevel;
         }
         
         /// <summary>
@@ -119,7 +119,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
