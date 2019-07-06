@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="editcompositebasic"></a>
 # **EditCompositeBasic**
-> Object EditCompositeBasic (string location, System.IO.Stream baseImage, System.IO.Stream layeredImage)
+> byte[] EditCompositeBasic (string location, System.IO.Stream baseImage, System.IO.Stream layeredImage)
 
 Composite two images together
 
@@ -44,7 +44,7 @@ namespace Example
             try
             {
                 // Composite two images together
-                Object result = apiInstance.EditCompositeBasic(location, baseImage, layeredImage);
+                byte[] result = apiInstance.EditCompositeBasic(location, baseImage, layeredImage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 <a name="editdrawrectangle"></a>
 # **EditDrawRectangle**
-> Object EditDrawRectangle (DrawRectangleRequest request)
+> byte[] EditDrawRectangle (DrawRectangleRequest request)
 
 Draw rectangle onto an image
 
@@ -112,7 +112,7 @@ namespace Example
             try
             {
                 // Draw rectangle onto an image
-                Object result = apiInstance.EditDrawRectangle(request);
+                byte[] result = apiInstance.EditDrawRectangle(request);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 <a name="editdrawtext"></a>
 # **EditDrawText**
-> Object EditDrawText (DrawTextRequest request)
+> byte[] EditDrawText (DrawTextRequest request)
 
 Draw text onto an image
 
@@ -178,7 +178,7 @@ namespace Example
             try
             {
                 // Draw text onto an image
-                Object result = apiInstance.EditDrawText(request);
+                byte[] result = apiInstance.EditDrawText(request);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 

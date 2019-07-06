@@ -34,8 +34,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="location">Location to composite the layered images; possible values are: \&quot;center\&quot;, \&quot;top-left\&quot;, \&quot;top-center\&quot;, \&quot;top-right\&quot;, \&quot;center-left\&quot;, \&quot;center-right\&quot;, \&quot;bottom-left\&quot;, \&quot;bottom-center\&quot;, \&quot;bottom-right\&quot;</param>
         /// <param name="baseImage">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <param name="layeredImage">Image to layer on top of the base image.</param>
-        /// <returns>Object</returns>
-        Object EditCompositeBasic (string location, System.IO.Stream baseImage, System.IO.Stream layeredImage);
+        /// <returns>byte[]</returns>
+        byte[] EditCompositeBasic (string location, System.IO.Stream baseImage, System.IO.Stream layeredImage);
 
         /// <summary>
         /// Composite two images together
@@ -47,8 +47,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="location">Location to composite the layered images; possible values are: \&quot;center\&quot;, \&quot;top-left\&quot;, \&quot;top-center\&quot;, \&quot;top-right\&quot;, \&quot;center-left\&quot;, \&quot;center-right\&quot;, \&quot;bottom-left\&quot;, \&quot;bottom-center\&quot;, \&quot;bottom-right\&quot;</param>
         /// <param name="baseImage">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <param name="layeredImage">Image to layer on top of the base image.</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> EditCompositeBasicWithHttpInfo (string location, System.IO.Stream baseImage, System.IO.Stream layeredImage);
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditCompositeBasicWithHttpInfo (string location, System.IO.Stream baseImage, System.IO.Stream layeredImage);
         /// <summary>
         /// Draw rectangle onto an image
         /// </summary>
@@ -57,8 +57,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Object</returns>
-        Object EditDrawRectangle (DrawRectangleRequest request);
+        /// <returns>byte[]</returns>
+        byte[] EditDrawRectangle (DrawRectangleRequest request);
 
         /// <summary>
         /// Draw rectangle onto an image
@@ -68,8 +68,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> EditDrawRectangleWithHttpInfo (DrawRectangleRequest request);
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditDrawRectangleWithHttpInfo (DrawRectangleRequest request);
         /// <summary>
         /// Draw text onto an image
         /// </summary>
@@ -78,8 +78,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Object</returns>
-        Object EditDrawText (DrawTextRequest request);
+        /// <returns>byte[]</returns>
+        byte[] EditDrawText (DrawTextRequest request);
 
         /// <summary>
         /// Draw text onto an image
@@ -89,8 +89,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> EditDrawTextWithHttpInfo (DrawTextRequest request);
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditDrawTextWithHttpInfo (DrawTextRequest request);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -103,8 +103,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="location">Location to composite the layered images; possible values are: \&quot;center\&quot;, \&quot;top-left\&quot;, \&quot;top-center\&quot;, \&quot;top-right\&quot;, \&quot;center-left\&quot;, \&quot;center-right\&quot;, \&quot;bottom-left\&quot;, \&quot;bottom-center\&quot;, \&quot;bottom-right\&quot;</param>
         /// <param name="baseImage">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <param name="layeredImage">Image to layer on top of the base image.</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> EditCompositeBasicAsync (string location, System.IO.Stream baseImage, System.IO.Stream layeredImage);
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditCompositeBasicAsync (string location, System.IO.Stream baseImage, System.IO.Stream layeredImage);
 
         /// <summary>
         /// Composite two images together
@@ -116,8 +116,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="location">Location to composite the layered images; possible values are: \&quot;center\&quot;, \&quot;top-left\&quot;, \&quot;top-center\&quot;, \&quot;top-right\&quot;, \&quot;center-left\&quot;, \&quot;center-right\&quot;, \&quot;bottom-left\&quot;, \&quot;bottom-center\&quot;, \&quot;bottom-right\&quot;</param>
         /// <param name="baseImage">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <param name="layeredImage">Image to layer on top of the base image.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> EditCompositeBasicAsyncWithHttpInfo (string location, System.IO.Stream baseImage, System.IO.Stream layeredImage);
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditCompositeBasicAsyncWithHttpInfo (string location, System.IO.Stream baseImage, System.IO.Stream layeredImage);
         /// <summary>
         /// Draw rectangle onto an image
         /// </summary>
@@ -126,8 +126,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> EditDrawRectangleAsync (DrawRectangleRequest request);
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditDrawRectangleAsync (DrawRectangleRequest request);
 
         /// <summary>
         /// Draw rectangle onto an image
@@ -137,8 +137,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> EditDrawRectangleAsyncWithHttpInfo (DrawRectangleRequest request);
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDrawRectangleAsyncWithHttpInfo (DrawRectangleRequest request);
         /// <summary>
         /// Draw text onto an image
         /// </summary>
@@ -147,8 +147,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> EditDrawTextAsync (DrawTextRequest request);
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditDrawTextAsync (DrawTextRequest request);
 
         /// <summary>
         /// Draw text onto an image
@@ -158,8 +158,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> EditDrawTextAsyncWithHttpInfo (DrawTextRequest request);
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDrawTextAsyncWithHttpInfo (DrawTextRequest request);
         #endregion Asynchronous Operations
     }
 
@@ -267,10 +267,10 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="location">Location to composite the layered images; possible values are: \&quot;center\&quot;, \&quot;top-left\&quot;, \&quot;top-center\&quot;, \&quot;top-right\&quot;, \&quot;center-left\&quot;, \&quot;center-right\&quot;, \&quot;bottom-left\&quot;, \&quot;bottom-center\&quot;, \&quot;bottom-right\&quot;</param>
         /// <param name="baseImage">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <param name="layeredImage">Image to layer on top of the base image.</param>
-        /// <returns>Object</returns>
-        public Object EditCompositeBasic (string location, System.IO.Stream baseImage, System.IO.Stream layeredImage)
+        /// <returns>byte[]</returns>
+        public byte[] EditCompositeBasic (string location, System.IO.Stream baseImage, System.IO.Stream layeredImage)
         {
-             ApiResponse<Object> localVarResponse = EditCompositeBasicWithHttpInfo(location, baseImage, layeredImage);
+             ApiResponse<byte[]> localVarResponse = EditCompositeBasicWithHttpInfo(location, baseImage, layeredImage);
              return localVarResponse.Data;
         }
 
@@ -281,8 +281,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="location">Location to composite the layered images; possible values are: \&quot;center\&quot;, \&quot;top-left\&quot;, \&quot;top-center\&quot;, \&quot;top-right\&quot;, \&quot;center-left\&quot;, \&quot;center-right\&quot;, \&quot;bottom-left\&quot;, \&quot;bottom-center\&quot;, \&quot;bottom-right\&quot;</param>
         /// <param name="baseImage">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <param name="layeredImage">Image to layer on top of the base image.</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > EditCompositeBasicWithHttpInfo (string location, System.IO.Stream baseImage, System.IO.Stream layeredImage)
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditCompositeBasicWithHttpInfo (string location, System.IO.Stream baseImage, System.IO.Stream layeredImage)
         {
             // verify the required parameter 'location' is set
             if (location == null)
@@ -339,9 +339,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -351,10 +351,10 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="location">Location to composite the layered images; possible values are: \&quot;center\&quot;, \&quot;top-left\&quot;, \&quot;top-center\&quot;, \&quot;top-right\&quot;, \&quot;center-left\&quot;, \&quot;center-right\&quot;, \&quot;bottom-left\&quot;, \&quot;bottom-center\&quot;, \&quot;bottom-right\&quot;</param>
         /// <param name="baseImage">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <param name="layeredImage">Image to layer on top of the base image.</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> EditCompositeBasicAsync (string location, System.IO.Stream baseImage, System.IO.Stream layeredImage)
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditCompositeBasicAsync (string location, System.IO.Stream baseImage, System.IO.Stream layeredImage)
         {
-             ApiResponse<Object> localVarResponse = await EditCompositeBasicAsyncWithHttpInfo(location, baseImage, layeredImage);
+             ApiResponse<byte[]> localVarResponse = await EditCompositeBasicAsyncWithHttpInfo(location, baseImage, layeredImage);
              return localVarResponse.Data;
 
         }
@@ -366,8 +366,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="location">Location to composite the layered images; possible values are: \&quot;center\&quot;, \&quot;top-left\&quot;, \&quot;top-center\&quot;, \&quot;top-right\&quot;, \&quot;center-left\&quot;, \&quot;center-right\&quot;, \&quot;bottom-left\&quot;, \&quot;bottom-center\&quot;, \&quot;bottom-right\&quot;</param>
         /// <param name="baseImage">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <param name="layeredImage">Image to layer on top of the base image.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> EditCompositeBasicAsyncWithHttpInfo (string location, System.IO.Stream baseImage, System.IO.Stream layeredImage)
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditCompositeBasicAsyncWithHttpInfo (string location, System.IO.Stream baseImage, System.IO.Stream layeredImage)
         {
             // verify the required parameter 'location' is set
             if (location == null)
@@ -424,9 +424,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -434,10 +434,10 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Object</returns>
-        public Object EditDrawRectangle (DrawRectangleRequest request)
+        /// <returns>byte[]</returns>
+        public byte[] EditDrawRectangle (DrawRectangleRequest request)
         {
-             ApiResponse<Object> localVarResponse = EditDrawRectangleWithHttpInfo(request);
+             ApiResponse<byte[]> localVarResponse = EditDrawRectangleWithHttpInfo(request);
              return localVarResponse.Data;
         }
 
@@ -446,8 +446,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > EditDrawRectangleWithHttpInfo (DrawRectangleRequest request)
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditDrawRectangleWithHttpInfo (DrawRectangleRequest request)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -507,9 +507,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -517,10 +517,10 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> EditDrawRectangleAsync (DrawRectangleRequest request)
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditDrawRectangleAsync (DrawRectangleRequest request)
         {
-             ApiResponse<Object> localVarResponse = await EditDrawRectangleAsyncWithHttpInfo(request);
+             ApiResponse<byte[]> localVarResponse = await EditDrawRectangleAsyncWithHttpInfo(request);
              return localVarResponse.Data;
 
         }
@@ -530,8 +530,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> EditDrawRectangleAsyncWithHttpInfo (DrawRectangleRequest request)
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDrawRectangleAsyncWithHttpInfo (DrawRectangleRequest request)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -591,9 +591,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -601,10 +601,10 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Object</returns>
-        public Object EditDrawText (DrawTextRequest request)
+        /// <returns>byte[]</returns>
+        public byte[] EditDrawText (DrawTextRequest request)
         {
-             ApiResponse<Object> localVarResponse = EditDrawTextWithHttpInfo(request);
+             ApiResponse<byte[]> localVarResponse = EditDrawTextWithHttpInfo(request);
              return localVarResponse.Data;
         }
 
@@ -613,8 +613,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > EditDrawTextWithHttpInfo (DrawTextRequest request)
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditDrawTextWithHttpInfo (DrawTextRequest request)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -674,9 +674,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -684,10 +684,10 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> EditDrawTextAsync (DrawTextRequest request)
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditDrawTextAsync (DrawTextRequest request)
         {
-             ApiResponse<Object> localVarResponse = await EditDrawTextAsyncWithHttpInfo(request);
+             ApiResponse<byte[]> localVarResponse = await EditDrawTextAsyncWithHttpInfo(request);
              return localVarResponse.Data;
 
         }
@@ -697,8 +697,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> EditDrawTextAsyncWithHttpInfo (DrawTextRequest request)
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDrawTextAsyncWithHttpInfo (DrawTextRequest request)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -758,9 +758,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
     }

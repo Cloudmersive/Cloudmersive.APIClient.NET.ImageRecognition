@@ -75,7 +75,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
             //System.IO.Stream baseImage = null;
             //System.IO.Stream layeredImage = null;
             //var response = instance.EditCompositeBasic(location, baseImage, layeredImage);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
         /// <summary>
@@ -87,7 +87,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
             // TODO uncomment below to test the method and replace null with proper value
             //DrawRectangleRequest request = null;
             //var response = instance.EditDrawRectangle(request);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
         /// <summary>
@@ -99,7 +99,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
             // TODO uncomment below to test the method and replace null with proper value
             //DrawTextRequest request = null;
             //var response = instance.EditDrawText(request);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
     }
