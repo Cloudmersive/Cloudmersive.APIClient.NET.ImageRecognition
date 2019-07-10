@@ -79,6 +79,19 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
         }
         
         /// <summary>
+        /// Test EditContrastAdaptive
+        /// </summary>
+        [Test]
+        public void EditContrastAdaptiveTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //double? gamma = null;
+            //System.IO.Stream imageFile = null;
+            //var response = instance.EditContrastAdaptive(gamma, imageFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test EditDrawRectangle
         /// </summary>
         [Test]
