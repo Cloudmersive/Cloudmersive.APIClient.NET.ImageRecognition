@@ -25,6 +25,27 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Normalizes image rotation and removes EXIF rotation data
+        /// </summary>
+        /// <remarks>
+        /// Automatically orients the input image based on EXIF information and then removes the EXIF information.  EXIF is an additional set of information stored in some images taken with cell phone cameras based on the orientation of the camera.  By normalizing rotation and removing EXIF data these images become much easier to process.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>byte[]</returns>
+        byte[] EditAutoOrient (System.IO.Stream imageFile);
+
+        /// <summary>
+        /// Normalizes image rotation and removes EXIF rotation data
+        /// </summary>
+        /// <remarks>
+        /// Automatically orients the input image based on EXIF information and then removes the EXIF information.  EXIF is an additional set of information stored in some images taken with cell phone cameras based on the orientation of the camera.  By normalizing rotation and removing EXIF data these images become much easier to process.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditAutoOrientWithHttpInfo (System.IO.Stream imageFile);
+        /// <summary>
         /// Composite two images together
         /// </summary>
         /// <remarks>
@@ -116,6 +137,27 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         ApiResponse<byte[]> EditDrawTextWithHttpInfo (DrawTextRequest request);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Normalizes image rotation and removes EXIF rotation data
+        /// </summary>
+        /// <remarks>
+        /// Automatically orients the input image based on EXIF information and then removes the EXIF information.  EXIF is an additional set of information stored in some images taken with cell phone cameras based on the orientation of the camera.  By normalizing rotation and removing EXIF data these images become much easier to process.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditAutoOrientAsync (System.IO.Stream imageFile);
+
+        /// <summary>
+        /// Normalizes image rotation and removes EXIF rotation data
+        /// </summary>
+        /// <remarks>
+        /// Automatically orients the input image based on EXIF information and then removes the EXIF information.  EXIF is an additional set of information stored in some images taken with cell phone cameras based on the orientation of the camera.  By normalizing rotation and removing EXIF data these images become much easier to process.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditAutoOrientAsyncWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
         /// Composite two images together
         /// </summary>
@@ -304,6 +346,151 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Normalizes image rotation and removes EXIF rotation data Automatically orients the input image based on EXIF information and then removes the EXIF information.  EXIF is an additional set of information stored in some images taken with cell phone cameras based on the orientation of the camera.  By normalizing rotation and removing EXIF data these images become much easier to process.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>byte[]</returns>
+        public byte[] EditAutoOrient (System.IO.Stream imageFile)
+        {
+             ApiResponse<byte[]> localVarResponse = EditAutoOrientWithHttpInfo(imageFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Normalizes image rotation and removes EXIF rotation data Automatically orients the input image based on EXIF information and then removes the EXIF information.  EXIF is an additional set of information stored in some images taken with cell phone cameras based on the orientation of the camera.  By normalizing rotation and removing EXIF data these images become much easier to process.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditAutoOrientWithHttpInfo (System.IO.Stream imageFile)
+        {
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling EditApi->EditAutoOrient");
+
+            var localVarPath = "/image/edit/auto-orient/remove-exif";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditAutoOrient", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Normalizes image rotation and removes EXIF rotation data Automatically orients the input image based on EXIF information and then removes the EXIF information.  EXIF is an additional set of information stored in some images taken with cell phone cameras based on the orientation of the camera.  By normalizing rotation and removing EXIF data these images become much easier to process.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditAutoOrientAsync (System.IO.Stream imageFile)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditAutoOrientAsyncWithHttpInfo(imageFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Normalizes image rotation and removes EXIF rotation data Automatically orients the input image based on EXIF information and then removes the EXIF information.  EXIF is an additional set of information stored in some images taken with cell phone cameras based on the orientation of the camera.  By normalizing rotation and removing EXIF data these images become much easier to process.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditAutoOrientAsyncWithHttpInfo (System.IO.Stream imageFile)
+        {
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling EditApi->EditAutoOrient");
+
+            var localVarPath = "/image/edit/auto-orient/remove-exif";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditAutoOrient", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>

@@ -4,11 +4,78 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**EditAutoOrient**](EditApi.md#editautoorient) | **POST** /image/edit/auto-orient/remove-exif | Normalizes image rotation and removes EXIF rotation data
 [**EditCompositeBasic**](EditApi.md#editcompositebasic) | **POST** /image/edit/composite/{location} | Composite two images together
 [**EditContrastAdaptive**](EditApi.md#editcontrastadaptive) | **POST** /image/edit/contrast/{gamma}/adaptive | Adaptively adjust the contrast of the image to be more appealing and easy to see
 [**EditDrawRectangle**](EditApi.md#editdrawrectangle) | **POST** /image/edit/draw/rectangle | Draw rectangle onto an image
 [**EditDrawText**](EditApi.md#editdrawtext) | **POST** /image/edit/draw/text | Draw text onto an image
 
+
+<a name="editautoorient"></a>
+# **EditAutoOrient**
+> byte[] EditAutoOrient (System.IO.Stream imageFile)
+
+Normalizes image rotation and removes EXIF rotation data
+
+Automatically orients the input image based on EXIF information and then removes the EXIF information.  EXIF is an additional set of information stored in some images taken with cell phone cameras based on the orientation of the camera.  By normalizing rotation and removing EXIF data these images become much easier to process.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.ImageRecognition.Api;
+using Cloudmersive.APIClient.NET.ImageRecognition.Client;
+using Cloudmersive.APIClient.NET.ImageRecognition.Model;
+
+namespace Example
+{
+    public class EditAutoOrientExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditApi();
+            var imageFile = new System.IO.Stream(); // System.IO.Stream | Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.
+
+            try
+            {
+                // Normalizes image rotation and removes EXIF rotation data
+                byte[] result = apiInstance.EditAutoOrient(imageFile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditApi.EditAutoOrient: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **imageFile** | **System.IO.Stream**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | 
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="editcompositebasic"></a>
 # **EditCompositeBasic**
