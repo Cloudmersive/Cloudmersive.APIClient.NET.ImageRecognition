@@ -94,6 +94,27 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditContrastAdaptiveWithHttpInfo (double? gamma, System.IO.Stream imageFile);
         /// <summary>
+        /// Draw polygon onto an image
+        /// </summary>
+        /// <remarks>
+        /// Draw one or more polygons, with customized visuals, onto an image
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Object</returns>
+        Object EditDrawPolygon (DrawPolygonRequest request);
+
+        /// <summary>
+        /// Draw polygon onto an image
+        /// </summary>
+        /// <remarks>
+        /// Draw one or more polygons, with customized visuals, onto an image
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> EditDrawPolygonWithHttpInfo (DrawPolygonRequest request);
+        /// <summary>
         /// Draw rectangle onto an image
         /// </summary>
         /// <remarks>
@@ -135,6 +156,27 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="request"></param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditDrawTextWithHttpInfo (DrawTextRequest request);
+        /// <summary>
+        /// Rotate an image any number of degrees
+        /// </summary>
+        /// <remarks>
+        /// Rotates an image by an arbitrary number of degrees
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="degrees">Degrees to rotate the image; values range from 0.0 to 360.0.</param>
+        /// <returns>Object</returns>
+        Object EditRotate (double? degrees);
+
+        /// <summary>
+        /// Rotate an image any number of degrees
+        /// </summary>
+        /// <remarks>
+        /// Rotates an image by an arbitrary number of degrees
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="degrees">Degrees to rotate the image; values range from 0.0 to 360.0.</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> EditRotateWithHttpInfo (double? degrees);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -207,6 +249,27 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditContrastAdaptiveAsyncWithHttpInfo (double? gamma, System.IO.Stream imageFile);
         /// <summary>
+        /// Draw polygon onto an image
+        /// </summary>
+        /// <remarks>
+        /// Draw one or more polygons, with customized visuals, onto an image
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> EditDrawPolygonAsync (DrawPolygonRequest request);
+
+        /// <summary>
+        /// Draw polygon onto an image
+        /// </summary>
+        /// <remarks>
+        /// Draw one or more polygons, with customized visuals, onto an image
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> EditDrawPolygonAsyncWithHttpInfo (DrawPolygonRequest request);
+        /// <summary>
         /// Draw rectangle onto an image
         /// </summary>
         /// <remarks>
@@ -248,6 +311,27 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="request"></param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDrawTextAsyncWithHttpInfo (DrawTextRequest request);
+        /// <summary>
+        /// Rotate an image any number of degrees
+        /// </summary>
+        /// <remarks>
+        /// Rotates an image by an arbitrary number of degrees
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="degrees">Degrees to rotate the image; values range from 0.0 to 360.0.</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> EditRotateAsync (double? degrees);
+
+        /// <summary>
+        /// Rotate an image any number of degrees
+        /// </summary>
+        /// <remarks>
+        /// Rotates an image by an arbitrary number of degrees
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="degrees">Degrees to rotate the image; values range from 0.0 to 360.0.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> EditRotateAsyncWithHttpInfo (double? degrees);
         #endregion Asynchronous Operations
     }
 
@@ -820,6 +904,173 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
+        /// Draw polygon onto an image Draw one or more polygons, with customized visuals, onto an image
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Object</returns>
+        public Object EditDrawPolygon (DrawPolygonRequest request)
+        {
+             ApiResponse<Object> localVarResponse = EditDrawPolygonWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Draw polygon onto an image Draw one or more polygons, with customized visuals, onto an image
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > EditDrawPolygonWithHttpInfo (DrawPolygonRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling EditApi->EditDrawPolygon");
+
+            var localVarPath = "/image/edit/draw/polygon";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "image/png"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDrawPolygon", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Draw polygon onto an image Draw one or more polygons, with customized visuals, onto an image
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> EditDrawPolygonAsync (DrawPolygonRequest request)
+        {
+             ApiResponse<Object> localVarResponse = await EditDrawPolygonAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Draw polygon onto an image Draw one or more polygons, with customized visuals, onto an image
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> EditDrawPolygonAsyncWithHttpInfo (DrawPolygonRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling EditApi->EditDrawPolygon");
+
+            var localVarPath = "/image/edit/draw/polygon";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "image/png"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDrawPolygon", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
         /// Draw rectangle onto an image Draw one or more rectangles, with customized visuals, onto an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1151,6 +1402,149 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
             return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Rotate an image any number of degrees Rotates an image by an arbitrary number of degrees
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="degrees">Degrees to rotate the image; values range from 0.0 to 360.0.</param>
+        /// <returns>Object</returns>
+        public Object EditRotate (double? degrees)
+        {
+             ApiResponse<Object> localVarResponse = EditRotateWithHttpInfo(degrees);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Rotate an image any number of degrees Rotates an image by an arbitrary number of degrees
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="degrees">Degrees to rotate the image; values range from 0.0 to 360.0.</param>
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > EditRotateWithHttpInfo (double? degrees)
+        {
+            // verify the required parameter 'degrees' is set
+            if (degrees == null)
+                throw new ApiException(400, "Missing required parameter 'degrees' when calling EditApi->EditRotate");
+
+            var localVarPath = "/image/edit/rotate/{degrees}/angle";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (degrees != null) localVarPathParams.Add("degrees", this.Configuration.ApiClient.ParameterToString(degrees)); // path parameter
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditRotate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+        }
+
+        /// <summary>
+        /// Rotate an image any number of degrees Rotates an image by an arbitrary number of degrees
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="degrees">Degrees to rotate the image; values range from 0.0 to 360.0.</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> EditRotateAsync (double? degrees)
+        {
+             ApiResponse<Object> localVarResponse = await EditRotateAsyncWithHttpInfo(degrees);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Rotate an image any number of degrees Rotates an image by an arbitrary number of degrees
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="degrees">Degrees to rotate the image; values range from 0.0 to 360.0.</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> EditRotateAsyncWithHttpInfo (double? degrees)
+        {
+            // verify the required parameter 'degrees' is set
+            if (degrees == null)
+                throw new ApiException(400, "Missing required parameter 'degrees' when calling EditApi->EditRotate");
+
+            var localVarPath = "/image/edit/rotate/{degrees}/angle";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (degrees != null) localVarPathParams.Add("degrees", this.Configuration.ApiClient.ParameterToString(degrees)); // path parameter
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditRotate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
         }
 
     }

@@ -104,6 +104,18 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
         }
         
         /// <summary>
+        /// Test EditDrawPolygon
+        /// </summary>
+        [Test]
+        public void EditDrawPolygonTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DrawPolygonRequest request = null;
+            //var response = instance.EditDrawPolygon(request);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
+        }
+        
+        /// <summary>
         /// Test EditDrawRectangle
         /// </summary>
         [Test]
@@ -125,6 +137,18 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
             //DrawTextRequest request = null;
             //var response = instance.EditDrawText(request);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test EditRotate
+        /// </summary>
+        [Test]
+        public void EditRotateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //double? degrees = null;
+            //var response = instance.EditRotate(degrees);
+            //Assert.IsInstanceOf<Object> (response, "response is Object");
         }
         
     }
