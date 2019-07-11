@@ -5,7 +5,7 @@ Image Recognition and Processing APIs let you use Machine Learning to recognize 
 This C# SDK is:
 
 - API version: v1
-- SDK version: 2.0.6
+- SDK version: 2.0.7
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -106,8 +106,8 @@ Class | Method | HTTP request | Description
 *EditApi* | [**EditAutoOrient**](docs/EditApi.md#editautoorient) | **POST** /image/edit/auto-orient/remove-exif | Normalizes image rotation and removes EXIF rotation data
 *EditApi* | [**EditCompositeBasic**](docs/EditApi.md#editcompositebasic) | **POST** /image/edit/composite/{location} | Composite two images together
 *EditApi* | [**EditContrastAdaptive**](docs/EditApi.md#editcontrastadaptive) | **POST** /image/edit/contrast/{gamma}/adaptive | Adaptively adjust the contrast of the image to be more appealing and easy to see
-*EditApi* | [**EditDrawPolygon**](docs/EditApi.md#editdrawpolygon) | **POST** /image/edit/draw/polygon | Draw polygon onto an image
-*EditApi* | [**EditDrawRectangle**](docs/EditApi.md#editdrawrectangle) | **POST** /image/edit/draw/rectangle | Draw rectangle onto an image
+*EditApi* | [**EditDrawPolygon**](docs/EditApi.md#editdrawpolygon) | **POST** /image/edit/draw/polygon | Draw a polygon onto an image
+*EditApi* | [**EditDrawRectangle**](docs/EditApi.md#editdrawrectangle) | **POST** /image/edit/draw/rectangle | Draw a rectangle onto an image
 *EditApi* | [**EditDrawText**](docs/EditApi.md#editdrawtext) | **POST** /image/edit/draw/text | Draw text onto an image
 *EditApi* | [**EditRotate**](docs/EditApi.md#editrotate) | **POST** /image/edit/rotate/{degrees}/angle | Rotate an image any number of degrees
 *FaceApi* | [**FaceCompare**](docs/FaceApi.md#facecompare) | **POST** /image/face/compare-and-match | Compare and match faces

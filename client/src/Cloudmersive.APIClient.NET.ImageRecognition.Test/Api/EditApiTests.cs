@@ -112,7 +112,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
             // TODO uncomment below to test the method and replace null with proper value
             //DrawPolygonRequest request = null;
             //var response = instance.EditDrawPolygon(request);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
         /// <summary>
@@ -147,8 +147,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //double? degrees = null;
-            //var response = instance.EditRotate(degrees);
-            //Assert.IsInstanceOf<Object> (response, "response is Object");
+            //System.IO.Stream imageFile = null;
+            //var response = instance.EditRotate(degrees, imageFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
     }

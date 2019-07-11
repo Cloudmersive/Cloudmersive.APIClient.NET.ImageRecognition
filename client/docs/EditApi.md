@@ -7,8 +7,8 @@ Method | HTTP request | Description
 [**EditAutoOrient**](EditApi.md#editautoorient) | **POST** /image/edit/auto-orient/remove-exif | Normalizes image rotation and removes EXIF rotation data
 [**EditCompositeBasic**](EditApi.md#editcompositebasic) | **POST** /image/edit/composite/{location} | Composite two images together
 [**EditContrastAdaptive**](EditApi.md#editcontrastadaptive) | **POST** /image/edit/contrast/{gamma}/adaptive | Adaptively adjust the contrast of the image to be more appealing and easy to see
-[**EditDrawPolygon**](EditApi.md#editdrawpolygon) | **POST** /image/edit/draw/polygon | Draw polygon onto an image
-[**EditDrawRectangle**](EditApi.md#editdrawrectangle) | **POST** /image/edit/draw/rectangle | Draw rectangle onto an image
+[**EditDrawPolygon**](EditApi.md#editdrawpolygon) | **POST** /image/edit/draw/polygon | Draw a polygon onto an image
+[**EditDrawRectangle**](EditApi.md#editdrawrectangle) | **POST** /image/edit/draw/rectangle | Draw a rectangle onto an image
 [**EditDrawText**](EditApi.md#editdrawtext) | **POST** /image/edit/draw/text | Draw text onto an image
 [**EditRotate**](EditApi.md#editrotate) | **POST** /image/edit/rotate/{degrees}/angle | Rotate an image any number of degrees
 
@@ -219,9 +219,9 @@ Name | Type | Description  | Notes
 
 <a name="editdrawpolygon"></a>
 # **EditDrawPolygon**
-> Object EditDrawPolygon (DrawPolygonRequest request)
+> byte[] EditDrawPolygon (DrawPolygonRequest request)
 
-Draw polygon onto an image
+Draw a polygon onto an image
 
 Draw one or more polygons, with customized visuals, onto an image
 
@@ -249,8 +249,8 @@ namespace Example
 
             try
             {
-                // Draw polygon onto an image
-                Object result = apiInstance.EditDrawPolygon(request);
+                // Draw a polygon onto an image
+                byte[] result = apiInstance.EditDrawPolygon(request);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 # **EditDrawRectangle**
 > byte[] EditDrawRectangle (DrawRectangleRequest request)
 
-Draw rectangle onto an image
+Draw a rectangle onto an image
 
 Draw one or more rectangles, with customized visuals, onto an image
 
@@ -315,7 +315,7 @@ namespace Example
 
             try
             {
-                // Draw rectangle onto an image
+                // Draw a rectangle onto an image
                 byte[] result = apiInstance.EditDrawRectangle(request);
                 Debug.WriteLine(result);
             }
@@ -417,7 +417,7 @@ Name | Type | Description  | Notes
 
 <a name="editrotate"></a>
 # **EditRotate**
-> Object EditRotate (double? degrees)
+> byte[] EditRotate (double? degrees, System.IO.Stream imageFile)
 
 Rotate an image any number of degrees
 
@@ -444,11 +444,12 @@ namespace Example
 
             var apiInstance = new EditApi();
             var degrees = 1.2;  // double? | Degrees to rotate the image; values range from 0.0 to 360.0.
+            var imageFile = new System.IO.Stream(); // System.IO.Stream | Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.
 
             try
             {
                 // Rotate an image any number of degrees
-                Object result = apiInstance.EditRotate(degrees);
+                byte[] result = apiInstance.EditRotate(degrees, imageFile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -465,10 +466,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **degrees** | **double?**| Degrees to rotate the image; values range from 0.0 to 360.0. | 
+ **imageFile** | **System.IO.Stream**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | 
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 
@@ -476,7 +478,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

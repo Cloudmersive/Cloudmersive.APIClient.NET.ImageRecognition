@@ -94,28 +94,28 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditContrastAdaptiveWithHttpInfo (double? gamma, System.IO.Stream imageFile);
         /// <summary>
-        /// Draw polygon onto an image
+        /// Draw a polygon onto an image
         /// </summary>
         /// <remarks>
         /// Draw one or more polygons, with customized visuals, onto an image
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Object</returns>
-        Object EditDrawPolygon (DrawPolygonRequest request);
+        /// <returns>byte[]</returns>
+        byte[] EditDrawPolygon (DrawPolygonRequest request);
 
         /// <summary>
-        /// Draw polygon onto an image
+        /// Draw a polygon onto an image
         /// </summary>
         /// <remarks>
         /// Draw one or more polygons, with customized visuals, onto an image
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> EditDrawPolygonWithHttpInfo (DrawPolygonRequest request);
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditDrawPolygonWithHttpInfo (DrawPolygonRequest request);
         /// <summary>
-        /// Draw rectangle onto an image
+        /// Draw a rectangle onto an image
         /// </summary>
         /// <remarks>
         /// Draw one or more rectangles, with customized visuals, onto an image
@@ -126,7 +126,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         byte[] EditDrawRectangle (DrawRectangleRequest request);
 
         /// <summary>
-        /// Draw rectangle onto an image
+        /// Draw a rectangle onto an image
         /// </summary>
         /// <remarks>
         /// Draw one or more rectangles, with customized visuals, onto an image
@@ -164,8 +164,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="degrees">Degrees to rotate the image; values range from 0.0 to 360.0.</param>
-        /// <returns>Object</returns>
-        Object EditRotate (double? degrees);
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>byte[]</returns>
+        byte[] EditRotate (double? degrees, System.IO.Stream imageFile);
 
         /// <summary>
         /// Rotate an image any number of degrees
@@ -175,8 +176,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="degrees">Degrees to rotate the image; values range from 0.0 to 360.0.</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> EditRotateWithHttpInfo (double? degrees);
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditRotateWithHttpInfo (double? degrees, System.IO.Stream imageFile);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -249,28 +251,28 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditContrastAdaptiveAsyncWithHttpInfo (double? gamma, System.IO.Stream imageFile);
         /// <summary>
-        /// Draw polygon onto an image
+        /// Draw a polygon onto an image
         /// </summary>
         /// <remarks>
         /// Draw one or more polygons, with customized visuals, onto an image
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> EditDrawPolygonAsync (DrawPolygonRequest request);
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditDrawPolygonAsync (DrawPolygonRequest request);
 
         /// <summary>
-        /// Draw polygon onto an image
+        /// Draw a polygon onto an image
         /// </summary>
         /// <remarks>
         /// Draw one or more polygons, with customized visuals, onto an image
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> EditDrawPolygonAsyncWithHttpInfo (DrawPolygonRequest request);
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDrawPolygonAsyncWithHttpInfo (DrawPolygonRequest request);
         /// <summary>
-        /// Draw rectangle onto an image
+        /// Draw a rectangle onto an image
         /// </summary>
         /// <remarks>
         /// Draw one or more rectangles, with customized visuals, onto an image
@@ -281,7 +283,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         System.Threading.Tasks.Task<byte[]> EditDrawRectangleAsync (DrawRectangleRequest request);
 
         /// <summary>
-        /// Draw rectangle onto an image
+        /// Draw a rectangle onto an image
         /// </summary>
         /// <remarks>
         /// Draw one or more rectangles, with customized visuals, onto an image
@@ -319,8 +321,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="degrees">Degrees to rotate the image; values range from 0.0 to 360.0.</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> EditRotateAsync (double? degrees);
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditRotateAsync (double? degrees, System.IO.Stream imageFile);
 
         /// <summary>
         /// Rotate an image any number of degrees
@@ -330,8 +333,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="degrees">Degrees to rotate the image; values range from 0.0 to 360.0.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> EditRotateAsyncWithHttpInfo (double? degrees);
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditRotateAsyncWithHttpInfo (double? degrees, System.IO.Stream imageFile);
         #endregion Asynchronous Operations
     }
 
@@ -904,24 +908,24 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Draw polygon onto an image Draw one or more polygons, with customized visuals, onto an image
+        /// Draw a polygon onto an image Draw one or more polygons, with customized visuals, onto an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Object</returns>
-        public Object EditDrawPolygon (DrawPolygonRequest request)
+        /// <returns>byte[]</returns>
+        public byte[] EditDrawPolygon (DrawPolygonRequest request)
         {
-             ApiResponse<Object> localVarResponse = EditDrawPolygonWithHttpInfo(request);
+             ApiResponse<byte[]> localVarResponse = EditDrawPolygonWithHttpInfo(request);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Draw polygon onto an image Draw one or more polygons, with customized visuals, onto an image
+        /// Draw a polygon onto an image Draw one or more polygons, with customized visuals, onto an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > EditDrawPolygonWithHttpInfo (DrawPolygonRequest request)
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditDrawPolygonWithHttpInfo (DrawPolygonRequest request)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -981,31 +985,31 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
-        /// Draw polygon onto an image Draw one or more polygons, with customized visuals, onto an image
+        /// Draw a polygon onto an image Draw one or more polygons, with customized visuals, onto an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> EditDrawPolygonAsync (DrawPolygonRequest request)
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditDrawPolygonAsync (DrawPolygonRequest request)
         {
-             ApiResponse<Object> localVarResponse = await EditDrawPolygonAsyncWithHttpInfo(request);
+             ApiResponse<byte[]> localVarResponse = await EditDrawPolygonAsyncWithHttpInfo(request);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Draw polygon onto an image Draw one or more polygons, with customized visuals, onto an image
+        /// Draw a polygon onto an image Draw one or more polygons, with customized visuals, onto an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> EditDrawPolygonAsyncWithHttpInfo (DrawPolygonRequest request)
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDrawPolygonAsyncWithHttpInfo (DrawPolygonRequest request)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -1065,13 +1069,13 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
-        /// Draw rectangle onto an image Draw one or more rectangles, with customized visuals, onto an image
+        /// Draw a rectangle onto an image Draw one or more rectangles, with customized visuals, onto an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -1083,7 +1087,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Draw rectangle onto an image Draw one or more rectangles, with customized visuals, onto an image
+        /// Draw a rectangle onto an image Draw one or more rectangles, with customized visuals, onto an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -1154,7 +1158,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Draw rectangle onto an image Draw one or more rectangles, with customized visuals, onto an image
+        /// Draw a rectangle onto an image Draw one or more rectangles, with customized visuals, onto an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -1167,7 +1171,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Draw rectangle onto an image Draw one or more rectangles, with customized visuals, onto an image
+        /// Draw a rectangle onto an image Draw one or more rectangles, with customized visuals, onto an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
@@ -1409,10 +1413,11 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="degrees">Degrees to rotate the image; values range from 0.0 to 360.0.</param>
-        /// <returns>Object</returns>
-        public Object EditRotate (double? degrees)
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>byte[]</returns>
+        public byte[] EditRotate (double? degrees, System.IO.Stream imageFile)
         {
-             ApiResponse<Object> localVarResponse = EditRotateWithHttpInfo(degrees);
+             ApiResponse<byte[]> localVarResponse = EditRotateWithHttpInfo(degrees, imageFile);
              return localVarResponse.Data;
         }
 
@@ -1421,12 +1426,16 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="degrees">Degrees to rotate the image; values range from 0.0 to 360.0.</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > EditRotateWithHttpInfo (double? degrees)
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditRotateWithHttpInfo (double? degrees, System.IO.Stream imageFile)
         {
             // verify the required parameter 'degrees' is set
             if (degrees == null)
                 throw new ApiException(400, "Missing required parameter 'degrees' when calling EditApi->EditRotate");
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling EditApi->EditRotate");
 
             var localVarPath = "/image/edit/rotate/{degrees}/angle";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1438,6 +1447,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1450,6 +1460,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (degrees != null) localVarPathParams.Add("degrees", this.Configuration.ApiClient.ParameterToString(degrees)); // path parameter
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
 
             // authentication (Apikey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
@@ -1470,9 +1481,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -1480,10 +1491,11 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="degrees">Degrees to rotate the image; values range from 0.0 to 360.0.</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> EditRotateAsync (double? degrees)
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditRotateAsync (double? degrees, System.IO.Stream imageFile)
         {
-             ApiResponse<Object> localVarResponse = await EditRotateAsyncWithHttpInfo(degrees);
+             ApiResponse<byte[]> localVarResponse = await EditRotateAsyncWithHttpInfo(degrees, imageFile);
              return localVarResponse.Data;
 
         }
@@ -1493,12 +1505,16 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="degrees">Degrees to rotate the image; values range from 0.0 to 360.0.</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> EditRotateAsyncWithHttpInfo (double? degrees)
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditRotateAsyncWithHttpInfo (double? degrees, System.IO.Stream imageFile)
         {
             // verify the required parameter 'degrees' is set
             if (degrees == null)
                 throw new ApiException(400, "Missing required parameter 'degrees' when calling EditApi->EditRotate");
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling EditApi->EditRotate");
 
             var localVarPath = "/image/edit/rotate/{degrees}/angle";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1510,6 +1526,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1522,6 +1539,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (degrees != null) localVarPathParams.Add("degrees", this.Configuration.ApiClient.ParameterToString(degrees)); // path parameter
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
 
             // authentication (Apikey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
@@ -1542,9 +1560,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
     }
