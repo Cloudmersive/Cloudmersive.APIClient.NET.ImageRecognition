@@ -25,24 +25,22 @@ using SwaggerDateConverter = Cloudmersive.APIClient.NET.ImageRecognition.Client.
 namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
 {
     /// <summary>
-    /// A person identified in an image age classification operation
+    /// A person identified in an image gender classification operation
     /// </summary>
     [DataContract]
-    public partial class PersonWithAge :  IEquatable<PersonWithAge>, IValidatableObject
+    public partial class PersonWithGender :  IEquatable<PersonWithGender>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PersonWithAge" /> class.
+        /// Initializes a new instance of the <see cref="PersonWithGender" /> class.
         /// </summary>
         /// <param name="faceLocation">Location and other information about the person&#39;s face corresponding to this age classification.</param>
-        /// <param name="ageClassificationConfidence">Confidence level of age classification; possible values are between 0.0 and 1.0; higher is better, with values &amp;gt; 0.50 being high confidence results.</param>
-        /// <param name="ageClass">The person&#39;s age range classification result in years; possible values are \&quot;0-2\&quot;, \&quot;4-6\&quot;, \&quot;8-13\&quot;, \&quot;15-20\&quot;, \&quot;25-32\&quot;, \&quot;38-43\&quot;, \&quot;48-53\&quot;, \&quot;60+\&quot;.</param>
-        /// <param name="age">age.</param>
-        public PersonWithAge(Face faceLocation = default(Face), double? ageClassificationConfidence = default(double?), string ageClass = default(string), double? age = default(double?))
+        /// <param name="genderClassificationConfidence">Confidence level of gender classification; possible values are between 0.0 and 1.0; higher is better, with values &amp;gt; 0.50 being high confidence results.</param>
+        /// <param name="genderClass">The person&#39;s identified gender; possible values are \&quot;Male\&quot;, \&quot;Female\&quot; and \&quot;Unknown\&quot;.</param>
+        public PersonWithGender(Face faceLocation = default(Face), double? genderClassificationConfidence = default(double?), string genderClass = default(string))
         {
             this.FaceLocation = faceLocation;
-            this.AgeClassificationConfidence = ageClassificationConfidence;
-            this.AgeClass = ageClass;
-            this.Age = age;
+            this.GenderClassificationConfidence = genderClassificationConfidence;
+            this.GenderClass = genderClass;
         }
         
         /// <summary>
@@ -53,24 +51,18 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         public Face FaceLocation { get; set; }
 
         /// <summary>
-        /// Confidence level of age classification; possible values are between 0.0 and 1.0; higher is better, with values &amp;gt; 0.50 being high confidence results
+        /// Confidence level of gender classification; possible values are between 0.0 and 1.0; higher is better, with values &amp;gt; 0.50 being high confidence results
         /// </summary>
-        /// <value>Confidence level of age classification; possible values are between 0.0 and 1.0; higher is better, with values &amp;gt; 0.50 being high confidence results</value>
-        [DataMember(Name="AgeClassificationConfidence", EmitDefaultValue=false)]
-        public double? AgeClassificationConfidence { get; set; }
+        /// <value>Confidence level of gender classification; possible values are between 0.0 and 1.0; higher is better, with values &amp;gt; 0.50 being high confidence results</value>
+        [DataMember(Name="GenderClassificationConfidence", EmitDefaultValue=false)]
+        public double? GenderClassificationConfidence { get; set; }
 
         /// <summary>
-        /// The person&#39;s age range classification result in years; possible values are \&quot;0-2\&quot;, \&quot;4-6\&quot;, \&quot;8-13\&quot;, \&quot;15-20\&quot;, \&quot;25-32\&quot;, \&quot;38-43\&quot;, \&quot;48-53\&quot;, \&quot;60+\&quot;
+        /// The person&#39;s identified gender; possible values are \&quot;Male\&quot;, \&quot;Female\&quot; and \&quot;Unknown\&quot;
         /// </summary>
-        /// <value>The person&#39;s age range classification result in years; possible values are \&quot;0-2\&quot;, \&quot;4-6\&quot;, \&quot;8-13\&quot;, \&quot;15-20\&quot;, \&quot;25-32\&quot;, \&quot;38-43\&quot;, \&quot;48-53\&quot;, \&quot;60+\&quot;</value>
-        [DataMember(Name="AgeClass", EmitDefaultValue=false)]
-        public string AgeClass { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Age
-        /// </summary>
-        [DataMember(Name="Age", EmitDefaultValue=false)]
-        public double? Age { get; set; }
+        /// <value>The person&#39;s identified gender; possible values are \&quot;Male\&quot;, \&quot;Female\&quot; and \&quot;Unknown\&quot;</value>
+        [DataMember(Name="GenderClass", EmitDefaultValue=false)]
+        public string GenderClass { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -79,11 +71,10 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class PersonWithAge {\n");
+            sb.Append("class PersonWithGender {\n");
             sb.Append("  FaceLocation: ").Append(FaceLocation).Append("\n");
-            sb.Append("  AgeClassificationConfidence: ").Append(AgeClassificationConfidence).Append("\n");
-            sb.Append("  AgeClass: ").Append(AgeClass).Append("\n");
-            sb.Append("  Age: ").Append(Age).Append("\n");
+            sb.Append("  GenderClassificationConfidence: ").Append(GenderClassificationConfidence).Append("\n");
+            sb.Append("  GenderClass: ").Append(GenderClass).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -104,15 +95,15 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as PersonWithAge);
+            return this.Equals(input as PersonWithGender);
         }
 
         /// <summary>
-        /// Returns true if PersonWithAge instances are equal
+        /// Returns true if PersonWithGender instances are equal
         /// </summary>
-        /// <param name="input">Instance of PersonWithAge to be compared</param>
+        /// <param name="input">Instance of PersonWithGender to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PersonWithAge input)
+        public bool Equals(PersonWithGender input)
         {
             if (input == null)
                 return false;
@@ -124,19 +115,14 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
                     this.FaceLocation.Equals(input.FaceLocation))
                 ) && 
                 (
-                    this.AgeClassificationConfidence == input.AgeClassificationConfidence ||
-                    (this.AgeClassificationConfidence != null &&
-                    this.AgeClassificationConfidence.Equals(input.AgeClassificationConfidence))
+                    this.GenderClassificationConfidence == input.GenderClassificationConfidence ||
+                    (this.GenderClassificationConfidence != null &&
+                    this.GenderClassificationConfidence.Equals(input.GenderClassificationConfidence))
                 ) && 
                 (
-                    this.AgeClass == input.AgeClass ||
-                    (this.AgeClass != null &&
-                    this.AgeClass.Equals(input.AgeClass))
-                ) && 
-                (
-                    this.Age == input.Age ||
-                    (this.Age != null &&
-                    this.Age.Equals(input.Age))
+                    this.GenderClass == input.GenderClass ||
+                    (this.GenderClass != null &&
+                    this.GenderClass.Equals(input.GenderClass))
                 );
         }
 
@@ -151,12 +137,10 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
                 int hashCode = 41;
                 if (this.FaceLocation != null)
                     hashCode = hashCode * 59 + this.FaceLocation.GetHashCode();
-                if (this.AgeClassificationConfidence != null)
-                    hashCode = hashCode * 59 + this.AgeClassificationConfidence.GetHashCode();
-                if (this.AgeClass != null)
-                    hashCode = hashCode * 59 + this.AgeClass.GetHashCode();
-                if (this.Age != null)
-                    hashCode = hashCode * 59 + this.Age.GetHashCode();
+                if (this.GenderClassificationConfidence != null)
+                    hashCode = hashCode * 59 + this.GenderClassificationConfidence.GetHashCode();
+                if (this.GenderClass != null)
+                    hashCode = hashCode * 59 + this.GenderClass.GetHashCode();
                 return hashCode;
             }
         }

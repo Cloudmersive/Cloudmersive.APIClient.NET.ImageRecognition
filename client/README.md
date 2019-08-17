@@ -5,7 +5,7 @@ Image Recognition and Processing APIs let you use Machine Learning to recognize 
 This C# SDK is:
 
 - API version: v1
-- SDK version: 2.0.7
+- SDK version: 2.0.8
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -114,6 +114,7 @@ Class | Method | HTTP request | Description
 *FaceApi* | [**FaceCropFirst**](docs/FaceApi.md#facecropfirst) | **POST** /image/face/crop/first | Crop image to face (square)
 *FaceApi* | [**FaceCropFirstRound**](docs/FaceApi.md#facecropfirstround) | **POST** /image/face/crop/first/round | Crop image to face (round)
 *FaceApi* | [**FaceDetectAge**](docs/FaceApi.md#facedetectage) | **POST** /image/face/detect-age | Detect the age of people in an image
+*FaceApi* | [**FaceDetectGender**](docs/FaceApi.md#facedetectgender) | **POST** /image/face/detect-gender | Detect the gender of people in an image
 *FaceApi* | [**FaceLocate**](docs/FaceApi.md#facelocate) | **POST** /image/face/locate | Find faces in an image
 *FaceApi* | [**FaceLocateWithLandmarks**](docs/FaceApi.md#facelocatewithlandmarks) | **POST** /image/face/locate-with-landmarks | Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image
 *NsfwApi* | [**NsfwClassify**](docs/NsfwApi.md#nsfwclassify) | **POST** /image/nsfw/classify | Not safe for work (NSFW) racy content classification
@@ -148,10 +149,12 @@ Class | Method | HTTP request | Description
  - [Model.FaceWithLandmarks](docs/FaceWithLandmarks.md)
  - [Model.FineTextDetectionResult](docs/FineTextDetectionResult.md)
  - [Model.FineTextItem](docs/FineTextItem.md)
+ - [Model.GenderDetectionResult](docs/GenderDetectionResult.md)
  - [Model.ImageDescriptionResponse](docs/ImageDescriptionResponse.md)
  - [Model.NsfwResult](docs/NsfwResult.md)
  - [Model.ObjectDetectionResult](docs/ObjectDetectionResult.md)
  - [Model.PersonWithAge](docs/PersonWithAge.md)
+ - [Model.PersonWithGender](docs/PersonWithGender.md)
  - [Model.PolygonPoint](docs/PolygonPoint.md)
  - [Model.RecognitionOutcome](docs/RecognitionOutcome.md)
  - [Model.TextDetectionResult](docs/TextDetectionResult.md)

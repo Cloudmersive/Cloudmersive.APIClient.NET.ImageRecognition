@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**FaceCropFirst**](FaceApi.md#facecropfirst) | **POST** /image/face/crop/first | Crop image to face (square)
 [**FaceCropFirstRound**](FaceApi.md#facecropfirstround) | **POST** /image/face/crop/first/round | Crop image to face (round)
 [**FaceDetectAge**](FaceApi.md#facedetectage) | **POST** /image/face/detect-age | Detect the age of people in an image
+[**FaceDetectGender**](FaceApi.md#facedetectgender) | **POST** /image/face/detect-gender | Detect the gender of people in an image
 [**FaceLocate**](FaceApi.md#facelocate) | **POST** /image/face/locate | Find faces in an image
 [**FaceLocateWithLandmarks**](FaceApi.md#facelocatewithlandmarks) | **POST** /image/face/locate-with-landmarks | Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image
 
@@ -266,6 +267,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AgeDetectionResult**](AgeDetectionResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="facedetectgender"></a>
+# **FaceDetectGender**
+> GenderDetectionResult FaceDetectGender (System.IO.Stream imageFile)
+
+Detect the gender of people in an image
+
+Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.ImageRecognition.Api;
+using Cloudmersive.APIClient.NET.ImageRecognition.Client;
+using Cloudmersive.APIClient.NET.ImageRecognition.Model;
+
+namespace Example
+{
+    public class FaceDetectGenderExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new FaceApi();
+            var imageFile = new System.IO.Stream(); // System.IO.Stream | Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.
+
+            try
+            {
+                // Detect the gender of people in an image
+                GenderDetectionResult result = apiInstance.FaceDetectGender(imageFile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling FaceApi.FaceDetectGender: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **imageFile** | **System.IO.Stream**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | 
+
+### Return type
+
+[**GenderDetectionResult**](GenderDetectionResult.md)
 
 ### Authorization
 

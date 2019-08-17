@@ -114,6 +114,18 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
         }
         
         /// <summary>
+        /// Test FaceDetectGender
+        /// </summary>
+        [Test]
+        public void FaceDetectGenderTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream imageFile = null;
+            //var response = instance.FaceDetectGender(imageFile);
+            //Assert.IsInstanceOf<GenderDetectionResult> (response, "response is GenderDetectionResult");
+        }
+        
+        /// <summary>
         /// Test FaceLocate
         /// </summary>
         [Test]

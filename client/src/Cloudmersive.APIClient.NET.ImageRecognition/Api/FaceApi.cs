@@ -111,6 +111,27 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>ApiResponse of AgeDetectionResult</returns>
         ApiResponse<AgeDetectionResult> FaceDetectAgeWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
+        /// Detect the gender of people in an image
+        /// </summary>
+        /// <remarks>
+        /// Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>GenderDetectionResult</returns>
+        GenderDetectionResult FaceDetectGender (System.IO.Stream imageFile);
+
+        /// <summary>
+        /// Detect the gender of people in an image
+        /// </summary>
+        /// <remarks>
+        /// Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ApiResponse of GenderDetectionResult</returns>
+        ApiResponse<GenderDetectionResult> FaceDetectGenderWithHttpInfo (System.IO.Stream imageFile);
+        /// <summary>
         /// Find faces in an image
         /// </summary>
         /// <remarks>
@@ -240,6 +261,27 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>Task of ApiResponse (AgeDetectionResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<AgeDetectionResult>> FaceDetectAgeAsyncWithHttpInfo (System.IO.Stream imageFile);
+        /// <summary>
+        /// Detect the gender of people in an image
+        /// </summary>
+        /// <remarks>
+        /// Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of GenderDetectionResult</returns>
+        System.Threading.Tasks.Task<GenderDetectionResult> FaceDetectGenderAsync (System.IO.Stream imageFile);
+
+        /// <summary>
+        /// Detect the gender of people in an image
+        /// </summary>
+        /// <remarks>
+        /// Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ApiResponse (GenderDetectionResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GenderDetectionResult>> FaceDetectGenderAsyncWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
         /// Find faces in an image
         /// </summary>
@@ -984,6 +1026,157 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
             return new ApiResponse<AgeDetectionResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AgeDetectionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgeDetectionResult)));
+        }
+
+        /// <summary>
+        /// Detect the gender of people in an image Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>GenderDetectionResult</returns>
+        public GenderDetectionResult FaceDetectGender (System.IO.Stream imageFile)
+        {
+             ApiResponse<GenderDetectionResult> localVarResponse = FaceDetectGenderWithHttpInfo(imageFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Detect the gender of people in an image Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ApiResponse of GenderDetectionResult</returns>
+        public ApiResponse< GenderDetectionResult > FaceDetectGenderWithHttpInfo (System.IO.Stream imageFile)
+        {
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling FaceApi->FaceDetectGender");
+
+            var localVarPath = "/image/face/detect-gender";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FaceDetectGender", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GenderDetectionResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GenderDetectionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GenderDetectionResult)));
+        }
+
+        /// <summary>
+        /// Detect the gender of people in an image Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of GenderDetectionResult</returns>
+        public async System.Threading.Tasks.Task<GenderDetectionResult> FaceDetectGenderAsync (System.IO.Stream imageFile)
+        {
+             ApiResponse<GenderDetectionResult> localVarResponse = await FaceDetectGenderAsyncWithHttpInfo(imageFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Detect the gender of people in an image Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ApiResponse (GenderDetectionResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GenderDetectionResult>> FaceDetectGenderAsyncWithHttpInfo (System.IO.Stream imageFile)
+        {
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling FaceApi->FaceDetectGender");
+
+            var localVarPath = "/image/face/detect-gender";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FaceDetectGender", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GenderDetectionResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GenderDetectionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GenderDetectionResult)));
         }
 
         /// <summary>
