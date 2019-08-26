@@ -347,7 +347,7 @@ Name | Type | Description  | Notes
 
 <a name="recognizedetecttextlarge"></a>
 # **RecognizeDetectTextLarge**
-> TextDetectionResult RecognizeDetectTextLarge ()
+> TextDetectionResult RecognizeDetectTextLarge (System.IO.Stream imageFile)
 
 Detect large text in a photo
 
@@ -373,11 +373,12 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new RecognizeApi();
+            var imageFile = new System.IO.Stream(); // System.IO.Stream | Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.
 
             try
             {
                 // Detect large text in a photo
-                TextDetectionResult result = apiInstance.RecognizeDetectTextLarge();
+                TextDetectionResult result = apiInstance.RecognizeDetectTextLarge(imageFile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -390,7 +391,10 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **imageFile** | **System.IO.Stream**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | 
 
 ### Return type
 
@@ -402,7 +406,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

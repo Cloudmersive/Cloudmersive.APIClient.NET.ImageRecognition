@@ -138,8 +138,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Identify the position, and size of large text within a photograph.  Identify the location of large text in a photo - such as signs, titles, etc. and other forms of large, low-density text.  Not suitable for high-density text (e.g. scans of documents, receipts, etc.) for OCR purposes - for OCR, please see our Deep Learning OCR APIs.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>TextDetectionResult</returns>
-        TextDetectionResult RecognizeDetectTextLarge ();
+        TextDetectionResult RecognizeDetectTextLarge (System.IO.Stream imageFile);
 
         /// <summary>
         /// Detect large text in a photo
@@ -148,8 +149,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Identify the position, and size of large text within a photograph.  Identify the location of large text in a photo - such as signs, titles, etc. and other forms of large, low-density text.  Not suitable for high-density text (e.g. scans of documents, receipts, etc.) for OCR purposes - for OCR, please see our Deep Learning OCR APIs.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>ApiResponse of TextDetectionResult</returns>
-        ApiResponse<TextDetectionResult> RecognizeDetectTextLargeWithHttpInfo ();
+        ApiResponse<TextDetectionResult> RecognizeDetectTextLargeWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
         /// Detect vehicle license plates in an image
         /// </summary>
@@ -287,8 +289,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Identify the position, and size of large text within a photograph.  Identify the location of large text in a photo - such as signs, titles, etc. and other forms of large, low-density text.  Not suitable for high-density text (e.g. scans of documents, receipts, etc.) for OCR purposes - for OCR, please see our Deep Learning OCR APIs.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>Task of TextDetectionResult</returns>
-        System.Threading.Tasks.Task<TextDetectionResult> RecognizeDetectTextLargeAsync ();
+        System.Threading.Tasks.Task<TextDetectionResult> RecognizeDetectTextLargeAsync (System.IO.Stream imageFile);
 
         /// <summary>
         /// Detect large text in a photo
@@ -297,8 +300,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Identify the position, and size of large text within a photograph.  Identify the location of large text in a photo - such as signs, titles, etc. and other forms of large, low-density text.  Not suitable for high-density text (e.g. scans of documents, receipts, etc.) for OCR purposes - for OCR, please see our Deep Learning OCR APIs.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>Task of ApiResponse (TextDetectionResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TextDetectionResult>> RecognizeDetectTextLargeAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<TextDetectionResult>> RecognizeDetectTextLargeAsyncWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
         /// Detect vehicle license plates in an image
         /// </summary>
@@ -1185,10 +1189,11 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Detect large text in a photo Identify the position, and size of large text within a photograph.  Identify the location of large text in a photo - such as signs, titles, etc. and other forms of large, low-density text.  Not suitable for high-density text (e.g. scans of documents, receipts, etc.) for OCR purposes - for OCR, please see our Deep Learning OCR APIs.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>TextDetectionResult</returns>
-        public TextDetectionResult RecognizeDetectTextLarge ()
+        public TextDetectionResult RecognizeDetectTextLarge (System.IO.Stream imageFile)
         {
-             ApiResponse<TextDetectionResult> localVarResponse = RecognizeDetectTextLargeWithHttpInfo();
+             ApiResponse<TextDetectionResult> localVarResponse = RecognizeDetectTextLargeWithHttpInfo(imageFile);
              return localVarResponse.Data;
         }
 
@@ -1196,9 +1201,13 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Detect large text in a photo Identify the position, and size of large text within a photograph.  Identify the location of large text in a photo - such as signs, titles, etc. and other forms of large, low-density text.  Not suitable for high-density text (e.g. scans of documents, receipts, etc.) for OCR purposes - for OCR, please see our Deep Learning OCR APIs.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>ApiResponse of TextDetectionResult</returns>
-        public ApiResponse< TextDetectionResult > RecognizeDetectTextLargeWithHttpInfo ()
+        public ApiResponse< TextDetectionResult > RecognizeDetectTextLargeWithHttpInfo (System.IO.Stream imageFile)
         {
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling RecognizeApi->RecognizeDetectTextLarge");
 
             var localVarPath = "/image/recognize/detect-text/large";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1210,6 +1219,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1224,6 +1234,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
 
             // authentication (Apikey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
@@ -1253,10 +1264,11 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Detect large text in a photo Identify the position, and size of large text within a photograph.  Identify the location of large text in a photo - such as signs, titles, etc. and other forms of large, low-density text.  Not suitable for high-density text (e.g. scans of documents, receipts, etc.) for OCR purposes - for OCR, please see our Deep Learning OCR APIs.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>Task of TextDetectionResult</returns>
-        public async System.Threading.Tasks.Task<TextDetectionResult> RecognizeDetectTextLargeAsync ()
+        public async System.Threading.Tasks.Task<TextDetectionResult> RecognizeDetectTextLargeAsync (System.IO.Stream imageFile)
         {
-             ApiResponse<TextDetectionResult> localVarResponse = await RecognizeDetectTextLargeAsyncWithHttpInfo();
+             ApiResponse<TextDetectionResult> localVarResponse = await RecognizeDetectTextLargeAsyncWithHttpInfo(imageFile);
              return localVarResponse.Data;
 
         }
@@ -1265,9 +1277,13 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Detect large text in a photo Identify the position, and size of large text within a photograph.  Identify the location of large text in a photo - such as signs, titles, etc. and other forms of large, low-density text.  Not suitable for high-density text (e.g. scans of documents, receipts, etc.) for OCR purposes - for OCR, please see our Deep Learning OCR APIs.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>Task of ApiResponse (TextDetectionResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TextDetectionResult>> RecognizeDetectTextLargeAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<TextDetectionResult>> RecognizeDetectTextLargeAsyncWithHttpInfo (System.IO.Stream imageFile)
         {
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling RecognizeApi->RecognizeDetectTextLarge");
 
             var localVarPath = "/image/recognize/detect-text/large";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1279,6 +1295,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1293,6 +1310,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
 
             // authentication (Apikey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))

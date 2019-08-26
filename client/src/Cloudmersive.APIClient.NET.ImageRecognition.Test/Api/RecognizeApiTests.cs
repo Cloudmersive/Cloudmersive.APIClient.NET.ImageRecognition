@@ -132,7 +132,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
         public void RecognizeDetectTextLargeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.RecognizeDetectTextLarge();
+            //System.IO.Stream imageFile = null;
+            //var response = instance.RecognizeDetectTextLarge(imageFile);
             //Assert.IsInstanceOf<TextDetectionResult> (response, "response is TextDetectionResult");
         }
         
