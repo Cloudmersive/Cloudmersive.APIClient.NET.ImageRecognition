@@ -9,7 +9,7 @@
 $csprojpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.ImageRecognition/Cloudmersive.APIClient.NET.ImageRecognition.csproj
 $nuspecpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.ImageRecognition/Cloudmersive.APIClient.NET.ImageRecognition.nuspec
 
-(Get-Content $nuspecpath).replace('<title>Swagger Library</title>', "<title>Cloudmersive Image Recognition and Processing API Client</title>") | Set-Content $nuspecpath
+(Get-Content $nuspecpath).replace('<title>Swagger Library</title>', "<title>Cloudmersive Image Recognition and Processing API Client</title><licenseUrl>https://www.apache.org/licenses/LICENSE-2.0.txt</licenseUrl>") | Set-Content $nuspecpath
 (Get-Content $nuspecpath).replace('<authors>$author$</authors>', "<authors>Cloudmersive</authors>") | Set-Content $nuspecpath
 (Get-Content $nuspecpath).replace('<owners>$author$</owners>', "<owners>Cloudmersive</owners>") | Set-Content $nuspecpath
 (Get-Content $nuspecpath).replace('<description>A library generated from a Swagger doc</description>', "<description>Image Recognition and Processing APIs let you use Machine Learning to recognize and process images, and also perform useful image modification operations.</description>") | Set-Content $nuspecpath
