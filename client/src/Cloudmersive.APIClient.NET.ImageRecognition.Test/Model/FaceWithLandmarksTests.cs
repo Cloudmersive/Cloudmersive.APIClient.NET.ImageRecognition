@@ -67,6 +67,38 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
 
 
         /// <summary>
+        /// Test the property 'LeftX'
+        /// </summary>
+        [Test]
+        public void LeftXTest()
+        {
+            // TODO unit test for the property 'LeftX'
+        }
+        /// <summary>
+        /// Test the property 'TopY'
+        /// </summary>
+        [Test]
+        public void TopYTest()
+        {
+            // TODO unit test for the property 'TopY'
+        }
+        /// <summary>
+        /// Test the property 'RightX'
+        /// </summary>
+        [Test]
+        public void RightXTest()
+        {
+            // TODO unit test for the property 'RightX'
+        }
+        /// <summary>
+        /// Test the property 'BottomY'
+        /// </summary>
+        [Test]
+        public void BottomYTest()
+        {
+            // TODO unit test for the property 'BottomY'
+        }
+        /// <summary>
         /// Test the property 'LeftEyebrow'
         /// </summary>
         [Test]
@@ -137,38 +169,6 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
         public void LipsOuterOutlineTest()
         {
             // TODO unit test for the property 'LipsOuterOutline'
-        }
-        /// <summary>
-        /// Test the property 'LeftX'
-        /// </summary>
-        [Test]
-        public void LeftXTest()
-        {
-            // TODO unit test for the property 'LeftX'
-        }
-        /// <summary>
-        /// Test the property 'TopY'
-        /// </summary>
-        [Test]
-        public void TopYTest()
-        {
-            // TODO unit test for the property 'TopY'
-        }
-        /// <summary>
-        /// Test the property 'RightX'
-        /// </summary>
-        [Test]
-        public void RightXTest()
-        {
-            // TODO unit test for the property 'RightX'
-        }
-        /// <summary>
-        /// Test the property 'BottomY'
-        /// </summary>
-        [Test]
-        public void BottomYTest()
-        {
-            // TODO unit test for the property 'BottomY'
         }
 
     }

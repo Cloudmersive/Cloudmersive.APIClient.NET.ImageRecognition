@@ -5,7 +5,7 @@ Image Recognition and Processing APIs let you use Machine Learning to recognize 
 This C# SDK is:
 
 - API version: v1
-- SDK version: 2.1.0
+- SDK version: 2.1.1
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -117,6 +117,7 @@ Class | Method | HTTP request | Description
 *FaceApi* | [**FaceDetectGender**](docs/FaceApi.md#facedetectgender) | **POST** /image/face/detect-gender | Detect the gender of people in an image
 *FaceApi* | [**FaceLocate**](docs/FaceApi.md#facelocate) | **POST** /image/face/locate | Find faces in an image
 *FaceApi* | [**FaceLocateWithLandmarks**](docs/FaceApi.md#facelocatewithlandmarks) | **POST** /image/face/locate-with-landmarks | Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image
+*InfoApi* | [**InfoGetDominantColor**](docs/InfoApi.md#infogetdominantcolor) | **POST** /image/get-info/dominant-color | Returns the dominant colors of the image
 *NsfwApi* | [**NsfwClassify**](docs/NsfwApi.md#nsfwclassify) | **POST** /image/nsfw/classify | Not safe for work (NSFW) racy content classification
 *RecognizeApi* | [**RecognizeDescribe**](docs/RecognizeApi.md#recognizedescribe) | **POST** /image/recognize/describe | Describe an image in natural language
 *RecognizeApi* | [**RecognizeDetectAndUnskewDocument**](docs/RecognizeApi.md#recognizedetectandunskewdocument) | **POST** /image/recognize/detect-document/unskew | Detect and unskew a photo of a document
@@ -132,8 +133,10 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Model.AgeDetectionResult](docs/AgeDetectionResult.md)
+ - [Model.ColorResult](docs/ColorResult.md)
  - [Model.DetectedLicensePlate](docs/DetectedLicensePlate.md)
  - [Model.DetectedObject](docs/DetectedObject.md)
+ - [Model.DominantColorResult](docs/DominantColorResult.md)
  - [Model.DrawPolygonInstance](docs/DrawPolygonInstance.md)
  - [Model.DrawPolygonRequest](docs/DrawPolygonRequest.md)
  - [Model.DrawRectangleInstance](docs/DrawRectangleInstance.md)

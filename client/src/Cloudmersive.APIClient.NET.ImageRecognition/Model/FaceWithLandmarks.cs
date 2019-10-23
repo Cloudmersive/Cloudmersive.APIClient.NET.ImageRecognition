@@ -33,21 +33,25 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FaceWithLandmarks" /> class.
         /// </summary>
-        /// <param name="leftEyebrow">leftEyebrow.</param>
-        /// <param name="rightEyebrow">rightEyebrow.</param>
-        /// <param name="leftEye">leftEye.</param>
-        /// <param name="rightEye">rightEye.</param>
-        /// <param name="bottomAndSidesOfFace">bottomAndSidesOfFace.</param>
-        /// <param name="noseBridge">noseBridge.</param>
-        /// <param name="noseBottom">noseBottom.</param>
-        /// <param name="lipsInnerOutline">lipsInnerOutline.</param>
-        /// <param name="lipsOuterOutline">lipsOuterOutline.</param>
         /// <param name="leftX">X coordinate of the left side of the face.</param>
         /// <param name="topY">Y coordinate of the top side of the face.</param>
         /// <param name="rightX">X coordinate of the right side of the face.</param>
         /// <param name="bottomY">Y coordinate of the bottom side of the face.</param>
-        public FaceWithLandmarks(List<FacePoint> leftEyebrow = default(List<FacePoint>), List<FacePoint> rightEyebrow = default(List<FacePoint>), List<FacePoint> leftEye = default(List<FacePoint>), List<FacePoint> rightEye = default(List<FacePoint>), List<FacePoint> bottomAndSidesOfFace = default(List<FacePoint>), List<FacePoint> noseBridge = default(List<FacePoint>), List<FacePoint> noseBottom = default(List<FacePoint>), List<FacePoint> lipsInnerOutline = default(List<FacePoint>), List<FacePoint> lipsOuterOutline = default(List<FacePoint>), int? leftX = default(int?), int? topY = default(int?), int? rightX = default(int?), int? bottomY = default(int?))
+        /// <param name="leftEyebrow">Point locations of the left eyebrow (the eyebrow cloesest to the left side of the picture).</param>
+        /// <param name="rightEyebrow">Point locations of the right eyebrow (the eyebrow cloesest to the right side of the picture).</param>
+        /// <param name="leftEye">Point locations of the left eye (the eye closest to the left side of the picture).</param>
+        /// <param name="rightEye">Point locations of the right eye (the eye closest to the right side of the picture).</param>
+        /// <param name="bottomAndSidesOfFace">Point locations of the bottom and sides of the face (cheeks and chin).</param>
+        /// <param name="noseBridge">Point locations of the nose bridge (the vertical portion of the nose).</param>
+        /// <param name="noseBottom">Point locations of the bottom (nostrils) of the nose.</param>
+        /// <param name="lipsInnerOutline">Point locations of the inner outline of the lips.</param>
+        /// <param name="lipsOuterOutline">Point locations of the outer outline of the lips.</param>
+        public FaceWithLandmarks(int? leftX = default(int?), int? topY = default(int?), int? rightX = default(int?), int? bottomY = default(int?), List<FacePoint> leftEyebrow = default(List<FacePoint>), List<FacePoint> rightEyebrow = default(List<FacePoint>), List<FacePoint> leftEye = default(List<FacePoint>), List<FacePoint> rightEye = default(List<FacePoint>), List<FacePoint> bottomAndSidesOfFace = default(List<FacePoint>), List<FacePoint> noseBridge = default(List<FacePoint>), List<FacePoint> noseBottom = default(List<FacePoint>), List<FacePoint> lipsInnerOutline = default(List<FacePoint>), List<FacePoint> lipsOuterOutline = default(List<FacePoint>))
         {
+            this.LeftX = leftX;
+            this.TopY = topY;
+            this.RightX = rightX;
+            this.BottomY = bottomY;
             this.LeftEyebrow = leftEyebrow;
             this.RightEyebrow = rightEyebrow;
             this.LeftEye = leftEye;
@@ -57,66 +61,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
             this.NoseBottom = noseBottom;
             this.LipsInnerOutline = lipsInnerOutline;
             this.LipsOuterOutline = lipsOuterOutline;
-            this.LeftX = leftX;
-            this.TopY = topY;
-            this.RightX = rightX;
-            this.BottomY = bottomY;
         }
         
-        /// <summary>
-        /// Gets or Sets LeftEyebrow
-        /// </summary>
-        [DataMember(Name="LeftEyebrow", EmitDefaultValue=false)]
-        public List<FacePoint> LeftEyebrow { get; set; }
-
-        /// <summary>
-        /// Gets or Sets RightEyebrow
-        /// </summary>
-        [DataMember(Name="RightEyebrow", EmitDefaultValue=false)]
-        public List<FacePoint> RightEyebrow { get; set; }
-
-        /// <summary>
-        /// Gets or Sets LeftEye
-        /// </summary>
-        [DataMember(Name="LeftEye", EmitDefaultValue=false)]
-        public List<FacePoint> LeftEye { get; set; }
-
-        /// <summary>
-        /// Gets or Sets RightEye
-        /// </summary>
-        [DataMember(Name="RightEye", EmitDefaultValue=false)]
-        public List<FacePoint> RightEye { get; set; }
-
-        /// <summary>
-        /// Gets or Sets BottomAndSidesOfFace
-        /// </summary>
-        [DataMember(Name="BottomAndSidesOfFace", EmitDefaultValue=false)]
-        public List<FacePoint> BottomAndSidesOfFace { get; set; }
-
-        /// <summary>
-        /// Gets or Sets NoseBridge
-        /// </summary>
-        [DataMember(Name="NoseBridge", EmitDefaultValue=false)]
-        public List<FacePoint> NoseBridge { get; set; }
-
-        /// <summary>
-        /// Gets or Sets NoseBottom
-        /// </summary>
-        [DataMember(Name="NoseBottom", EmitDefaultValue=false)]
-        public List<FacePoint> NoseBottom { get; set; }
-
-        /// <summary>
-        /// Gets or Sets LipsInnerOutline
-        /// </summary>
-        [DataMember(Name="LipsInnerOutline", EmitDefaultValue=false)]
-        public List<FacePoint> LipsInnerOutline { get; set; }
-
-        /// <summary>
-        /// Gets or Sets LipsOuterOutline
-        /// </summary>
-        [DataMember(Name="LipsOuterOutline", EmitDefaultValue=false)]
-        public List<FacePoint> LipsOuterOutline { get; set; }
-
         /// <summary>
         /// X coordinate of the left side of the face
         /// </summary>
@@ -146,6 +92,69 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         public int? BottomY { get; set; }
 
         /// <summary>
+        /// Point locations of the left eyebrow (the eyebrow cloesest to the left side of the picture)
+        /// </summary>
+        /// <value>Point locations of the left eyebrow (the eyebrow cloesest to the left side of the picture)</value>
+        [DataMember(Name="LeftEyebrow", EmitDefaultValue=false)]
+        public List<FacePoint> LeftEyebrow { get; set; }
+
+        /// <summary>
+        /// Point locations of the right eyebrow (the eyebrow cloesest to the right side of the picture)
+        /// </summary>
+        /// <value>Point locations of the right eyebrow (the eyebrow cloesest to the right side of the picture)</value>
+        [DataMember(Name="RightEyebrow", EmitDefaultValue=false)]
+        public List<FacePoint> RightEyebrow { get; set; }
+
+        /// <summary>
+        /// Point locations of the left eye (the eye closest to the left side of the picture)
+        /// </summary>
+        /// <value>Point locations of the left eye (the eye closest to the left side of the picture)</value>
+        [DataMember(Name="LeftEye", EmitDefaultValue=false)]
+        public List<FacePoint> LeftEye { get; set; }
+
+        /// <summary>
+        /// Point locations of the right eye (the eye closest to the right side of the picture)
+        /// </summary>
+        /// <value>Point locations of the right eye (the eye closest to the right side of the picture)</value>
+        [DataMember(Name="RightEye", EmitDefaultValue=false)]
+        public List<FacePoint> RightEye { get; set; }
+
+        /// <summary>
+        /// Point locations of the bottom and sides of the face (cheeks and chin)
+        /// </summary>
+        /// <value>Point locations of the bottom and sides of the face (cheeks and chin)</value>
+        [DataMember(Name="BottomAndSidesOfFace", EmitDefaultValue=false)]
+        public List<FacePoint> BottomAndSidesOfFace { get; set; }
+
+        /// <summary>
+        /// Point locations of the nose bridge (the vertical portion of the nose)
+        /// </summary>
+        /// <value>Point locations of the nose bridge (the vertical portion of the nose)</value>
+        [DataMember(Name="NoseBridge", EmitDefaultValue=false)]
+        public List<FacePoint> NoseBridge { get; set; }
+
+        /// <summary>
+        /// Point locations of the bottom (nostrils) of the nose
+        /// </summary>
+        /// <value>Point locations of the bottom (nostrils) of the nose</value>
+        [DataMember(Name="NoseBottom", EmitDefaultValue=false)]
+        public List<FacePoint> NoseBottom { get; set; }
+
+        /// <summary>
+        /// Point locations of the inner outline of the lips
+        /// </summary>
+        /// <value>Point locations of the inner outline of the lips</value>
+        [DataMember(Name="LipsInnerOutline", EmitDefaultValue=false)]
+        public List<FacePoint> LipsInnerOutline { get; set; }
+
+        /// <summary>
+        /// Point locations of the outer outline of the lips
+        /// </summary>
+        /// <value>Point locations of the outer outline of the lips</value>
+        [DataMember(Name="LipsOuterOutline", EmitDefaultValue=false)]
+        public List<FacePoint> LipsOuterOutline { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -153,6 +162,10 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FaceWithLandmarks {\n");
+            sb.Append("  LeftX: ").Append(LeftX).Append("\n");
+            sb.Append("  TopY: ").Append(TopY).Append("\n");
+            sb.Append("  RightX: ").Append(RightX).Append("\n");
+            sb.Append("  BottomY: ").Append(BottomY).Append("\n");
             sb.Append("  LeftEyebrow: ").Append(LeftEyebrow).Append("\n");
             sb.Append("  RightEyebrow: ").Append(RightEyebrow).Append("\n");
             sb.Append("  LeftEye: ").Append(LeftEye).Append("\n");
@@ -162,10 +175,6 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
             sb.Append("  NoseBottom: ").Append(NoseBottom).Append("\n");
             sb.Append("  LipsInnerOutline: ").Append(LipsInnerOutline).Append("\n");
             sb.Append("  LipsOuterOutline: ").Append(LipsOuterOutline).Append("\n");
-            sb.Append("  LeftX: ").Append(LeftX).Append("\n");
-            sb.Append("  TopY: ").Append(TopY).Append("\n");
-            sb.Append("  RightX: ").Append(RightX).Append("\n");
-            sb.Append("  BottomY: ").Append(BottomY).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -200,6 +209,26 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
                 return false;
 
             return 
+                (
+                    this.LeftX == input.LeftX ||
+                    (this.LeftX != null &&
+                    this.LeftX.Equals(input.LeftX))
+                ) && 
+                (
+                    this.TopY == input.TopY ||
+                    (this.TopY != null &&
+                    this.TopY.Equals(input.TopY))
+                ) && 
+                (
+                    this.RightX == input.RightX ||
+                    (this.RightX != null &&
+                    this.RightX.Equals(input.RightX))
+                ) && 
+                (
+                    this.BottomY == input.BottomY ||
+                    (this.BottomY != null &&
+                    this.BottomY.Equals(input.BottomY))
+                ) && 
                 (
                     this.LeftEyebrow == input.LeftEyebrow ||
                     this.LeftEyebrow != null &&
@@ -244,26 +273,6 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
                     this.LipsOuterOutline == input.LipsOuterOutline ||
                     this.LipsOuterOutline != null &&
                     this.LipsOuterOutline.SequenceEqual(input.LipsOuterOutline)
-                ) && 
-                (
-                    this.LeftX == input.LeftX ||
-                    (this.LeftX != null &&
-                    this.LeftX.Equals(input.LeftX))
-                ) && 
-                (
-                    this.TopY == input.TopY ||
-                    (this.TopY != null &&
-                    this.TopY.Equals(input.TopY))
-                ) && 
-                (
-                    this.RightX == input.RightX ||
-                    (this.RightX != null &&
-                    this.RightX.Equals(input.RightX))
-                ) && 
-                (
-                    this.BottomY == input.BottomY ||
-                    (this.BottomY != null &&
-                    this.BottomY.Equals(input.BottomY))
                 );
         }
 
@@ -276,6 +285,14 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.LeftX != null)
+                    hashCode = hashCode * 59 + this.LeftX.GetHashCode();
+                if (this.TopY != null)
+                    hashCode = hashCode * 59 + this.TopY.GetHashCode();
+                if (this.RightX != null)
+                    hashCode = hashCode * 59 + this.RightX.GetHashCode();
+                if (this.BottomY != null)
+                    hashCode = hashCode * 59 + this.BottomY.GetHashCode();
                 if (this.LeftEyebrow != null)
                     hashCode = hashCode * 59 + this.LeftEyebrow.GetHashCode();
                 if (this.RightEyebrow != null)
@@ -294,14 +311,6 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
                     hashCode = hashCode * 59 + this.LipsInnerOutline.GetHashCode();
                 if (this.LipsOuterOutline != null)
                     hashCode = hashCode * 59 + this.LipsOuterOutline.GetHashCode();
-                if (this.LeftX != null)
-                    hashCode = hashCode * 59 + this.LeftX.GetHashCode();
-                if (this.TopY != null)
-                    hashCode = hashCode * 59 + this.TopY.GetHashCode();
-                if (this.RightX != null)
-                    hashCode = hashCode * 59 + this.RightX.GetHashCode();
-                if (this.BottomY != null)
-                    hashCode = hashCode * 59 + this.BottomY.GetHashCode();
                 return hashCode;
             }
         }

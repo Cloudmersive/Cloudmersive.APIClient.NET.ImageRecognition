@@ -67,6 +67,22 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
 
 
         /// <summary>
+        /// Test the property 'LicensePlateTextBestMatch'
+        /// </summary>
+        [Test]
+        public void LicensePlateTextBestMatchTest()
+        {
+            // TODO unit test for the property 'LicensePlateTextBestMatch'
+        }
+        /// <summary>
+        /// Test the property 'LicensePlateTextRunnerUp'
+        /// </summary>
+        [Test]
+        public void LicensePlateTextRunnerUpTest()
+        {
+            // TODO unit test for the property 'LicensePlateTextRunnerUp'
+        }
+        /// <summary>
         /// Test the property 'LocationX'
         /// </summary>
         [Test]
@@ -97,22 +113,6 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
         public void HeightTest()
         {
             // TODO unit test for the property 'Height'
-        }
-        /// <summary>
-        /// Test the property 'LicensePlateTextBestMatch'
-        /// </summary>
-        [Test]
-        public void LicensePlateTextBestMatchTest()
-        {
-            // TODO unit test for the property 'LicensePlateTextBestMatch'
-        }
-        /// <summary>
-        /// Test the property 'LicensePlateTextRunnerUp'
-        /// </summary>
-        [Test]
-        public void LicensePlateTextRunnerUpTest()
-        {
-            // TODO unit test for the property 'LicensePlateTextRunnerUp'
         }
         /// <summary>
         /// Test the property 'LicensePlateRecognitionConfidenceLevel'

@@ -25,24 +25,20 @@ using SwaggerDateConverter = Cloudmersive.APIClient.NET.ImageRecognition.Client.
 namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
 {
     /// <summary>
-    /// Results of comparing/matching faces in an image
+    /// Result of performing a get dominant color operation
     /// </summary>
     [DataContract]
-    public partial class FaceCompareResponse :  IEquatable<FaceCompareResponse>, IValidatableObject
+    public partial class DominantColorResult :  IEquatable<DominantColorResult>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="FaceCompareResponse" /> class.
+        /// Initializes a new instance of the <see cref="DominantColorResult" /> class.
         /// </summary>
         /// <param name="successful">True if the operation was successful, false otherwise.</param>
-        /// <param name="faces">Array of faces found in the input image.</param>
-        /// <param name="faceCount">Number of faces found in the image.</param>
-        /// <param name="errorDetails">Details of any errors that occurred.</param>
-        public FaceCompareResponse(bool? successful = default(bool?), List<FaceMatch> faces = default(List<FaceMatch>), int? faceCount = default(int?), string errorDetails = default(string))
+        /// <param name="dominantColors">Dominant colors in the image, in order where most dominant color is in the first index position (0), the second most-dominant color is in index position 1 and so on.</param>
+        public DominantColorResult(bool? successful = default(bool?), List<ColorResult> dominantColors = default(List<ColorResult>))
         {
             this.Successful = successful;
-            this.Faces = faces;
-            this.FaceCount = faceCount;
-            this.ErrorDetails = errorDetails;
+            this.DominantColors = dominantColors;
         }
         
         /// <summary>
@@ -53,25 +49,11 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         public bool? Successful { get; set; }
 
         /// <summary>
-        /// Array of faces found in the input image
+        /// Dominant colors in the image, in order where most dominant color is in the first index position (0), the second most-dominant color is in index position 1 and so on
         /// </summary>
-        /// <value>Array of faces found in the input image</value>
-        [DataMember(Name="Faces", EmitDefaultValue=false)]
-        public List<FaceMatch> Faces { get; set; }
-
-        /// <summary>
-        /// Number of faces found in the image
-        /// </summary>
-        /// <value>Number of faces found in the image</value>
-        [DataMember(Name="FaceCount", EmitDefaultValue=false)]
-        public int? FaceCount { get; set; }
-
-        /// <summary>
-        /// Details of any errors that occurred
-        /// </summary>
-        /// <value>Details of any errors that occurred</value>
-        [DataMember(Name="ErrorDetails", EmitDefaultValue=false)]
-        public string ErrorDetails { get; set; }
+        /// <value>Dominant colors in the image, in order where most dominant color is in the first index position (0), the second most-dominant color is in index position 1 and so on</value>
+        [DataMember(Name="DominantColors", EmitDefaultValue=false)]
+        public List<ColorResult> DominantColors { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -80,11 +62,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class FaceCompareResponse {\n");
+            sb.Append("class DominantColorResult {\n");
             sb.Append("  Successful: ").Append(Successful).Append("\n");
-            sb.Append("  Faces: ").Append(Faces).Append("\n");
-            sb.Append("  FaceCount: ").Append(FaceCount).Append("\n");
-            sb.Append("  ErrorDetails: ").Append(ErrorDetails).Append("\n");
+            sb.Append("  DominantColors: ").Append(DominantColors).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -105,15 +85,15 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as FaceCompareResponse);
+            return this.Equals(input as DominantColorResult);
         }
 
         /// <summary>
-        /// Returns true if FaceCompareResponse instances are equal
+        /// Returns true if DominantColorResult instances are equal
         /// </summary>
-        /// <param name="input">Instance of FaceCompareResponse to be compared</param>
+        /// <param name="input">Instance of DominantColorResult to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(FaceCompareResponse input)
+        public bool Equals(DominantColorResult input)
         {
             if (input == null)
                 return false;
@@ -125,19 +105,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
                     this.Successful.Equals(input.Successful))
                 ) && 
                 (
-                    this.Faces == input.Faces ||
-                    this.Faces != null &&
-                    this.Faces.SequenceEqual(input.Faces)
-                ) && 
-                (
-                    this.FaceCount == input.FaceCount ||
-                    (this.FaceCount != null &&
-                    this.FaceCount.Equals(input.FaceCount))
-                ) && 
-                (
-                    this.ErrorDetails == input.ErrorDetails ||
-                    (this.ErrorDetails != null &&
-                    this.ErrorDetails.Equals(input.ErrorDetails))
+                    this.DominantColors == input.DominantColors ||
+                    this.DominantColors != null &&
+                    this.DominantColors.SequenceEqual(input.DominantColors)
                 );
         }
 
@@ -152,12 +122,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
                 int hashCode = 41;
                 if (this.Successful != null)
                     hashCode = hashCode * 59 + this.Successful.GetHashCode();
-                if (this.Faces != null)
-                    hashCode = hashCode * 59 + this.Faces.GetHashCode();
-                if (this.FaceCount != null)
-                    hashCode = hashCode * 59 + this.FaceCount.GetHashCode();
-                if (this.ErrorDetails != null)
-                    hashCode = hashCode * 59 + this.ErrorDetails.GetHashCode();
+                if (this.DominantColors != null)
+                    hashCode = hashCode * 59 + this.DominantColors.GetHashCode();
                 return hashCode;
             }
         }
