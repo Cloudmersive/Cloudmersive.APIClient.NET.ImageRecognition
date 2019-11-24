@@ -173,6 +173,29 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>ApiResponse of VehicleLicensePlateDetectionResult</returns>
         ApiResponse<VehicleLicensePlateDetectionResult> RecognizeDetectVehicleLicensePlatesWithHttpInfo (System.IO.Stream imageFile);
+        /// <summary>
+        /// Find the location of a symbol in an image
+        /// </summary>
+        /// <remarks>
+        /// Determine if an image contains a symbol, and if so, the location of that symbol in the image.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputImage">Image file to search through for the target image.</param>
+        /// <param name="targetImage">Image to find in the input image.</param>
+        /// <returns>FindSymbolResult</returns>
+        FindSymbolResult RecognizeFindSymbol (System.IO.Stream inputImage, System.IO.Stream targetImage);
+
+        /// <summary>
+        /// Find the location of a symbol in an image
+        /// </summary>
+        /// <remarks>
+        /// Determine if an image contains a symbol, and if so, the location of that symbol in the image.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputImage">Image file to search through for the target image.</param>
+        /// <param name="targetImage">Image to find in the input image.</param>
+        /// <returns>ApiResponse of FindSymbolResult</returns>
+        ApiResponse<FindSymbolResult> RecognizeFindSymbolWithHttpInfo (System.IO.Stream inputImage, System.IO.Stream targetImage);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -324,6 +347,29 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>Task of ApiResponse (VehicleLicensePlateDetectionResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<VehicleLicensePlateDetectionResult>> RecognizeDetectVehicleLicensePlatesAsyncWithHttpInfo (System.IO.Stream imageFile);
+        /// <summary>
+        /// Find the location of a symbol in an image
+        /// </summary>
+        /// <remarks>
+        /// Determine if an image contains a symbol, and if so, the location of that symbol in the image.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputImage">Image file to search through for the target image.</param>
+        /// <param name="targetImage">Image to find in the input image.</param>
+        /// <returns>Task of FindSymbolResult</returns>
+        System.Threading.Tasks.Task<FindSymbolResult> RecognizeFindSymbolAsync (System.IO.Stream inputImage, System.IO.Stream targetImage);
+
+        /// <summary>
+        /// Find the location of a symbol in an image
+        /// </summary>
+        /// <remarks>
+        /// Determine if an image contains a symbol, and if so, the location of that symbol in the image.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputImage">Image file to search through for the target image.</param>
+        /// <param name="targetImage">Image to find in the input image.</param>
+        /// <returns>Task of ApiResponse (FindSymbolResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FindSymbolResult>> RecognizeFindSymbolAsyncWithHttpInfo (System.IO.Stream inputImage, System.IO.Stream targetImage);
         #endregion Asynchronous Operations
     }
 
@@ -1485,6 +1531,169 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
             return new ApiResponse<VehicleLicensePlateDetectionResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (VehicleLicensePlateDetectionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VehicleLicensePlateDetectionResult)));
+        }
+
+        /// <summary>
+        /// Find the location of a symbol in an image Determine if an image contains a symbol, and if so, the location of that symbol in the image.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputImage">Image file to search through for the target image.</param>
+        /// <param name="targetImage">Image to find in the input image.</param>
+        /// <returns>FindSymbolResult</returns>
+        public FindSymbolResult RecognizeFindSymbol (System.IO.Stream inputImage, System.IO.Stream targetImage)
+        {
+             ApiResponse<FindSymbolResult> localVarResponse = RecognizeFindSymbolWithHttpInfo(inputImage, targetImage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Find the location of a symbol in an image Determine if an image contains a symbol, and if so, the location of that symbol in the image.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputImage">Image file to search through for the target image.</param>
+        /// <param name="targetImage">Image to find in the input image.</param>
+        /// <returns>ApiResponse of FindSymbolResult</returns>
+        public ApiResponse< FindSymbolResult > RecognizeFindSymbolWithHttpInfo (System.IO.Stream inputImage, System.IO.Stream targetImage)
+        {
+            // verify the required parameter 'inputImage' is set
+            if (inputImage == null)
+                throw new ApiException(400, "Missing required parameter 'inputImage' when calling RecognizeApi->RecognizeFindSymbol");
+            // verify the required parameter 'targetImage' is set
+            if (targetImage == null)
+                throw new ApiException(400, "Missing required parameter 'targetImage' when calling RecognizeApi->RecognizeFindSymbol");
+
+            var localVarPath = "/image/recognize/find/symbol";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputImage != null) localVarFileParams.Add("inputImage", this.Configuration.ApiClient.ParameterToFile("inputImage", inputImage));
+            if (targetImage != null) localVarFileParams.Add("targetImage", this.Configuration.ApiClient.ParameterToFile("targetImage", targetImage));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RecognizeFindSymbol", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FindSymbolResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FindSymbolResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FindSymbolResult)));
+        }
+
+        /// <summary>
+        /// Find the location of a symbol in an image Determine if an image contains a symbol, and if so, the location of that symbol in the image.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputImage">Image file to search through for the target image.</param>
+        /// <param name="targetImage">Image to find in the input image.</param>
+        /// <returns>Task of FindSymbolResult</returns>
+        public async System.Threading.Tasks.Task<FindSymbolResult> RecognizeFindSymbolAsync (System.IO.Stream inputImage, System.IO.Stream targetImage)
+        {
+             ApiResponse<FindSymbolResult> localVarResponse = await RecognizeFindSymbolAsyncWithHttpInfo(inputImage, targetImage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Find the location of a symbol in an image Determine if an image contains a symbol, and if so, the location of that symbol in the image.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="inputImage">Image file to search through for the target image.</param>
+        /// <param name="targetImage">Image to find in the input image.</param>
+        /// <returns>Task of ApiResponse (FindSymbolResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FindSymbolResult>> RecognizeFindSymbolAsyncWithHttpInfo (System.IO.Stream inputImage, System.IO.Stream targetImage)
+        {
+            // verify the required parameter 'inputImage' is set
+            if (inputImage == null)
+                throw new ApiException(400, "Missing required parameter 'inputImage' when calling RecognizeApi->RecognizeFindSymbol");
+            // verify the required parameter 'targetImage' is set
+            if (targetImage == null)
+                throw new ApiException(400, "Missing required parameter 'targetImage' when calling RecognizeApi->RecognizeFindSymbol");
+
+            var localVarPath = "/image/recognize/find/symbol";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (inputImage != null) localVarFileParams.Add("inputImage", this.Configuration.ApiClient.ParameterToFile("inputImage", inputImage));
+            if (targetImage != null) localVarFileParams.Add("targetImage", this.Configuration.ApiClient.ParameterToFile("targetImage", targetImage));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RecognizeFindSymbol", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FindSymbolResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FindSymbolResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FindSymbolResult)));
         }
 
     }

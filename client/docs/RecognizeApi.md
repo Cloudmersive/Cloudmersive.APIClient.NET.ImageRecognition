@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**RecognizeDetectTextFine**](RecognizeApi.md#recognizedetecttextfine) | **POST** /image/recognize/detect-text/fine | Detect fine text in a photo of a document
 [**RecognizeDetectTextLarge**](RecognizeApi.md#recognizedetecttextlarge) | **POST** /image/recognize/detect-text/large | Detect large text in a photo
 [**RecognizeDetectVehicleLicensePlates**](RecognizeApi.md#recognizedetectvehiclelicenseplates) | **POST** /image/recognize/detect-vehicle-license-plates | Detect vehicle license plates in an image
+[**RecognizeFindSymbol**](RecognizeApi.md#recognizefindsymbol) | **POST** /image/recognize/find/symbol | Find the location of a symbol in an image
 
 
 <a name="recognizedescribe"></a>
@@ -465,6 +466,74 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**VehicleLicensePlateDetectionResult**](VehicleLicensePlateDetectionResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="recognizefindsymbol"></a>
+# **RecognizeFindSymbol**
+> FindSymbolResult RecognizeFindSymbol (System.IO.Stream inputImage, System.IO.Stream targetImage)
+
+Find the location of a symbol in an image
+
+Determine if an image contains a symbol, and if so, the location of that symbol in the image.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.ImageRecognition.Api;
+using Cloudmersive.APIClient.NET.ImageRecognition.Client;
+using Cloudmersive.APIClient.NET.ImageRecognition.Model;
+
+namespace Example
+{
+    public class RecognizeFindSymbolExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new RecognizeApi();
+            var inputImage = new System.IO.Stream(); // System.IO.Stream | Image file to search through for the target image.
+            var targetImage = new System.IO.Stream(); // System.IO.Stream | Image to find in the input image.
+
+            try
+            {
+                // Find the location of a symbol in an image
+                FindSymbolResult result = apiInstance.RecognizeFindSymbol(inputImage, targetImage);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecognizeApi.RecognizeFindSymbol: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputImage** | **System.IO.Stream**| Image file to search through for the target image. | 
+ **targetImage** | **System.IO.Stream**| Image to find in the input image. | 
+
+### Return type
+
+[**FindSymbolResult**](FindSymbolResult.md)
 
 ### Authorization
 

@@ -24,7 +24,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Resize an image with parameters
+        /// Resize an image while preserving aspect ratio
         /// </summary>
         /// <remarks>
         /// Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio
@@ -37,7 +37,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         byte[] ResizePost (int? maxWidth, int? maxHeight, System.IO.Stream imageFile);
 
         /// <summary>
-        /// Resize an image with parameters
+        /// Resize an image while preserving aspect ratio
         /// </summary>
         /// <remarks>
         /// Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio
@@ -48,10 +48,35 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ResizePostWithHttpInfo (int? maxWidth, int? maxHeight, System.IO.Stream imageFile);
+        /// <summary>
+        /// Resize an image
+        /// </summary>
+        /// <remarks>
+        /// Resize an image to a specific width and specific height
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>byte[]</returns>
+        byte[] ResizeResizeSimple (int? width, int? height, System.IO.Stream imageFile);
+
+        /// <summary>
+        /// Resize an image
+        /// </summary>
+        /// <remarks>
+        /// Resize an image to a specific width and specific height
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> ResizeResizeSimpleWithHttpInfo (int? width, int? height, System.IO.Stream imageFile);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Resize an image with parameters
+        /// Resize an image while preserving aspect ratio
         /// </summary>
         /// <remarks>
         /// Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio
@@ -64,7 +89,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         System.Threading.Tasks.Task<byte[]> ResizePostAsync (int? maxWidth, int? maxHeight, System.IO.Stream imageFile);
 
         /// <summary>
-        /// Resize an image with parameters
+        /// Resize an image while preserving aspect ratio
         /// </summary>
         /// <remarks>
         /// Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio
@@ -75,6 +100,31 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ResizePostAsyncWithHttpInfo (int? maxWidth, int? maxHeight, System.IO.Stream imageFile);
+        /// <summary>
+        /// Resize an image
+        /// </summary>
+        /// <remarks>
+        /// Resize an image to a specific width and specific height
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> ResizeResizeSimpleAsync (int? width, int? height, System.IO.Stream imageFile);
+
+        /// <summary>
+        /// Resize an image
+        /// </summary>
+        /// <remarks>
+        /// Resize an image to a specific width and specific height
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> ResizeResizeSimpleAsyncWithHttpInfo (int? width, int? height, System.IO.Stream imageFile);
         #endregion Asynchronous Operations
     }
 
@@ -176,7 +226,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Resize an image with parameters Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio
+        /// Resize an image while preserving aspect ratio Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maxWidth">Maximum width of the output image - final image will be as large as possible while less than or equial to this width</param>
@@ -190,7 +240,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Resize an image with parameters Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio
+        /// Resize an image while preserving aspect ratio Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maxWidth">Maximum width of the output image - final image will be as large as possible while less than or equial to this width</param>
@@ -260,7 +310,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Resize an image with parameters Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio
+        /// Resize an image while preserving aspect ratio Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maxWidth">Maximum width of the output image - final image will be as large as possible while less than or equial to this width</param>
@@ -275,7 +325,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Resize an image with parameters Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio
+        /// Resize an image while preserving aspect ratio Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maxWidth">Maximum width of the output image - final image will be as large as possible while less than or equial to this width</param>
@@ -336,6 +386,175 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("ResizePost", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Resize an image Resize an image to a specific width and specific height
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>byte[]</returns>
+        public byte[] ResizeResizeSimple (int? width, int? height, System.IO.Stream imageFile)
+        {
+             ApiResponse<byte[]> localVarResponse = ResizeResizeSimpleWithHttpInfo(width, height, imageFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Resize an image Resize an image to a specific width and specific height
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > ResizeResizeSimpleWithHttpInfo (int? width, int? height, System.IO.Stream imageFile)
+        {
+            // verify the required parameter 'width' is set
+            if (width == null)
+                throw new ApiException(400, "Missing required parameter 'width' when calling ResizeApi->ResizeResizeSimple");
+            // verify the required parameter 'height' is set
+            if (height == null)
+                throw new ApiException(400, "Missing required parameter 'height' when calling ResizeApi->ResizeResizeSimple");
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling ResizeApi->ResizeResizeSimple");
+
+            var localVarPath = "/image/resize/target/{width}/{height}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "image/png"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (width != null) localVarPathParams.Add("width", this.Configuration.ApiClient.ParameterToString(width)); // path parameter
+            if (height != null) localVarPathParams.Add("height", this.Configuration.ApiClient.ParameterToString(height)); // path parameter
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ResizeResizeSimple", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Resize an image Resize an image to a specific width and specific height
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> ResizeResizeSimpleAsync (int? width, int? height, System.IO.Stream imageFile)
+        {
+             ApiResponse<byte[]> localVarResponse = await ResizeResizeSimpleAsyncWithHttpInfo(width, height, imageFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Resize an image Resize an image to a specific width and specific height
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ResizeResizeSimpleAsyncWithHttpInfo (int? width, int? height, System.IO.Stream imageFile)
+        {
+            // verify the required parameter 'width' is set
+            if (width == null)
+                throw new ApiException(400, "Missing required parameter 'width' when calling ResizeApi->ResizeResizeSimple");
+            // verify the required parameter 'height' is set
+            if (height == null)
+                throw new ApiException(400, "Missing required parameter 'height' when calling ResizeApi->ResizeResizeSimple");
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling ResizeApi->ResizeResizeSimple");
+
+            var localVarPath = "/image/resize/target/{width}/{height}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "image/png"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (width != null) localVarPathParams.Add("width", this.Configuration.ApiClient.ParameterToString(width)); // path parameter
+            if (height != null) localVarPathParams.Add("height", this.Configuration.ApiClient.ParameterToString(height)); // path parameter
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ResizeResizeSimple", localVarResponse);
                 if (exception != null) throw exception;
             }
 

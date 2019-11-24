@@ -5,7 +5,7 @@ Image Recognition and Processing APIs let you use Machine Learning to recognize 
 This C# SDK is:
 
 - API version: v1
-- SDK version: 2.1.1
+- SDK version: 2.1.2
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -106,9 +106,11 @@ Class | Method | HTTP request | Description
 *EditApi* | [**EditAutoOrient**](docs/EditApi.md#editautoorient) | **POST** /image/edit/auto-orient/remove-exif | Normalizes image rotation and removes EXIF rotation data
 *EditApi* | [**EditCompositeBasic**](docs/EditApi.md#editcompositebasic) | **POST** /image/edit/composite/{location} | Composite two images together
 *EditApi* | [**EditContrastAdaptive**](docs/EditApi.md#editcontrastadaptive) | **POST** /image/edit/contrast/{gamma}/adaptive | Adaptively adjust the contrast of the image to be more appealing and easy to see
+*EditApi* | [**EditCropRectangle**](docs/EditApi.md#editcroprectangle) | **POST** /image/edit/crop/rectangle/{left}/{top}/{width}/{height} | Crop an image to a rectangular area
 *EditApi* | [**EditDrawPolygon**](docs/EditApi.md#editdrawpolygon) | **POST** /image/edit/draw/polygon | Draw a polygon onto an image
 *EditApi* | [**EditDrawRectangle**](docs/EditApi.md#editdrawrectangle) | **POST** /image/edit/draw/rectangle | Draw a rectangle onto an image
 *EditApi* | [**EditDrawText**](docs/EditApi.md#editdrawtext) | **POST** /image/edit/draw/text | Draw text onto an image
+*EditApi* | [**EditDropShadow**](docs/EditApi.md#editdropshadow) | **POST** /image/edit/drop-shadow/{X}/{Y}/{sigma}/{opacity} | Add a customizeable drop shadow to an image
 *EditApi* | [**EditRotate**](docs/EditApi.md#editrotate) | **POST** /image/edit/rotate/{degrees}/angle | Rotate an image any number of degrees
 *FaceApi* | [**FaceCompare**](docs/FaceApi.md#facecompare) | **POST** /image/face/compare-and-match | Compare and match faces
 *FaceApi* | [**FaceCropFirst**](docs/FaceApi.md#facecropfirst) | **POST** /image/face/crop/first | Crop image to face (square)
@@ -117,6 +119,14 @@ Class | Method | HTTP request | Description
 *FaceApi* | [**FaceDetectGender**](docs/FaceApi.md#facedetectgender) | **POST** /image/face/detect-gender | Detect the gender of people in an image
 *FaceApi* | [**FaceLocate**](docs/FaceApi.md#facelocate) | **POST** /image/face/locate | Find faces in an image
 *FaceApi* | [**FaceLocateWithLandmarks**](docs/FaceApi.md#facelocatewithlandmarks) | **POST** /image/face/locate-with-landmarks | Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image
+*FilterApi* | [**FilterBlackAndWhite**](docs/FilterApi.md#filterblackandwhite) | **POST** /image/filter/black-and-white | Convert image to black-and-white grayscale
+*FilterApi* | [**FilterDespeckle**](docs/FilterApi.md#filterdespeckle) | **POST** /image/filter/despeckle | Despeckle (remove point noise) from the image
+*FilterApi* | [**FilterEdgeDetect**](docs/FilterApi.md#filteredgedetect) | **POST** /image/filter/edge-detect/{radius} | Detect and highlight edges in an image
+*FilterApi* | [**FilterEmboss**](docs/FilterApi.md#filteremboss) | **POST** /image/filter/emboss/{radius}/{sigma} | Emboss an image
+*FilterApi* | [**FilterGaussianBlur**](docs/FilterApi.md#filtergaussianblur) | **POST** /image/filter/blur/guassian/{radius}/{sigma} | Perform a guassian blur on the input image
+*FilterApi* | [**FilterMotionBlur**](docs/FilterApi.md#filtermotionblur) | **POST** /image/filter/blur/motion/{radius}/{sigma}/{angle} | Perform a motion blur on the input image
+*FilterApi* | [**FilterPosterize**](docs/FilterApi.md#filterposterize) | **POST** /image/filter/posterize | Posterize the image by reducing distinct colors
+*FilterApi* | [**FilterSwirl**](docs/FilterApi.md#filterswirl) | **POST** /image/filter/swirl | Swirl distort the image
 *InfoApi* | [**InfoGetDominantColor**](docs/InfoApi.md#infogetdominantcolor) | **POST** /image/get-info/dominant-color | Returns the dominant colors of the image
 *NsfwApi* | [**NsfwClassify**](docs/NsfwApi.md#nsfwclassify) | **POST** /image/nsfw/classify | Not safe for work (NSFW) racy content classification
 *RecognizeApi* | [**RecognizeDescribe**](docs/RecognizeApi.md#recognizedescribe) | **POST** /image/recognize/describe | Describe an image in natural language
@@ -126,7 +136,9 @@ Class | Method | HTTP request | Description
 *RecognizeApi* | [**RecognizeDetectTextFine**](docs/RecognizeApi.md#recognizedetecttextfine) | **POST** /image/recognize/detect-text/fine | Detect fine text in a photo of a document
 *RecognizeApi* | [**RecognizeDetectTextLarge**](docs/RecognizeApi.md#recognizedetecttextlarge) | **POST** /image/recognize/detect-text/large | Detect large text in a photo
 *RecognizeApi* | [**RecognizeDetectVehicleLicensePlates**](docs/RecognizeApi.md#recognizedetectvehiclelicenseplates) | **POST** /image/recognize/detect-vehicle-license-plates | Detect vehicle license plates in an image
-*ResizeApi* | [**ResizePost**](docs/ResizeApi.md#resizepost) | **POST** /image/resize/preserveAspectRatio/{maxWidth}/{maxHeight} | Resize an image with parameters
+*RecognizeApi* | [**RecognizeFindSymbol**](docs/RecognizeApi.md#recognizefindsymbol) | **POST** /image/recognize/find/symbol | Find the location of a symbol in an image
+*ResizeApi* | [**ResizePost**](docs/ResizeApi.md#resizepost) | **POST** /image/resize/preserveAspectRatio/{maxWidth}/{maxHeight} | Resize an image while preserving aspect ratio
+*ResizeApi* | [**ResizeResizeSimple**](docs/ResizeApi.md#resizeresizesimple) | **POST** /image/resize/target/{width}/{height} | Resize an image
 
 
 <a name="documentation-for-models"></a>
@@ -150,6 +162,7 @@ Class | Method | HTTP request | Description
  - [Model.FaceMatch](docs/FaceMatch.md)
  - [Model.FacePoint](docs/FacePoint.md)
  - [Model.FaceWithLandmarks](docs/FaceWithLandmarks.md)
+ - [Model.FindSymbolResult](docs/FindSymbolResult.md)
  - [Model.FineTextDetectionResult](docs/FineTextDetectionResult.md)
  - [Model.FineTextItem](docs/FineTextItem.md)
  - [Model.GenderDetectionResult](docs/GenderDetectionResult.md)

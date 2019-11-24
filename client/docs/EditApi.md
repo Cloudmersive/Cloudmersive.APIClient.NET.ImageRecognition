@@ -7,9 +7,11 @@ Method | HTTP request | Description
 [**EditAutoOrient**](EditApi.md#editautoorient) | **POST** /image/edit/auto-orient/remove-exif | Normalizes image rotation and removes EXIF rotation data
 [**EditCompositeBasic**](EditApi.md#editcompositebasic) | **POST** /image/edit/composite/{location} | Composite two images together
 [**EditContrastAdaptive**](EditApi.md#editcontrastadaptive) | **POST** /image/edit/contrast/{gamma}/adaptive | Adaptively adjust the contrast of the image to be more appealing and easy to see
+[**EditCropRectangle**](EditApi.md#editcroprectangle) | **POST** /image/edit/crop/rectangle/{left}/{top}/{width}/{height} | Crop an image to a rectangular area
 [**EditDrawPolygon**](EditApi.md#editdrawpolygon) | **POST** /image/edit/draw/polygon | Draw a polygon onto an image
 [**EditDrawRectangle**](EditApi.md#editdrawrectangle) | **POST** /image/edit/draw/rectangle | Draw a rectangle onto an image
 [**EditDrawText**](EditApi.md#editdrawtext) | **POST** /image/edit/draw/text | Draw text onto an image
+[**EditDropShadow**](EditApi.md#editdropshadow) | **POST** /image/edit/drop-shadow/{X}/{Y}/{sigma}/{opacity} | Add a customizeable drop shadow to an image
 [**EditRotate**](EditApi.md#editrotate) | **POST** /image/edit/rotate/{degrees}/angle | Rotate an image any number of degrees
 
 
@@ -217,6 +219,80 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="editcroprectangle"></a>
+# **EditCropRectangle**
+> byte[] EditCropRectangle (int? left, int? top, int? width, int? height, System.IO.Stream imageFile)
+
+Crop an image to a rectangular area
+
+Crop an image to a target rectangular area
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.ImageRecognition.Api;
+using Cloudmersive.APIClient.NET.ImageRecognition.Client;
+using Cloudmersive.APIClient.NET.ImageRecognition.Model;
+
+namespace Example
+{
+    public class EditCropRectangleExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditApi();
+            var left = 56;  // int? | The left edge of the rectangular crop area in pixels (X).
+            var top = 56;  // int? | The top edge of the rectangular crop area in pixels (Y).
+            var width = 56;  // int? | The width of the rectangular crop area in pixels.
+            var height = 56;  // int? | The height of the rectangular crop area in pixels.
+            var imageFile = new System.IO.Stream(); // System.IO.Stream | Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.
+
+            try
+            {
+                // Crop an image to a rectangular area
+                byte[] result = apiInstance.EditCropRectangle(left, top, width, height, imageFile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditApi.EditCropRectangle: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **left** | **int?**| The left edge of the rectangular crop area in pixels (X). | 
+ **top** | **int?**| The top edge of the rectangular crop area in pixels (Y). | 
+ **width** | **int?**| The width of the rectangular crop area in pixels. | 
+ **height** | **int?**| The height of the rectangular crop area in pixels. | 
+ **imageFile** | **System.IO.Stream**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | 
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="editdrawpolygon"></a>
 # **EditDrawPolygon**
 > byte[] EditDrawPolygon (DrawPolygonRequest request)
@@ -412,6 +488,80 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: image/png
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="editdropshadow"></a>
+# **EditDropShadow**
+> byte[] EditDropShadow (int? X, int? Y, int? sigma, int? opacity, System.IO.Stream imageFile)
+
+Add a customizeable drop shadow to an image
+
+Add a customizeable drop shadow to the image
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.ImageRecognition.Api;
+using Cloudmersive.APIClient.NET.ImageRecognition.Client;
+using Cloudmersive.APIClient.NET.ImageRecognition.Model;
+
+namespace Example
+{
+    public class EditDropShadowExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new EditApi();
+            var X = 56;  // int? | 
+            var Y = 56;  // int? | 
+            var sigma = 56;  // int? | Sigma (blur distance) of the drop shadow
+            var opacity = 56;  // int? | Opacity of the drop shadow; 0 is 0% and 100 is 100%
+            var imageFile = new System.IO.Stream(); // System.IO.Stream | Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.
+
+            try
+            {
+                // Add a customizeable drop shadow to an image
+                byte[] result = apiInstance.EditDropShadow(X, Y, sigma, opacity, imageFile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EditApi.EditDropShadow: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **X** | **int?**|  | 
+ **Y** | **int?**|  | 
+ **sigma** | **int?**| Sigma (blur distance) of the drop shadow | 
+ **opacity** | **int?**| Opacity of the drop shadow; 0 is 0% and 100 is 100% | 
+ **imageFile** | **System.IO.Stream**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | 
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -77,6 +77,20 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
+        /// <summary>
+        /// Test ResizeResizeSimple
+        /// </summary>
+        [Test]
+        public void ResizeResizeSimpleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? width = null;
+            //int? height = null;
+            //System.IO.Stream imageFile = null;
+            //var response = instance.ResizeResizeSimple(width, height, imageFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
     }
 
 }

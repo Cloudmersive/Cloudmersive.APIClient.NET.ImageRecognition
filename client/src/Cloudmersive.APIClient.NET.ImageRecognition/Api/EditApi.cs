@@ -94,6 +94,35 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditContrastAdaptiveWithHttpInfo (double? gamma, System.IO.Stream imageFile);
         /// <summary>
+        /// Crop an image to a rectangular area
+        /// </summary>
+        /// <remarks>
+        /// Crop an image to a target rectangular area
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="left">The left edge of the rectangular crop area in pixels (X).</param>
+        /// <param name="top">The top edge of the rectangular crop area in pixels (Y).</param>
+        /// <param name="width">The width of the rectangular crop area in pixels.</param>
+        /// <param name="height">The height of the rectangular crop area in pixels.</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>byte[]</returns>
+        byte[] EditCropRectangle (int? left, int? top, int? width, int? height, System.IO.Stream imageFile);
+
+        /// <summary>
+        /// Crop an image to a rectangular area
+        /// </summary>
+        /// <remarks>
+        /// Crop an image to a target rectangular area
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="left">The left edge of the rectangular crop area in pixels (X).</param>
+        /// <param name="top">The top edge of the rectangular crop area in pixels (Y).</param>
+        /// <param name="width">The width of the rectangular crop area in pixels.</param>
+        /// <param name="height">The height of the rectangular crop area in pixels.</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditCropRectangleWithHttpInfo (int? left, int? top, int? width, int? height, System.IO.Stream imageFile);
+        /// <summary>
         /// Draw a polygon onto an image
         /// </summary>
         /// <remarks>
@@ -156,6 +185,35 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="request"></param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditDrawTextWithHttpInfo (DrawTextRequest request);
+        /// <summary>
+        /// Add a customizeable drop shadow to an image
+        /// </summary>
+        /// <remarks>
+        /// Add a customizeable drop shadow to the image
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="sigma">Sigma (blur distance) of the drop shadow</param>
+        /// <param name="opacity">Opacity of the drop shadow; 0 is 0% and 100 is 100%</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>byte[]</returns>
+        byte[] EditDropShadow (int? X, int? Y, int? sigma, int? opacity, System.IO.Stream imageFile);
+
+        /// <summary>
+        /// Add a customizeable drop shadow to an image
+        /// </summary>
+        /// <remarks>
+        /// Add a customizeable drop shadow to the image
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="sigma">Sigma (blur distance) of the drop shadow</param>
+        /// <param name="opacity">Opacity of the drop shadow; 0 is 0% and 100 is 100%</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditDropShadowWithHttpInfo (int? X, int? Y, int? sigma, int? opacity, System.IO.Stream imageFile);
         /// <summary>
         /// Rotate an image any number of degrees
         /// </summary>
@@ -251,6 +309,35 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditContrastAdaptiveAsyncWithHttpInfo (double? gamma, System.IO.Stream imageFile);
         /// <summary>
+        /// Crop an image to a rectangular area
+        /// </summary>
+        /// <remarks>
+        /// Crop an image to a target rectangular area
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="left">The left edge of the rectangular crop area in pixels (X).</param>
+        /// <param name="top">The top edge of the rectangular crop area in pixels (Y).</param>
+        /// <param name="width">The width of the rectangular crop area in pixels.</param>
+        /// <param name="height">The height of the rectangular crop area in pixels.</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditCropRectangleAsync (int? left, int? top, int? width, int? height, System.IO.Stream imageFile);
+
+        /// <summary>
+        /// Crop an image to a rectangular area
+        /// </summary>
+        /// <remarks>
+        /// Crop an image to a target rectangular area
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="left">The left edge of the rectangular crop area in pixels (X).</param>
+        /// <param name="top">The top edge of the rectangular crop area in pixels (Y).</param>
+        /// <param name="width">The width of the rectangular crop area in pixels.</param>
+        /// <param name="height">The height of the rectangular crop area in pixels.</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditCropRectangleAsyncWithHttpInfo (int? left, int? top, int? width, int? height, System.IO.Stream imageFile);
+        /// <summary>
         /// Draw a polygon onto an image
         /// </summary>
         /// <remarks>
@@ -313,6 +400,35 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="request"></param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDrawTextAsyncWithHttpInfo (DrawTextRequest request);
+        /// <summary>
+        /// Add a customizeable drop shadow to an image
+        /// </summary>
+        /// <remarks>
+        /// Add a customizeable drop shadow to the image
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="sigma">Sigma (blur distance) of the drop shadow</param>
+        /// <param name="opacity">Opacity of the drop shadow; 0 is 0% and 100 is 100%</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditDropShadowAsync (int? X, int? Y, int? sigma, int? opacity, System.IO.Stream imageFile);
+
+        /// <summary>
+        /// Add a customizeable drop shadow to an image
+        /// </summary>
+        /// <remarks>
+        /// Add a customizeable drop shadow to the image
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="sigma">Sigma (blur distance) of the drop shadow</param>
+        /// <param name="opacity">Opacity of the drop shadow; 0 is 0% and 100 is 100%</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDropShadowAsyncWithHttpInfo (int? X, int? Y, int? sigma, int? opacity, System.IO.Stream imageFile);
         /// <summary>
         /// Rotate an image any number of degrees
         /// </summary>
@@ -908,6 +1024,199 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
+        /// Crop an image to a rectangular area Crop an image to a target rectangular area
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="left">The left edge of the rectangular crop area in pixels (X).</param>
+        /// <param name="top">The top edge of the rectangular crop area in pixels (Y).</param>
+        /// <param name="width">The width of the rectangular crop area in pixels.</param>
+        /// <param name="height">The height of the rectangular crop area in pixels.</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>byte[]</returns>
+        public byte[] EditCropRectangle (int? left, int? top, int? width, int? height, System.IO.Stream imageFile)
+        {
+             ApiResponse<byte[]> localVarResponse = EditCropRectangleWithHttpInfo(left, top, width, height, imageFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Crop an image to a rectangular area Crop an image to a target rectangular area
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="left">The left edge of the rectangular crop area in pixels (X).</param>
+        /// <param name="top">The top edge of the rectangular crop area in pixels (Y).</param>
+        /// <param name="width">The width of the rectangular crop area in pixels.</param>
+        /// <param name="height">The height of the rectangular crop area in pixels.</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditCropRectangleWithHttpInfo (int? left, int? top, int? width, int? height, System.IO.Stream imageFile)
+        {
+            // verify the required parameter 'left' is set
+            if (left == null)
+                throw new ApiException(400, "Missing required parameter 'left' when calling EditApi->EditCropRectangle");
+            // verify the required parameter 'top' is set
+            if (top == null)
+                throw new ApiException(400, "Missing required parameter 'top' when calling EditApi->EditCropRectangle");
+            // verify the required parameter 'width' is set
+            if (width == null)
+                throw new ApiException(400, "Missing required parameter 'width' when calling EditApi->EditCropRectangle");
+            // verify the required parameter 'height' is set
+            if (height == null)
+                throw new ApiException(400, "Missing required parameter 'height' when calling EditApi->EditCropRectangle");
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling EditApi->EditCropRectangle");
+
+            var localVarPath = "/image/edit/crop/rectangle/{left}/{top}/{width}/{height}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (left != null) localVarPathParams.Add("left", this.Configuration.ApiClient.ParameterToString(left)); // path parameter
+            if (top != null) localVarPathParams.Add("top", this.Configuration.ApiClient.ParameterToString(top)); // path parameter
+            if (width != null) localVarPathParams.Add("width", this.Configuration.ApiClient.ParameterToString(width)); // path parameter
+            if (height != null) localVarPathParams.Add("height", this.Configuration.ApiClient.ParameterToString(height)); // path parameter
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditCropRectangle", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Crop an image to a rectangular area Crop an image to a target rectangular area
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="left">The left edge of the rectangular crop area in pixels (X).</param>
+        /// <param name="top">The top edge of the rectangular crop area in pixels (Y).</param>
+        /// <param name="width">The width of the rectangular crop area in pixels.</param>
+        /// <param name="height">The height of the rectangular crop area in pixels.</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditCropRectangleAsync (int? left, int? top, int? width, int? height, System.IO.Stream imageFile)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditCropRectangleAsyncWithHttpInfo(left, top, width, height, imageFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Crop an image to a rectangular area Crop an image to a target rectangular area
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="left">The left edge of the rectangular crop area in pixels (X).</param>
+        /// <param name="top">The top edge of the rectangular crop area in pixels (Y).</param>
+        /// <param name="width">The width of the rectangular crop area in pixels.</param>
+        /// <param name="height">The height of the rectangular crop area in pixels.</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditCropRectangleAsyncWithHttpInfo (int? left, int? top, int? width, int? height, System.IO.Stream imageFile)
+        {
+            // verify the required parameter 'left' is set
+            if (left == null)
+                throw new ApiException(400, "Missing required parameter 'left' when calling EditApi->EditCropRectangle");
+            // verify the required parameter 'top' is set
+            if (top == null)
+                throw new ApiException(400, "Missing required parameter 'top' when calling EditApi->EditCropRectangle");
+            // verify the required parameter 'width' is set
+            if (width == null)
+                throw new ApiException(400, "Missing required parameter 'width' when calling EditApi->EditCropRectangle");
+            // verify the required parameter 'height' is set
+            if (height == null)
+                throw new ApiException(400, "Missing required parameter 'height' when calling EditApi->EditCropRectangle");
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling EditApi->EditCropRectangle");
+
+            var localVarPath = "/image/edit/crop/rectangle/{left}/{top}/{width}/{height}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (left != null) localVarPathParams.Add("left", this.Configuration.ApiClient.ParameterToString(left)); // path parameter
+            if (top != null) localVarPathParams.Add("top", this.Configuration.ApiClient.ParameterToString(top)); // path parameter
+            if (width != null) localVarPathParams.Add("width", this.Configuration.ApiClient.ParameterToString(width)); // path parameter
+            if (height != null) localVarPathParams.Add("height", this.Configuration.ApiClient.ParameterToString(height)); // path parameter
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditCropRectangle", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
         /// Draw a polygon onto an image Draw one or more polygons, with customized visuals, onto an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1400,6 +1709,199 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("EditDrawText", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Add a customizeable drop shadow to an image Add a customizeable drop shadow to the image
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="sigma">Sigma (blur distance) of the drop shadow</param>
+        /// <param name="opacity">Opacity of the drop shadow; 0 is 0% and 100 is 100%</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>byte[]</returns>
+        public byte[] EditDropShadow (int? X, int? Y, int? sigma, int? opacity, System.IO.Stream imageFile)
+        {
+             ApiResponse<byte[]> localVarResponse = EditDropShadowWithHttpInfo(X, Y, sigma, opacity, imageFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add a customizeable drop shadow to an image Add a customizeable drop shadow to the image
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="sigma">Sigma (blur distance) of the drop shadow</param>
+        /// <param name="opacity">Opacity of the drop shadow; 0 is 0% and 100 is 100%</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditDropShadowWithHttpInfo (int? X, int? Y, int? sigma, int? opacity, System.IO.Stream imageFile)
+        {
+            // verify the required parameter 'X' is set
+            if (X == null)
+                throw new ApiException(400, "Missing required parameter 'X' when calling EditApi->EditDropShadow");
+            // verify the required parameter 'Y' is set
+            if (Y == null)
+                throw new ApiException(400, "Missing required parameter 'Y' when calling EditApi->EditDropShadow");
+            // verify the required parameter 'sigma' is set
+            if (sigma == null)
+                throw new ApiException(400, "Missing required parameter 'sigma' when calling EditApi->EditDropShadow");
+            // verify the required parameter 'opacity' is set
+            if (opacity == null)
+                throw new ApiException(400, "Missing required parameter 'opacity' when calling EditApi->EditDropShadow");
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling EditApi->EditDropShadow");
+
+            var localVarPath = "/image/edit/drop-shadow/{X}/{Y}/{sigma}/{opacity}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (X != null) localVarPathParams.Add("X", this.Configuration.ApiClient.ParameterToString(X)); // path parameter
+            if (Y != null) localVarPathParams.Add("Y", this.Configuration.ApiClient.ParameterToString(Y)); // path parameter
+            if (sigma != null) localVarPathParams.Add("sigma", this.Configuration.ApiClient.ParameterToString(sigma)); // path parameter
+            if (opacity != null) localVarPathParams.Add("opacity", this.Configuration.ApiClient.ParameterToString(opacity)); // path parameter
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDropShadow", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Add a customizeable drop shadow to an image Add a customizeable drop shadow to the image
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="sigma">Sigma (blur distance) of the drop shadow</param>
+        /// <param name="opacity">Opacity of the drop shadow; 0 is 0% and 100 is 100%</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditDropShadowAsync (int? X, int? Y, int? sigma, int? opacity, System.IO.Stream imageFile)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditDropShadowAsyncWithHttpInfo(X, Y, sigma, opacity, imageFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add a customizeable drop shadow to an image Add a customizeable drop shadow to the image
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="sigma">Sigma (blur distance) of the drop shadow</param>
+        /// <param name="opacity">Opacity of the drop shadow; 0 is 0% and 100 is 100%</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDropShadowAsyncWithHttpInfo (int? X, int? Y, int? sigma, int? opacity, System.IO.Stream imageFile)
+        {
+            // verify the required parameter 'X' is set
+            if (X == null)
+                throw new ApiException(400, "Missing required parameter 'X' when calling EditApi->EditDropShadow");
+            // verify the required parameter 'Y' is set
+            if (Y == null)
+                throw new ApiException(400, "Missing required parameter 'Y' when calling EditApi->EditDropShadow");
+            // verify the required parameter 'sigma' is set
+            if (sigma == null)
+                throw new ApiException(400, "Missing required parameter 'sigma' when calling EditApi->EditDropShadow");
+            // verify the required parameter 'opacity' is set
+            if (opacity == null)
+                throw new ApiException(400, "Missing required parameter 'opacity' when calling EditApi->EditDropShadow");
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling EditApi->EditDropShadow");
+
+            var localVarPath = "/image/edit/drop-shadow/{X}/{Y}/{sigma}/{opacity}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (X != null) localVarPathParams.Add("X", this.Configuration.ApiClient.ParameterToString(X)); // path parameter
+            if (Y != null) localVarPathParams.Add("Y", this.Configuration.ApiClient.ParameterToString(Y)); // path parameter
+            if (sigma != null) localVarPathParams.Add("sigma", this.Configuration.ApiClient.ParameterToString(sigma)); // path parameter
+            if (opacity != null) localVarPathParams.Add("opacity", this.Configuration.ApiClient.ParameterToString(opacity)); // path parameter
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditDropShadow", localVarResponse);
                 if (exception != null) throw exception;
             }
 

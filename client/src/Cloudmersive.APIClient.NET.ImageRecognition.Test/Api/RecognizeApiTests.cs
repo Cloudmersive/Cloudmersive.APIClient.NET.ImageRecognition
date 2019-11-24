@@ -149,6 +149,19 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
             //Assert.IsInstanceOf<VehicleLicensePlateDetectionResult> (response, "response is VehicleLicensePlateDetectionResult");
         }
         
+        /// <summary>
+        /// Test RecognizeFindSymbol
+        /// </summary>
+        [Test]
+        public void RecognizeFindSymbolTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream inputImage = null;
+            //System.IO.Stream targetImage = null;
+            //var response = instance.RecognizeFindSymbol(inputImage, targetImage);
+            //Assert.IsInstanceOf<FindSymbolResult> (response, "response is FindSymbolResult");
+        }
+        
     }
 
 }

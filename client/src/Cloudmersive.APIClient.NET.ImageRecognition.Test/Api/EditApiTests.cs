@@ -104,6 +104,22 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
         }
         
         /// <summary>
+        /// Test EditCropRectangle
+        /// </summary>
+        [Test]
+        public void EditCropRectangleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? left = null;
+            //int? top = null;
+            //int? width = null;
+            //int? height = null;
+            //System.IO.Stream imageFile = null;
+            //var response = instance.EditCropRectangle(left, top, width, height, imageFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test EditDrawPolygon
         /// </summary>
         [Test]
@@ -136,6 +152,22 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
             // TODO uncomment below to test the method and replace null with proper value
             //DrawTextRequest request = null;
             //var response = instance.EditDrawText(request);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test EditDropShadow
+        /// </summary>
+        [Test]
+        public void EditDropShadowTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? X = null;
+            //int? Y = null;
+            //int? sigma = null;
+            //int? opacity = null;
+            //System.IO.Stream imageFile = null;
+            //var response = instance.EditDropShadow(X, Y, sigma, opacity, imageFile);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         
