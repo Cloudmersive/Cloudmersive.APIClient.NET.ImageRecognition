@@ -173,8 +173,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="levels">Number of unique colors to retain in the output image</param>
-        /// <returns>Object</returns>
-        Object FilterPosterize (int? levels);
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>byte[]</returns>
+        byte[] FilterPosterize (int? levels, System.IO.Stream imageFile);
 
         /// <summary>
         /// Posterize the image by reducing distinct colors
@@ -184,8 +185,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="levels">Number of unique colors to retain in the output image</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> FilterPosterizeWithHttpInfo (int? levels);
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> FilterPosterizeWithHttpInfo (int? levels, System.IO.Stream imageFile);
         /// <summary>
         /// Swirl distort the image
         /// </summary>
@@ -361,8 +363,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="levels">Number of unique colors to retain in the output image</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> FilterPosterizeAsync (int? levels);
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> FilterPosterizeAsync (int? levels, System.IO.Stream imageFile);
 
         /// <summary>
         /// Posterize the image by reducing distinct colors
@@ -372,8 +375,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="levels">Number of unique colors to retain in the output image</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> FilterPosterizeAsyncWithHttpInfo (int? levels);
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> FilterPosterizeAsyncWithHttpInfo (int? levels, System.IO.Stream imageFile);
         /// <summary>
         /// Swirl distort the image
         /// </summary>
@@ -1468,10 +1472,11 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="levels">Number of unique colors to retain in the output image</param>
-        /// <returns>Object</returns>
-        public Object FilterPosterize (int? levels)
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>byte[]</returns>
+        public byte[] FilterPosterize (int? levels, System.IO.Stream imageFile)
         {
-             ApiResponse<Object> localVarResponse = FilterPosterizeWithHttpInfo(levels);
+             ApiResponse<byte[]> localVarResponse = FilterPosterizeWithHttpInfo(levels, imageFile);
              return localVarResponse.Data;
         }
 
@@ -1480,12 +1485,16 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="levels">Number of unique colors to retain in the output image</param>
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > FilterPosterizeWithHttpInfo (int? levels)
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > FilterPosterizeWithHttpInfo (int? levels, System.IO.Stream imageFile)
         {
             // verify the required parameter 'levels' is set
             if (levels == null)
                 throw new ApiException(400, "Missing required parameter 'levels' when calling FilterApi->FilterPosterize");
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling FilterApi->FilterPosterize");
 
             var localVarPath = "/image/filter/posterize";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1497,6 +1506,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1509,6 +1519,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (levels != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "levels", levels)); // query parameter
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
 
             // authentication (Apikey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
@@ -1529,9 +1540,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>
@@ -1539,10 +1550,11 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="levels">Number of unique colors to retain in the output image</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> FilterPosterizeAsync (int? levels)
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> FilterPosterizeAsync (int? levels, System.IO.Stream imageFile)
         {
-             ApiResponse<Object> localVarResponse = await FilterPosterizeAsyncWithHttpInfo(levels);
+             ApiResponse<byte[]> localVarResponse = await FilterPosterizeAsyncWithHttpInfo(levels, imageFile);
              return localVarResponse.Data;
 
         }
@@ -1552,12 +1564,16 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="levels">Number of unique colors to retain in the output image</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> FilterPosterizeAsyncWithHttpInfo (int? levels)
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> FilterPosterizeAsyncWithHttpInfo (int? levels, System.IO.Stream imageFile)
         {
             // verify the required parameter 'levels' is set
             if (levels == null)
                 throw new ApiException(400, "Missing required parameter 'levels' when calling FilterApi->FilterPosterize");
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling FilterApi->FilterPosterize");
 
             var localVarPath = "/image/filter/posterize";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1569,6 +1585,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1581,6 +1598,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (levels != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "levels", levels)); // query parameter
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
 
             // authentication (Apikey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
@@ -1601,9 +1619,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<byte[]>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
         }
 
         /// <summary>

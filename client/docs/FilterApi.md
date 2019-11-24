@@ -428,7 +428,7 @@ Name | Type | Description  | Notes
 
 <a name="filterposterize"></a>
 # **FilterPosterize**
-> Object FilterPosterize (int? levels)
+> byte[] FilterPosterize (int? levels, System.IO.Stream imageFile)
 
 Posterize the image by reducing distinct colors
 
@@ -455,11 +455,12 @@ namespace Example
 
             var apiInstance = new FilterApi();
             var levels = 56;  // int? | Number of unique colors to retain in the output image
+            var imageFile = new System.IO.Stream(); // System.IO.Stream | Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.
 
             try
             {
                 // Posterize the image by reducing distinct colors
-                Object result = apiInstance.FilterPosterize(levels);
+                byte[] result = apiInstance.FilterPosterize(levels, imageFile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -476,10 +477,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **levels** | **int?**| Number of unique colors to retain in the output image | 
+ **imageFile** | **System.IO.Stream**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | 
 
 ### Return type
 
-**Object**
+**byte[]**
 
 ### Authorization
 
@@ -487,7 +489,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
  - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

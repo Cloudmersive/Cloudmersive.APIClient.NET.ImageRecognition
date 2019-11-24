@@ -34,13 +34,15 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// Initializes a new instance of the <see cref="FindSymbolResult" /> class.
         /// </summary>
         /// <param name="successful">True if successful, false otherwise.</param>
+        /// <param name="matchScore">Score between 0.0 and 1.0 that measures how closely the symbol matched; scores above 0.2 are good.</param>
         /// <param name="xLeft">X location of the left edge of the found location in pixels.</param>
         /// <param name="yTop">Y location of the top edge of the found location in pixels.</param>
         /// <param name="width">Width of the found location in pixels.</param>
         /// <param name="height">Height of the found location in pixels.</param>
-        public FindSymbolResult(bool? successful = default(bool?), int? xLeft = default(int?), int? yTop = default(int?), int? width = default(int?), int? height = default(int?))
+        public FindSymbolResult(bool? successful = default(bool?), double? matchScore = default(double?), int? xLeft = default(int?), int? yTop = default(int?), int? width = default(int?), int? height = default(int?))
         {
             this.Successful = successful;
+            this.MatchScore = matchScore;
             this.XLeft = xLeft;
             this.YTop = yTop;
             this.Width = width;
@@ -53,6 +55,13 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <value>True if successful, false otherwise</value>
         [DataMember(Name="Successful", EmitDefaultValue=false)]
         public bool? Successful { get; set; }
+
+        /// <summary>
+        /// Score between 0.0 and 1.0 that measures how closely the symbol matched; scores above 0.2 are good
+        /// </summary>
+        /// <value>Score between 0.0 and 1.0 that measures how closely the symbol matched; scores above 0.2 are good</value>
+        [DataMember(Name="MatchScore", EmitDefaultValue=false)]
+        public double? MatchScore { get; set; }
 
         /// <summary>
         /// X location of the left edge of the found location in pixels
@@ -91,6 +100,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
             var sb = new StringBuilder();
             sb.Append("class FindSymbolResult {\n");
             sb.Append("  Successful: ").Append(Successful).Append("\n");
+            sb.Append("  MatchScore: ").Append(MatchScore).Append("\n");
             sb.Append("  XLeft: ").Append(XLeft).Append("\n");
             sb.Append("  YTop: ").Append(YTop).Append("\n");
             sb.Append("  Width: ").Append(Width).Append("\n");
@@ -135,6 +145,11 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
                     this.Successful.Equals(input.Successful))
                 ) && 
                 (
+                    this.MatchScore == input.MatchScore ||
+                    (this.MatchScore != null &&
+                    this.MatchScore.Equals(input.MatchScore))
+                ) && 
+                (
                     this.XLeft == input.XLeft ||
                     (this.XLeft != null &&
                     this.XLeft.Equals(input.XLeft))
@@ -167,6 +182,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
                 int hashCode = 41;
                 if (this.Successful != null)
                     hashCode = hashCode * 59 + this.Successful.GetHashCode();
+                if (this.MatchScore != null)
+                    hashCode = hashCode * 59 + this.MatchScore.GetHashCode();
                 if (this.XLeft != null)
                     hashCode = hashCode * 59 + this.XLeft.GetHashCode();
                 if (this.YTop != null)
