@@ -64,6 +64,18 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
 
         
         /// <summary>
+        /// Test ConvertToBmp
+        /// </summary>
+        [Test]
+        public void ConvertToBmpTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream imageFile = null;
+            //var response = instance.ConvertToBmp(imageFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test ConvertToGif
         /// </summary>
         [Test]
@@ -89,6 +101,18 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
         }
         
         /// <summary>
+        /// Test ConvertToPhotoshop
+        /// </summary>
+        [Test]
+        public void ConvertToPhotoshopTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream imageFile = null;
+            //var response = instance.ConvertToPhotoshop(imageFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test ConvertToPng
         /// </summary>
         [Test]
@@ -97,6 +121,30 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
             // TODO uncomment below to test the method and replace null with proper value
             //System.IO.Stream imageFile = null;
             //var response = instance.ConvertToPng(imageFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test ConvertToTiff
+        /// </summary>
+        [Test]
+        public void ConvertToTiffTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream imageFile = null;
+            //var response = instance.ConvertToTiff(imageFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test ConvertToWebP
+        /// </summary>
+        [Test]
+        public void ConvertToWebPTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream imageFile = null;
+            //var response = instance.ConvertToWebP(imageFile);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         

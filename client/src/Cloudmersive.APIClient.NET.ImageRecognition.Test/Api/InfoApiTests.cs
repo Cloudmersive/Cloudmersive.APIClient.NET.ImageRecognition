@@ -76,6 +76,18 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
             //Assert.IsInstanceOf<DominantColorResult> (response, "response is DominantColorResult");
         }
         
+        /// <summary>
+        /// Test InfoGetMetadata
+        /// </summary>
+        [Test]
+        public void InfoGetMetadataTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream imageFile = null;
+            //var response = instance.InfoGetMetadata(imageFile);
+            //Assert.IsInstanceOf<ImageMetadata> (response, "response is ImageMetadata");
+        }
+        
     }
 
 }

@@ -5,7 +5,7 @@ Image Recognition and Processing APIs let you use Machine Learning to recognize 
 This C# SDK is:
 
 - API version: v1
-- SDK version: 2.1.3
+- SDK version: 2.1.4
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -103,9 +103,13 @@ All URIs are relative to *https://api.cloudmersive.com*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ArtisticApi* | [**ArtisticPainting**](docs/ArtisticApi.md#artisticpainting) | **POST** /image/artistic/painting/{style} | Transform an image into an artistic painting automatically
+*ConvertApi* | [**ConvertToBmp**](docs/ConvertApi.md#converttobmp) | **POST** /image/convert/to/bmp | Convert input image to Bitmap BMP format
 *ConvertApi* | [**ConvertToGif**](docs/ConvertApi.md#converttogif) | **POST** /image/convert/to/gif | Convert input image to GIF format
 *ConvertApi* | [**ConvertToJpg**](docs/ConvertApi.md#converttojpg) | **POST** /image/convert/to/jpg/{quality} | Convert input image to JPG/JPEG format
+*ConvertApi* | [**ConvertToPhotoshop**](docs/ConvertApi.md#converttophotoshop) | **POST** /image/convert/to/psd | Convert input image to Photoshop PSD format
 *ConvertApi* | [**ConvertToPng**](docs/ConvertApi.md#converttopng) | **POST** /image/convert/to/png | Convert input image to PNG format
+*ConvertApi* | [**ConvertToTiff**](docs/ConvertApi.md#converttotiff) | **POST** /image/convert/to/tiff | Convert input image to TIFF format
+*ConvertApi* | [**ConvertToWebP**](docs/ConvertApi.md#converttowebp) | **POST** /image/convert/to/webp | Convert input image to WebP format
 *EditApi* | [**EditAutoOrient**](docs/EditApi.md#editautoorient) | **POST** /image/edit/auto-orient/remove-exif | Normalizes image rotation and removes EXIF rotation data
 *EditApi* | [**EditCompositeBasic**](docs/EditApi.md#editcompositebasic) | **POST** /image/edit/composite/{location} | Composite two images together
 *EditApi* | [**EditContrastAdaptive**](docs/EditApi.md#editcontrastadaptive) | **POST** /image/edit/contrast/{gamma}/adaptive | Adaptively adjust the contrast of the image to be more appealing and easy to see
@@ -131,6 +135,7 @@ Class | Method | HTTP request | Description
 *FilterApi* | [**FilterPosterize**](docs/FilterApi.md#filterposterize) | **POST** /image/filter/posterize | Posterize the image by reducing distinct colors
 *FilterApi* | [**FilterSwirl**](docs/FilterApi.md#filterswirl) | **POST** /image/filter/swirl | Swirl distort the image
 *InfoApi* | [**InfoGetDominantColor**](docs/InfoApi.md#infogetdominantcolor) | **POST** /image/get-info/dominant-color | Returns the dominant colors of the image
+*InfoApi* | [**InfoGetMetadata**](docs/InfoApi.md#infogetmetadata) | **POST** /image/get-info/metadata | Returns the image metadata, including EXIF and resolution
 *NsfwApi* | [**NsfwClassify**](docs/NsfwApi.md#nsfwclassify) | **POST** /image/nsfw/classify | Not safe for work (NSFW) racy content classification
 *RecognizeApi* | [**RecognizeDescribe**](docs/RecognizeApi.md#recognizedescribe) | **POST** /image/recognize/describe | Describe an image in natural language
 *RecognizeApi* | [**RecognizeDetectAndUnskewDocument**](docs/RecognizeApi.md#recognizedetectandunskewdocument) | **POST** /image/recognize/detect-document/unskew | Detect and unskew a photo of a document
@@ -170,6 +175,8 @@ Class | Method | HTTP request | Description
  - [Model.FineTextItem](docs/FineTextItem.md)
  - [Model.GenderDetectionResult](docs/GenderDetectionResult.md)
  - [Model.ImageDescriptionResponse](docs/ImageDescriptionResponse.md)
+ - [Model.ImageMetadata](docs/ImageMetadata.md)
+ - [Model.ImageMetadataExifValue](docs/ImageMetadataExifValue.md)
  - [Model.NsfwResult](docs/NsfwResult.md)
  - [Model.ObjectDetectionResult](docs/ObjectDetectionResult.md)
  - [Model.PersonWithAge](docs/PersonWithAge.md)

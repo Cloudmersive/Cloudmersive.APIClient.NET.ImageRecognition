@@ -45,6 +45,27 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>ApiResponse of DominantColorResult</returns>
         ApiResponse<DominantColorResult> InfoGetDominantColorWithHttpInfo (System.IO.Stream imageFile);
+        /// <summary>
+        /// Returns the image metadata, including EXIF and resolution
+        /// </summary>
+        /// <remarks>
+        /// Returns the metadata information on the image, including file type, EXIF (if available), and resolution.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ImageMetadata</returns>
+        ImageMetadata InfoGetMetadata (System.IO.Stream imageFile);
+
+        /// <summary>
+        /// Returns the image metadata, including EXIF and resolution
+        /// </summary>
+        /// <remarks>
+        /// Returns the metadata information on the image, including file type, EXIF (if available), and resolution.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ApiResponse of ImageMetadata</returns>
+        ApiResponse<ImageMetadata> InfoGetMetadataWithHttpInfo (System.IO.Stream imageFile);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -68,6 +89,27 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>Task of ApiResponse (DominantColorResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<DominantColorResult>> InfoGetDominantColorAsyncWithHttpInfo (System.IO.Stream imageFile);
+        /// <summary>
+        /// Returns the image metadata, including EXIF and resolution
+        /// </summary>
+        /// <remarks>
+        /// Returns the metadata information on the image, including file type, EXIF (if available), and resolution.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ImageMetadata</returns>
+        System.Threading.Tasks.Task<ImageMetadata> InfoGetMetadataAsync (System.IO.Stream imageFile);
+
+        /// <summary>
+        /// Returns the image metadata, including EXIF and resolution
+        /// </summary>
+        /// <remarks>
+        /// Returns the metadata information on the image, including file type, EXIF (if available), and resolution.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ApiResponse (ImageMetadata)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ImageMetadata>> InfoGetMetadataAsyncWithHttpInfo (System.IO.Stream imageFile);
         #endregion Asynchronous Operations
     }
 
@@ -317,6 +359,157 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
             return new ApiResponse<DominantColorResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DominantColorResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DominantColorResult)));
+        }
+
+        /// <summary>
+        /// Returns the image metadata, including EXIF and resolution Returns the metadata information on the image, including file type, EXIF (if available), and resolution.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ImageMetadata</returns>
+        public ImageMetadata InfoGetMetadata (System.IO.Stream imageFile)
+        {
+             ApiResponse<ImageMetadata> localVarResponse = InfoGetMetadataWithHttpInfo(imageFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns the image metadata, including EXIF and resolution Returns the metadata information on the image, including file type, EXIF (if available), and resolution.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ApiResponse of ImageMetadata</returns>
+        public ApiResponse< ImageMetadata > InfoGetMetadataWithHttpInfo (System.IO.Stream imageFile)
+        {
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling InfoApi->InfoGetMetadata");
+
+            var localVarPath = "/image/get-info/metadata";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("InfoGetMetadata", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ImageMetadata>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ImageMetadata) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImageMetadata)));
+        }
+
+        /// <summary>
+        /// Returns the image metadata, including EXIF and resolution Returns the metadata information on the image, including file type, EXIF (if available), and resolution.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ImageMetadata</returns>
+        public async System.Threading.Tasks.Task<ImageMetadata> InfoGetMetadataAsync (System.IO.Stream imageFile)
+        {
+             ApiResponse<ImageMetadata> localVarResponse = await InfoGetMetadataAsyncWithHttpInfo(imageFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns the image metadata, including EXIF and resolution Returns the metadata information on the image, including file type, EXIF (if available), and resolution.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ApiResponse (ImageMetadata)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ImageMetadata>> InfoGetMetadataAsyncWithHttpInfo (System.IO.Stream imageFile)
+        {
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling InfoApi->InfoGetMetadata");
+
+            var localVarPath = "/image/get-info/metadata";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("InfoGetMetadata", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ImageMetadata>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ImageMetadata) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImageMetadata)));
         }
 
     }
