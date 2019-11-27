@@ -5,7 +5,7 @@ Image Recognition and Processing APIs let you use Machine Learning to recognize 
 This C# SDK is:
 
 - API version: v1
-- SDK version: 2.1.4
+- SDK version: 2.1.5
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -118,6 +118,7 @@ Class | Method | HTTP request | Description
 *EditApi* | [**EditDrawRectangle**](docs/EditApi.md#editdrawrectangle) | **POST** /image/edit/draw/rectangle | Draw a rectangle onto an image
 *EditApi* | [**EditDrawText**](docs/EditApi.md#editdrawtext) | **POST** /image/edit/draw/text | Draw text onto an image
 *EditApi* | [**EditDropShadow**](docs/EditApi.md#editdropshadow) | **POST** /image/edit/drop-shadow/{X}/{Y}/{sigma}/{opacity} | Add a customizeable drop shadow to an image
+*EditApi* | [**EditRemoveTransparency**](docs/EditApi.md#editremovetransparency) | **POST** /image/edit/remove-transparency | Remove transparency from the image
 *EditApi* | [**EditRotate**](docs/EditApi.md#editrotate) | **POST** /image/edit/rotate/{degrees}/angle | Rotate an image any number of degrees
 *FaceApi* | [**FaceCompare**](docs/FaceApi.md#facecompare) | **POST** /image/face/compare-and-match | Compare and match faces
 *FaceApi* | [**FaceCropFirst**](docs/FaceApi.md#facecropfirst) | **POST** /image/face/crop/first | Crop image to face (square)

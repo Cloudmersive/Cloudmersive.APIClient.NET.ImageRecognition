@@ -172,6 +172,18 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
         }
         
         /// <summary>
+        /// Test EditRemoveTransparency
+        /// </summary>
+        [Test]
+        public void EditRemoveTransparencyTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream imageFile = null;
+            //var response = instance.EditRemoveTransparency(imageFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test EditRotate
         /// </summary>
         [Test]
