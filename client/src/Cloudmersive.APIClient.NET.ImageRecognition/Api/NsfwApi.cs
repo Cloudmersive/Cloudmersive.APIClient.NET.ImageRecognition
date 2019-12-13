@@ -25,7 +25,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Not safe for work (NSFW) racy content classification
+        /// Not safe for work NSFW racy content classification
         /// </summary>
         /// <remarks>
         /// Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
@@ -36,7 +36,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         NsfwResult NsfwClassify (System.IO.Stream imageFile);
 
         /// <summary>
-        /// Not safe for work (NSFW) racy content classification
+        /// Not safe for work NSFW racy content classification
         /// </summary>
         /// <remarks>
         /// Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
@@ -48,7 +48,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Not safe for work (NSFW) racy content classification
+        /// Not safe for work NSFW racy content classification
         /// </summary>
         /// <remarks>
         /// Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
@@ -59,7 +59,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         System.Threading.Tasks.Task<NsfwResult> NsfwClassifyAsync (System.IO.Stream imageFile);
 
         /// <summary>
-        /// Not safe for work (NSFW) racy content classification
+        /// Not safe for work NSFW racy content classification
         /// </summary>
         /// <remarks>
         /// Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
@@ -169,7 +169,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Not safe for work (NSFW) racy content classification Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
+        /// Not safe for work NSFW racy content classification Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -181,7 +181,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Not safe for work (NSFW) racy content classification Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
+        /// Not safe for work NSFW racy content classification Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -244,7 +244,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Not safe for work (NSFW) racy content classification Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
+        /// Not safe for work NSFW racy content classification Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -257,7 +257,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Not safe for work (NSFW) racy content classification Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
+        /// Not safe for work NSFW racy content classification Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>

@@ -5,7 +5,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**InfoGetDominantColor**](InfoApi.md#infogetdominantcolor) | **POST** /image/get-info/dominant-color | Returns the dominant colors of the image
-[**InfoGetMetadata**](InfoApi.md#infogetmetadata) | **POST** /image/get-info/metadata | Returns the image metadata, including EXIF and resolution
+[**InfoGetMetadata**](InfoApi.md#infogetmetadata) | **POST** /image/get-info/metadata | Returns the image metadata including EXIF and resolution
 
 
 <a name="infogetdominantcolor"></a>
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 # **InfoGetMetadata**
 > ImageMetadata InfoGetMetadata (System.IO.Stream imageFile)
 
-Returns the image metadata, including EXIF and resolution
+Returns the image metadata including EXIF and resolution
 
 Returns the metadata information on the image, including file type, EXIF (if available), and resolution.
 
@@ -106,7 +106,7 @@ namespace Example
 
             try
             {
-                // Returns the image metadata, including EXIF and resolution
+                // Returns the image metadata including EXIF and resolution
                 ImageMetadata result = apiInstance.InfoGetMetadata(imageFile);
                 Debug.WriteLine(result);
             }

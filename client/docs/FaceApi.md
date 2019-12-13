@@ -5,12 +5,12 @@ All URIs are relative to *https://api.cloudmersive.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**FaceCompare**](FaceApi.md#facecompare) | **POST** /image/face/compare-and-match | Compare and match faces
-[**FaceCropFirst**](FaceApi.md#facecropfirst) | **POST** /image/face/crop/first | Crop image to face (square)
-[**FaceCropFirstRound**](FaceApi.md#facecropfirstround) | **POST** /image/face/crop/first/round | Crop image to face (round)
+[**FaceCropFirst**](FaceApi.md#facecropfirst) | **POST** /image/face/crop/first | Crop image to face with square crop
+[**FaceCropFirstRound**](FaceApi.md#facecropfirstround) | **POST** /image/face/crop/first/round | Crop image to face with round crop
 [**FaceDetectAge**](FaceApi.md#facedetectage) | **POST** /image/face/detect-age | Detect the age of people in an image
 [**FaceDetectGender**](FaceApi.md#facedetectgender) | **POST** /image/face/detect-gender | Detect the gender of people in an image
-[**FaceLocate**](FaceApi.md#facelocate) | **POST** /image/face/locate | Find faces in an image
-[**FaceLocateWithLandmarks**](FaceApi.md#facelocatewithlandmarks) | **POST** /image/face/locate-with-landmarks | Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image
+[**FaceLocate**](FaceApi.md#facelocate) | **POST** /image/face/locate | Detect and find faces in an image
+[**FaceLocateWithLandmarks**](FaceApi.md#facelocatewithlandmarks) | **POST** /image/face/locate-with-landmarks | Detect and find faces and landmarks eyes and nose and mouth in image
 
 
 <a name="facecompare"></a>
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 # **FaceCropFirst**
 > byte[] FaceCropFirst (System.IO.Stream imageFile)
 
-Crop image to face (square)
+Crop image to face with square crop
 
 Crop an image to the face (rectangular crop).  If there is more than one face present, choose the first one.
 
@@ -113,7 +113,7 @@ namespace Example
 
             try
             {
-                // Crop image to face (square)
+                // Crop image to face with square crop
                 byte[] result = apiInstance.FaceCropFirst(imageFile);
                 Debug.WriteLine(result);
             }
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 # **FaceCropFirstRound**
 > byte[] FaceCropFirstRound (System.IO.Stream imageFile)
 
-Crop image to face (round)
+Crop image to face with round crop
 
 Crop an image to the face (circular/round crop).  If there is more than one face present, choose the first one.
 
@@ -179,7 +179,7 @@ namespace Example
 
             try
             {
-                // Crop image to face (round)
+                // Crop image to face with round crop
                 byte[] result = apiInstance.FaceCropFirstRound(imageFile);
                 Debug.WriteLine(result);
             }
@@ -349,7 +349,7 @@ Name | Type | Description  | Notes
 # **FaceLocate**
 > FaceLocateResponse FaceLocate (System.IO.Stream imageFile)
 
-Find faces in an image
+Detect and find faces in an image
 
 Locate the positions of all faces in an image
 
@@ -377,7 +377,7 @@ namespace Example
 
             try
             {
-                // Find faces in an image
+                // Detect and find faces in an image
                 FaceLocateResponse result = apiInstance.FaceLocate(imageFile);
                 Debug.WriteLine(result);
             }
@@ -415,7 +415,7 @@ Name | Type | Description  | Notes
 # **FaceLocateWithLandmarks**
 > FaceLocateWithLandmarksResponse FaceLocateWithLandmarks (System.IO.Stream imageFile)
 
-Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image
+Detect and find faces and landmarks eyes and nose and mouth in image
 
 Locate the positions of all faces in an image, along with the eyes, eye brows, nose and mouth components of each
 
@@ -443,7 +443,7 @@ namespace Example
 
             try
             {
-                // Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image
+                // Detect and find faces and landmarks eyes and nose and mouth in image
                 FaceLocateWithLandmarksResponse result = apiInstance.FaceLocateWithLandmarks(imageFile);
                 Debug.WriteLine(result);
             }

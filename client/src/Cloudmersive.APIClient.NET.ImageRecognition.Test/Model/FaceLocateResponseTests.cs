@@ -67,14 +67,6 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
 
 
         /// <summary>
-        /// Test the property 'ErrorDetails'
-        /// </summary>
-        [Test]
-        public void ErrorDetailsTest()
-        {
-            // TODO unit test for the property 'ErrorDetails'
-        }
-        /// <summary>
         /// Test the property 'Successful'
         /// </summary>
         [Test]
@@ -97,6 +89,14 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
         public void FaceCountTest()
         {
             // TODO unit test for the property 'FaceCount'
+        }
+        /// <summary>
+        /// Test the property 'ErrorDetails'
+        /// </summary>
+        [Test]
+        public void ErrorDetailsTest()
+        {
+            // TODO unit test for the property 'ErrorDetails'
         }
 
     }

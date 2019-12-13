@@ -5,7 +5,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**FilterBlackAndWhite**](FilterApi.md#filterblackandwhite) | **POST** /image/filter/black-and-white | Convert image to black-and-white grayscale
-[**FilterDespeckle**](FilterApi.md#filterdespeckle) | **POST** /image/filter/despeckle | Despeckle (remove point noise) from the image
+[**FilterDespeckle**](FilterApi.md#filterdespeckle) | **POST** /image/filter/despeckle | Despeckle to remove point noise from the image
 [**FilterEdgeDetect**](FilterApi.md#filteredgedetect) | **POST** /image/filter/edge-detect/{radius} | Detect and highlight edges in an image
 [**FilterEmboss**](FilterApi.md#filteremboss) | **POST** /image/filter/emboss/{radius}/{sigma} | Emboss an image
 [**FilterGaussianBlur**](FilterApi.md#filtergaussianblur) | **POST** /image/filter/blur/guassian/{radius}/{sigma} | Perform a guassian blur on the input image
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 # **FilterDespeckle**
 > byte[] FilterDespeckle (System.IO.Stream imageFile)
 
-Despeckle (remove point noise) from the image
+Despeckle to remove point noise from the image
 
 Remove point noise / despeckle the input image
 
@@ -112,7 +112,7 @@ namespace Example
 
             try
             {
-                // Despeckle (remove point noise) from the image
+                // Despeckle to remove point noise from the image
                 byte[] result = apiInstance.FilterDespeckle(imageFile);
                 Debug.WriteLine(result);
             }

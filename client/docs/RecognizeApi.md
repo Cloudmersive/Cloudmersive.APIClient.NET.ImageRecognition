@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**RecognizeDescribe**](RecognizeApi.md#recognizedescribe) | **POST** /image/recognize/describe | Describe an image in natural language
 [**RecognizeDetectAndUnskewDocument**](RecognizeApi.md#recognizedetectandunskewdocument) | **POST** /image/recognize/detect-document/unskew | Detect and unskew a photo of a document
-[**RecognizeDetectObjects**](RecognizeApi.md#recognizedetectobjects) | **POST** /image/recognize/detect-objects | Detect objects, including types and locations, in an image
-[**RecognizeDetectPeople**](RecognizeApi.md#recognizedetectpeople) | **POST** /image/recognize/detect-people | Detect people, including locations, in an image
+[**RecognizeDetectObjects**](RecognizeApi.md#recognizedetectobjects) | **POST** /image/recognize/detect-objects | Detect objects including types and locations in an image
+[**RecognizeDetectPeople**](RecognizeApi.md#recognizedetectpeople) | **POST** /image/recognize/detect-people | Detect people including locations in an image
 [**RecognizeDetectTextFine**](RecognizeApi.md#recognizedetecttextfine) | **POST** /image/recognize/detect-text/fine | Detect fine text in a photo of a document
 [**RecognizeDetectTextLarge**](RecognizeApi.md#recognizedetecttextlarge) | **POST** /image/recognize/detect-text/large | Detect large text in a photo
 [**RecognizeDetectVehicleLicensePlates**](RecognizeApi.md#recognizedetectvehiclelicenseplates) | **POST** /image/recognize/detect-vehicle-license-plates | Detect vehicle license plates in an image
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 # **RecognizeDetectObjects**
 > ObjectDetectionResult RecognizeDetectObjects (System.IO.Stream imageFile)
 
-Detect objects, including types and locations, in an image
+Detect objects including types and locations in an image
 
 Identify the position, size and description of objects in an image, along with a recognition confidence level.  Detects both human people and objects in an image.
 
@@ -180,7 +180,7 @@ namespace Example
 
             try
             {
-                // Detect objects, including types and locations, in an image
+                // Detect objects including types and locations in an image
                 ObjectDetectionResult result = apiInstance.RecognizeDetectObjects(imageFile);
                 Debug.WriteLine(result);
             }
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 # **RecognizeDetectPeople**
 > ObjectDetectionResult RecognizeDetectPeople (System.IO.Stream imageFile)
 
-Detect people, including locations, in an image
+Detect people including locations in an image
 
 Identify the position, and size of human people in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
 
@@ -246,7 +246,7 @@ namespace Example
 
             try
             {
-                // Detect people, including locations, in an image
+                // Detect people including locations in an image
                 ObjectDetectionResult result = apiInstance.RecognizeDetectPeople(imageFile);
                 Debug.WriteLine(result);
             }

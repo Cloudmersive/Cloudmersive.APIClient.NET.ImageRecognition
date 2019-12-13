@@ -46,7 +46,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>ApiResponse of DominantColorResult</returns>
         ApiResponse<DominantColorResult> InfoGetDominantColorWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
-        /// Returns the image metadata, including EXIF and resolution
+        /// Returns the image metadata including EXIF and resolution
         /// </summary>
         /// <remarks>
         /// Returns the metadata information on the image, including file type, EXIF (if available), and resolution.
@@ -57,7 +57,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         ImageMetadata InfoGetMetadata (System.IO.Stream imageFile);
 
         /// <summary>
-        /// Returns the image metadata, including EXIF and resolution
+        /// Returns the image metadata including EXIF and resolution
         /// </summary>
         /// <remarks>
         /// Returns the metadata information on the image, including file type, EXIF (if available), and resolution.
@@ -90,7 +90,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>Task of ApiResponse (DominantColorResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<DominantColorResult>> InfoGetDominantColorAsyncWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
-        /// Returns the image metadata, including EXIF and resolution
+        /// Returns the image metadata including EXIF and resolution
         /// </summary>
         /// <remarks>
         /// Returns the metadata information on the image, including file type, EXIF (if available), and resolution.
@@ -101,7 +101,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         System.Threading.Tasks.Task<ImageMetadata> InfoGetMetadataAsync (System.IO.Stream imageFile);
 
         /// <summary>
-        /// Returns the image metadata, including EXIF and resolution
+        /// Returns the image metadata including EXIF and resolution
         /// </summary>
         /// <remarks>
         /// Returns the metadata information on the image, including file type, EXIF (if available), and resolution.
@@ -362,7 +362,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Returns the image metadata, including EXIF and resolution Returns the metadata information on the image, including file type, EXIF (if available), and resolution.
+        /// Returns the image metadata including EXIF and resolution Returns the metadata information on the image, including file type, EXIF (if available), and resolution.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -374,7 +374,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Returns the image metadata, including EXIF and resolution Returns the metadata information on the image, including file type, EXIF (if available), and resolution.
+        /// Returns the image metadata including EXIF and resolution Returns the metadata information on the image, including file type, EXIF (if available), and resolution.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -437,7 +437,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Returns the image metadata, including EXIF and resolution Returns the metadata information on the image, including file type, EXIF (if available), and resolution.
+        /// Returns the image metadata including EXIF and resolution Returns the metadata information on the image, including file type, EXIF (if available), and resolution.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -450,7 +450,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Returns the image metadata, including EXIF and resolution Returns the metadata information on the image, including file type, EXIF (if available), and resolution.
+        /// Returns the image metadata including EXIF and resolution Returns the metadata information on the image, including file type, EXIF (if available), and resolution.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>

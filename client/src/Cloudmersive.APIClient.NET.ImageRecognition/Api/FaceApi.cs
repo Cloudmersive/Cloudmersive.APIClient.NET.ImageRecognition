@@ -48,7 +48,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>ApiResponse of FaceCompareResponse</returns>
         ApiResponse<FaceCompareResponse> FaceCompareWithHttpInfo (System.IO.Stream inputImage, System.IO.Stream matchFace);
         /// <summary>
-        /// Crop image to face (square)
+        /// Crop image to face with square crop
         /// </summary>
         /// <remarks>
         /// Crop an image to the face (rectangular crop).  If there is more than one face present, choose the first one.
@@ -59,7 +59,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         byte[] FaceCropFirst (System.IO.Stream imageFile);
 
         /// <summary>
-        /// Crop image to face (square)
+        /// Crop image to face with square crop
         /// </summary>
         /// <remarks>
         /// Crop an image to the face (rectangular crop).  If there is more than one face present, choose the first one.
@@ -69,7 +69,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> FaceCropFirstWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
-        /// Crop image to face (round)
+        /// Crop image to face with round crop
         /// </summary>
         /// <remarks>
         /// Crop an image to the face (circular/round crop).  If there is more than one face present, choose the first one.
@@ -80,7 +80,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         byte[] FaceCropFirstRound (System.IO.Stream imageFile);
 
         /// <summary>
-        /// Crop image to face (round)
+        /// Crop image to face with round crop
         /// </summary>
         /// <remarks>
         /// Crop an image to the face (circular/round crop).  If there is more than one face present, choose the first one.
@@ -132,7 +132,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>ApiResponse of GenderDetectionResult</returns>
         ApiResponse<GenderDetectionResult> FaceDetectGenderWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
-        /// Find faces in an image
+        /// Detect and find faces in an image
         /// </summary>
         /// <remarks>
         /// Locate the positions of all faces in an image
@@ -143,7 +143,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         FaceLocateResponse FaceLocate (System.IO.Stream imageFile);
 
         /// <summary>
-        /// Find faces in an image
+        /// Detect and find faces in an image
         /// </summary>
         /// <remarks>
         /// Locate the positions of all faces in an image
@@ -153,7 +153,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>ApiResponse of FaceLocateResponse</returns>
         ApiResponse<FaceLocateResponse> FaceLocateWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
-        /// Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image
+        /// Detect and find faces and landmarks eyes and nose and mouth in image
         /// </summary>
         /// <remarks>
         /// Locate the positions of all faces in an image, along with the eyes, eye brows, nose and mouth components of each
@@ -164,7 +164,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         FaceLocateWithLandmarksResponse FaceLocateWithLandmarks (System.IO.Stream imageFile);
 
         /// <summary>
-        /// Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image
+        /// Detect and find faces and landmarks eyes and nose and mouth in image
         /// </summary>
         /// <remarks>
         /// Locate the positions of all faces in an image, along with the eyes, eye brows, nose and mouth components of each
@@ -199,7 +199,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>Task of ApiResponse (FaceCompareResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<FaceCompareResponse>> FaceCompareAsyncWithHttpInfo (System.IO.Stream inputImage, System.IO.Stream matchFace);
         /// <summary>
-        /// Crop image to face (square)
+        /// Crop image to face with square crop
         /// </summary>
         /// <remarks>
         /// Crop an image to the face (rectangular crop).  If there is more than one face present, choose the first one.
@@ -210,7 +210,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         System.Threading.Tasks.Task<byte[]> FaceCropFirstAsync (System.IO.Stream imageFile);
 
         /// <summary>
-        /// Crop image to face (square)
+        /// Crop image to face with square crop
         /// </summary>
         /// <remarks>
         /// Crop an image to the face (rectangular crop).  If there is more than one face present, choose the first one.
@@ -220,7 +220,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> FaceCropFirstAsyncWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
-        /// Crop image to face (round)
+        /// Crop image to face with round crop
         /// </summary>
         /// <remarks>
         /// Crop an image to the face (circular/round crop).  If there is more than one face present, choose the first one.
@@ -231,7 +231,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         System.Threading.Tasks.Task<byte[]> FaceCropFirstRoundAsync (System.IO.Stream imageFile);
 
         /// <summary>
-        /// Crop image to face (round)
+        /// Crop image to face with round crop
         /// </summary>
         /// <remarks>
         /// Crop an image to the face (circular/round crop).  If there is more than one face present, choose the first one.
@@ -283,7 +283,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>Task of ApiResponse (GenderDetectionResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<GenderDetectionResult>> FaceDetectGenderAsyncWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
-        /// Find faces in an image
+        /// Detect and find faces in an image
         /// </summary>
         /// <remarks>
         /// Locate the positions of all faces in an image
@@ -294,7 +294,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         System.Threading.Tasks.Task<FaceLocateResponse> FaceLocateAsync (System.IO.Stream imageFile);
 
         /// <summary>
-        /// Find faces in an image
+        /// Detect and find faces in an image
         /// </summary>
         /// <remarks>
         /// Locate the positions of all faces in an image
@@ -304,7 +304,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>Task of ApiResponse (FaceLocateResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<FaceLocateResponse>> FaceLocateAsyncWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
-        /// Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image
+        /// Detect and find faces and landmarks eyes and nose and mouth in image
         /// </summary>
         /// <remarks>
         /// Locate the positions of all faces in an image, along with the eyes, eye brows, nose and mouth components of each
@@ -315,7 +315,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         System.Threading.Tasks.Task<FaceLocateWithLandmarksResponse> FaceLocateWithLandmarksAsync (System.IO.Stream imageFile);
 
         /// <summary>
-        /// Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image
+        /// Detect and find faces and landmarks eyes and nose and mouth in image
         /// </summary>
         /// <remarks>
         /// Locate the positions of all faces in an image, along with the eyes, eye brows, nose and mouth components of each
@@ -588,7 +588,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Crop image to face (square) Crop an image to the face (rectangular crop).  If there is more than one face present, choose the first one.
+        /// Crop image to face with square crop Crop an image to the face (rectangular crop).  If there is more than one face present, choose the first one.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -600,7 +600,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Crop image to face (square) Crop an image to the face (rectangular crop).  If there is more than one face present, choose the first one.
+        /// Crop image to face with square crop Crop an image to the face (rectangular crop).  If there is more than one face present, choose the first one.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -660,7 +660,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Crop image to face (square) Crop an image to the face (rectangular crop).  If there is more than one face present, choose the first one.
+        /// Crop image to face with square crop Crop an image to the face (rectangular crop).  If there is more than one face present, choose the first one.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -673,7 +673,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Crop image to face (square) Crop an image to the face (rectangular crop).  If there is more than one face present, choose the first one.
+        /// Crop image to face with square crop Crop an image to the face (rectangular crop).  If there is more than one face present, choose the first one.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -733,7 +733,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Crop image to face (round) Crop an image to the face (circular/round crop).  If there is more than one face present, choose the first one.
+        /// Crop image to face with round crop Crop an image to the face (circular/round crop).  If there is more than one face present, choose the first one.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -745,7 +745,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Crop image to face (round) Crop an image to the face (circular/round crop).  If there is more than one face present, choose the first one.
+        /// Crop image to face with round crop Crop an image to the face (circular/round crop).  If there is more than one face present, choose the first one.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -805,7 +805,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Crop image to face (round) Crop an image to the face (circular/round crop).  If there is more than one face present, choose the first one.
+        /// Crop image to face with round crop Crop an image to the face (circular/round crop).  If there is more than one face present, choose the first one.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -818,7 +818,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Crop image to face (round) Crop an image to the face (circular/round crop).  If there is more than one face present, choose the first one.
+        /// Crop image to face with round crop Crop an image to the face (circular/round crop).  If there is more than one face present, choose the first one.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -1180,7 +1180,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Find faces in an image Locate the positions of all faces in an image
+        /// Detect and find faces in an image Locate the positions of all faces in an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -1192,7 +1192,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Find faces in an image Locate the positions of all faces in an image
+        /// Detect and find faces in an image Locate the positions of all faces in an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -1255,7 +1255,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Find faces in an image Locate the positions of all faces in an image
+        /// Detect and find faces in an image Locate the positions of all faces in an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -1268,7 +1268,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Find faces in an image Locate the positions of all faces in an image
+        /// Detect and find faces in an image Locate the positions of all faces in an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -1331,7 +1331,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image Locate the positions of all faces in an image, along with the eyes, eye brows, nose and mouth components of each
+        /// Detect and find faces and landmarks eyes and nose and mouth in image Locate the positions of all faces in an image, along with the eyes, eye brows, nose and mouth components of each
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -1343,7 +1343,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image Locate the positions of all faces in an image, along with the eyes, eye brows, nose and mouth components of each
+        /// Detect and find faces and landmarks eyes and nose and mouth in image Locate the positions of all faces in an image, along with the eyes, eye brows, nose and mouth components of each
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -1406,7 +1406,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image Locate the positions of all faces in an image, along with the eyes, eye brows, nose and mouth components of each
+        /// Detect and find faces and landmarks eyes and nose and mouth in image Locate the positions of all faces in an image, along with the eyes, eye brows, nose and mouth components of each
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -1419,7 +1419,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Find faces and face landmarks (eyes, eye brows, nose, mouth) in an image Locate the positions of all faces in an image, along with the eyes, eye brows, nose and mouth components of each
+        /// Detect and find faces and landmarks eyes and nose and mouth in image Locate the positions of all faces in an image, along with the eyes, eye brows, nose and mouth components of each
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>

@@ -45,7 +45,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> FilterBlackAndWhiteWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
-        /// Despeckle (remove point noise) from the image
+        /// Despeckle to remove point noise from the image
         /// </summary>
         /// <remarks>
         /// Remove point noise / despeckle the input image
@@ -56,7 +56,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         byte[] FilterDespeckle (System.IO.Stream imageFile);
 
         /// <summary>
-        /// Despeckle (remove point noise) from the image
+        /// Despeckle to remove point noise from the image
         /// </summary>
         /// <remarks>
         /// Remove point noise / despeckle the input image
@@ -235,7 +235,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> FilterBlackAndWhiteAsyncWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
-        /// Despeckle (remove point noise) from the image
+        /// Despeckle to remove point noise from the image
         /// </summary>
         /// <remarks>
         /// Remove point noise / despeckle the input image
@@ -246,7 +246,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         System.Threading.Tasks.Task<byte[]> FilterDespeckleAsync (System.IO.Stream imageFile);
 
         /// <summary>
-        /// Despeckle (remove point noise) from the image
+        /// Despeckle to remove point noise from the image
         /// </summary>
         /// <remarks>
         /// Remove point noise / despeckle the input image
@@ -647,7 +647,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Despeckle (remove point noise) from the image Remove point noise / despeckle the input image
+        /// Despeckle to remove point noise from the image Remove point noise / despeckle the input image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -659,7 +659,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Despeckle (remove point noise) from the image Remove point noise / despeckle the input image
+        /// Despeckle to remove point noise from the image Remove point noise / despeckle the input image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -719,7 +719,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Despeckle (remove point noise) from the image Remove point noise / despeckle the input image
+        /// Despeckle to remove point noise from the image Remove point noise / despeckle the input image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -732,7 +732,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Despeckle (remove point noise) from the image Remove point noise / despeckle the input image
+        /// Despeckle to remove point noise from the image Remove point noise / despeckle the input image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>

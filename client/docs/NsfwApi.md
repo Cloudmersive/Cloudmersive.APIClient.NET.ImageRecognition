@@ -4,14 +4,14 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**NsfwClassify**](NsfwApi.md#nsfwclassify) | **POST** /image/nsfw/classify | Not safe for work (NSFW) racy content classification
+[**NsfwClassify**](NsfwApi.md#nsfwclassify) | **POST** /image/nsfw/classify | Not safe for work NSFW racy content classification
 
 
 <a name="nsfwclassify"></a>
 # **NsfwClassify**
 > NsfwResult NsfwClassify (System.IO.Stream imageFile)
 
-Not safe for work (NSFW) racy content classification
+Not safe for work NSFW racy content classification
 
 Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
 
@@ -39,7 +39,7 @@ namespace Example
 
             try
             {
-                // Not safe for work (NSFW) racy content classification
+                // Not safe for work NSFW racy content classification
                 NsfwResult result = apiInstance.NsfwClassify(imageFile);
                 Debug.WriteLine(result);
             }

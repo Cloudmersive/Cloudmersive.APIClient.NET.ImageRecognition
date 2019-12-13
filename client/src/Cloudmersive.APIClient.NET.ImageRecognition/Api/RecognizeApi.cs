@@ -69,7 +69,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> RecognizeDetectAndUnskewDocumentWithHttpInfo (System.IO.Stream imageFile, string postProcessingEffect = null);
         /// <summary>
-        /// Detect objects, including types and locations, in an image
+        /// Detect objects including types and locations in an image
         /// </summary>
         /// <remarks>
         /// Identify the position, size and description of objects in an image, along with a recognition confidence level.  Detects both human people and objects in an image.
@@ -80,7 +80,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         ObjectDetectionResult RecognizeDetectObjects (System.IO.Stream imageFile);
 
         /// <summary>
-        /// Detect objects, including types and locations, in an image
+        /// Detect objects including types and locations in an image
         /// </summary>
         /// <remarks>
         /// Identify the position, size and description of objects in an image, along with a recognition confidence level.  Detects both human people and objects in an image.
@@ -90,7 +90,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>ApiResponse of ObjectDetectionResult</returns>
         ApiResponse<ObjectDetectionResult> RecognizeDetectObjectsWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
-        /// Detect people, including locations, in an image
+        /// Detect people including locations in an image
         /// </summary>
         /// <remarks>
         /// Identify the position, and size of human people in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
@@ -101,7 +101,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         ObjectDetectionResult RecognizeDetectPeople (System.IO.Stream imageFile);
 
         /// <summary>
-        /// Detect people, including locations, in an image
+        /// Detect people including locations in an image
         /// </summary>
         /// <remarks>
         /// Identify the position, and size of human people in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
@@ -243,7 +243,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> RecognizeDetectAndUnskewDocumentAsyncWithHttpInfo (System.IO.Stream imageFile, string postProcessingEffect = null);
         /// <summary>
-        /// Detect objects, including types and locations, in an image
+        /// Detect objects including types and locations in an image
         /// </summary>
         /// <remarks>
         /// Identify the position, size and description of objects in an image, along with a recognition confidence level.  Detects both human people and objects in an image.
@@ -254,7 +254,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         System.Threading.Tasks.Task<ObjectDetectionResult> RecognizeDetectObjectsAsync (System.IO.Stream imageFile);
 
         /// <summary>
-        /// Detect objects, including types and locations, in an image
+        /// Detect objects including types and locations in an image
         /// </summary>
         /// <remarks>
         /// Identify the position, size and description of objects in an image, along with a recognition confidence level.  Detects both human people and objects in an image.
@@ -264,7 +264,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>Task of ApiResponse (ObjectDetectionResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<ObjectDetectionResult>> RecognizeDetectObjectsAsyncWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
-        /// Detect people, including locations, in an image
+        /// Detect people including locations in an image
         /// </summary>
         /// <remarks>
         /// Identify the position, and size of human people in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
@@ -275,7 +275,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         System.Threading.Tasks.Task<ObjectDetectionResult> RecognizeDetectPeopleAsync (System.IO.Stream imageFile);
 
         /// <summary>
-        /// Detect people, including locations, in an image
+        /// Detect people including locations in an image
         /// </summary>
         /// <remarks>
         /// Identify the position, and size of human people in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
@@ -779,7 +779,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Detect objects, including types and locations, in an image Identify the position, size and description of objects in an image, along with a recognition confidence level.  Detects both human people and objects in an image.
+        /// Detect objects including types and locations in an image Identify the position, size and description of objects in an image, along with a recognition confidence level.  Detects both human people and objects in an image.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -791,7 +791,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Detect objects, including types and locations, in an image Identify the position, size and description of objects in an image, along with a recognition confidence level.  Detects both human people and objects in an image.
+        /// Detect objects including types and locations in an image Identify the position, size and description of objects in an image, along with a recognition confidence level.  Detects both human people and objects in an image.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -854,7 +854,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Detect objects, including types and locations, in an image Identify the position, size and description of objects in an image, along with a recognition confidence level.  Detects both human people and objects in an image.
+        /// Detect objects including types and locations in an image Identify the position, size and description of objects in an image, along with a recognition confidence level.  Detects both human people and objects in an image.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -867,7 +867,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Detect objects, including types and locations, in an image Identify the position, size and description of objects in an image, along with a recognition confidence level.  Detects both human people and objects in an image.
+        /// Detect objects including types and locations in an image Identify the position, size and description of objects in an image, along with a recognition confidence level.  Detects both human people and objects in an image.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -930,7 +930,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Detect people, including locations, in an image Identify the position, and size of human people in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
+        /// Detect people including locations in an image Identify the position, and size of human people in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -942,7 +942,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Detect people, including locations, in an image Identify the position, and size of human people in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
+        /// Detect people including locations in an image Identify the position, and size of human people in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -1005,7 +1005,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Detect people, including locations, in an image Identify the position, and size of human people in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
+        /// Detect people including locations in an image Identify the position, and size of human people in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -1018,7 +1018,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Detect people, including locations, in an image Identify the position, and size of human people in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
+        /// Detect people including locations in an image Identify the position, and size of human people in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>

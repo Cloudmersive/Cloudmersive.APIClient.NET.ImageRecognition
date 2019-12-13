@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: image/png
+ - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: image/png
+ - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -322,7 +322,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditApi();
-            var request = new DrawPolygonRequest(); // DrawPolygonRequest | 
+            var request = new DrawPolygonRequest(); // DrawPolygonRequest | Polygon drawing request parameters
 
             try
             {
@@ -343,7 +343,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**DrawPolygonRequest**](DrawPolygonRequest.md)|  | 
+ **request** | [**DrawPolygonRequest**](DrawPolygonRequest.md)| Polygon drawing request parameters | 
 
 ### Return type
 
@@ -356,7 +356,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: image/png
+ - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -388,7 +388,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditApi();
-            var request = new DrawRectangleRequest(); // DrawRectangleRequest | 
+            var request = new DrawRectangleRequest(); // DrawRectangleRequest | Draw rectangle parameters
 
             try
             {
@@ -409,7 +409,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**DrawRectangleRequest**](DrawRectangleRequest.md)|  | 
+ **request** | [**DrawRectangleRequest**](DrawRectangleRequest.md)| Draw rectangle parameters | 
 
 ### Return type
 
@@ -422,7 +422,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: image/png
+ - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -454,7 +454,7 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditApi();
-            var request = new DrawTextRequest(); // DrawTextRequest | 
+            var request = new DrawTextRequest(); // DrawTextRequest | Draw text parameters
 
             try
             {
@@ -475,7 +475,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**DrawTextRequest**](DrawTextRequest.md)|  | 
+ **request** | [**DrawTextRequest**](DrawTextRequest.md)| Draw text parameters | 
 
 ### Return type
 
@@ -488,7 +488,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: image/png
+ - **Accept**: application/octet-stream
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -520,8 +520,8 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new EditApi();
-            var X = 56;  // int? | 
-            var Y = 56;  // int? | 
+            var X = 56;  // int? | Horizontal (X) offset of the drop shadow
+            var Y = 56;  // int? | Vertical (Y) offset of the drop shadow
             var sigma = 56;  // int? | Sigma (blur distance) of the drop shadow
             var opacity = 56;  // int? | Opacity of the drop shadow; 0 is 0% and 100 is 100%
             var imageFile = new System.IO.Stream(); // System.IO.Stream | Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.
@@ -545,8 +545,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **X** | **int?**|  | 
- **Y** | **int?**|  | 
+ **X** | **int?**| Horizontal (X) offset of the drop shadow | 
+ **Y** | **int?**| Vertical (Y) offset of the drop shadow | 
  **sigma** | **int?**| Sigma (blur distance) of the drop shadow | 
  **opacity** | **int?**| Opacity of the drop shadow; 0 is 0% and 100 is 100% | 
  **imageFile** | **System.IO.Stream**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | 

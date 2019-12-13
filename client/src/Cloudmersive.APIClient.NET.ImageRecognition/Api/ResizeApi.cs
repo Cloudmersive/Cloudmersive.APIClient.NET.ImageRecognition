@@ -55,8 +55,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Resize an image to a specific width and specific height
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="width"></param>
-        /// <param name="height"></param>
+        /// <param name="width">Width of the output image - final image will be exactly this width</param>
+        /// <param name="height">Height of the output image - final image will be exactly this height</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>byte[]</returns>
         byte[] ResizeResizeSimple (int? width, int? height, System.IO.Stream imageFile);
@@ -68,8 +68,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Resize an image to a specific width and specific height
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="width"></param>
-        /// <param name="height"></param>
+        /// <param name="width">Width of the output image - final image will be exactly this width</param>
+        /// <param name="height">Height of the output image - final image will be exactly this height</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> ResizeResizeSimpleWithHttpInfo (int? width, int? height, System.IO.Stream imageFile);
@@ -107,8 +107,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Resize an image to a specific width and specific height
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="width"></param>
-        /// <param name="height"></param>
+        /// <param name="width">Width of the output image - final image will be exactly this width</param>
+        /// <param name="height">Height of the output image - final image will be exactly this height</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>Task of byte[]</returns>
         System.Threading.Tasks.Task<byte[]> ResizeResizeSimpleAsync (int? width, int? height, System.IO.Stream imageFile);
@@ -120,8 +120,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Resize an image to a specific width and specific height
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="width"></param>
-        /// <param name="height"></param>
+        /// <param name="width">Width of the output image - final image will be exactly this width</param>
+        /// <param name="height">Height of the output image - final image will be exactly this height</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> ResizeResizeSimpleAsyncWithHttpInfo (int? width, int? height, System.IO.Stream imageFile);
@@ -275,7 +275,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "image/png"
+                "application/octet-stream"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -360,7 +360,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "image/png"
+                "application/octet-stream"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -398,8 +398,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Resize an image Resize an image to a specific width and specific height
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="width"></param>
-        /// <param name="height"></param>
+        /// <param name="width">Width of the output image - final image will be exactly this width</param>
+        /// <param name="height">Height of the output image - final image will be exactly this height</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>byte[]</returns>
         public byte[] ResizeResizeSimple (int? width, int? height, System.IO.Stream imageFile)
@@ -412,8 +412,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Resize an image Resize an image to a specific width and specific height
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="width"></param>
-        /// <param name="height"></param>
+        /// <param name="width">Width of the output image - final image will be exactly this width</param>
+        /// <param name="height">Height of the output image - final image will be exactly this height</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>ApiResponse of byte[]</returns>
         public ApiResponse< byte[] > ResizeResizeSimpleWithHttpInfo (int? width, int? height, System.IO.Stream imageFile)
@@ -444,7 +444,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "image/png"
+                "application/octet-stream"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -482,8 +482,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Resize an image Resize an image to a specific width and specific height
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="width"></param>
-        /// <param name="height"></param>
+        /// <param name="width">Width of the output image - final image will be exactly this width</param>
+        /// <param name="height">Height of the output image - final image will be exactly this height</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>Task of byte[]</returns>
         public async System.Threading.Tasks.Task<byte[]> ResizeResizeSimpleAsync (int? width, int? height, System.IO.Stream imageFile)
@@ -497,8 +497,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Resize an image Resize an image to a specific width and specific height
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="width"></param>
-        /// <param name="height"></param>
+        /// <param name="width">Width of the output image - final image will be exactly this width</param>
+        /// <param name="height">Height of the output image - final image will be exactly this height</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         public async System.Threading.Tasks.Task<ApiResponse<byte[]>> ResizeResizeSimpleAsyncWithHttpInfo (int? width, int? height, System.IO.Stream imageFile)
@@ -529,7 +529,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "image/png"
+                "application/octet-stream"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)

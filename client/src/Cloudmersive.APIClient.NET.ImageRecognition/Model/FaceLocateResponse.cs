@@ -33,24 +33,18 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FaceLocateResponse" /> class.
         /// </summary>
-        /// <param name="errorDetails">errorDetails.</param>
         /// <param name="successful">True if the operation was successful, false otherwise.</param>
         /// <param name="faces">Array of faces found in the image.</param>
         /// <param name="faceCount">Number of faces found in the image.</param>
-        public FaceLocateResponse(string errorDetails = default(string), bool? successful = default(bool?), List<Face> faces = default(List<Face>), int? faceCount = default(int?))
+        /// <param name="errorDetails">Details of any errors that occurred.</param>
+        public FaceLocateResponse(bool? successful = default(bool?), List<Face> faces = default(List<Face>), int? faceCount = default(int?), string errorDetails = default(string))
         {
-            this.ErrorDetails = errorDetails;
             this.Successful = successful;
             this.Faces = faces;
             this.FaceCount = faceCount;
+            this.ErrorDetails = errorDetails;
         }
         
-        /// <summary>
-        /// Gets or Sets ErrorDetails
-        /// </summary>
-        [DataMember(Name="ErrorDetails", EmitDefaultValue=false)]
-        public string ErrorDetails { get; set; }
-
         /// <summary>
         /// True if the operation was successful, false otherwise
         /// </summary>
@@ -73,6 +67,13 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         public int? FaceCount { get; set; }
 
         /// <summary>
+        /// Details of any errors that occurred
+        /// </summary>
+        /// <value>Details of any errors that occurred</value>
+        [DataMember(Name="ErrorDetails", EmitDefaultValue=false)]
+        public string ErrorDetails { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -80,10 +81,10 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FaceLocateResponse {\n");
-            sb.Append("  ErrorDetails: ").Append(ErrorDetails).Append("\n");
             sb.Append("  Successful: ").Append(Successful).Append("\n");
             sb.Append("  Faces: ").Append(Faces).Append("\n");
             sb.Append("  FaceCount: ").Append(FaceCount).Append("\n");
+            sb.Append("  ErrorDetails: ").Append(ErrorDetails).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -119,11 +120,6 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
 
             return 
                 (
-                    this.ErrorDetails == input.ErrorDetails ||
-                    (this.ErrorDetails != null &&
-                    this.ErrorDetails.Equals(input.ErrorDetails))
-                ) && 
-                (
                     this.Successful == input.Successful ||
                     (this.Successful != null &&
                     this.Successful.Equals(input.Successful))
@@ -137,6 +133,11 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
                     this.FaceCount == input.FaceCount ||
                     (this.FaceCount != null &&
                     this.FaceCount.Equals(input.FaceCount))
+                ) && 
+                (
+                    this.ErrorDetails == input.ErrorDetails ||
+                    (this.ErrorDetails != null &&
+                    this.ErrorDetails.Equals(input.ErrorDetails))
                 );
         }
 
@@ -149,14 +150,14 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ErrorDetails != null)
-                    hashCode = hashCode * 59 + this.ErrorDetails.GetHashCode();
                 if (this.Successful != null)
                     hashCode = hashCode * 59 + this.Successful.GetHashCode();
                 if (this.Faces != null)
                     hashCode = hashCode * 59 + this.Faces.GetHashCode();
                 if (this.FaceCount != null)
                     hashCode = hashCode * 59 + this.FaceCount.GetHashCode();
+                if (this.ErrorDetails != null)
+                    hashCode = hashCode * 59 + this.ErrorDetails.GetHashCode();
                 return hashCode;
             }
         }

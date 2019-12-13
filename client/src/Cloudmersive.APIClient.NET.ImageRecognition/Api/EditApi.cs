@@ -129,7 +129,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw one or more polygons, with customized visuals, onto an image
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Polygon drawing request parameters</param>
         /// <returns>byte[]</returns>
         byte[] EditDrawPolygon (DrawPolygonRequest request);
 
@@ -140,7 +140,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw one or more polygons, with customized visuals, onto an image
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Polygon drawing request parameters</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditDrawPolygonWithHttpInfo (DrawPolygonRequest request);
         /// <summary>
@@ -150,7 +150,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw one or more rectangles, with customized visuals, onto an image
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Draw rectangle parameters</param>
         /// <returns>byte[]</returns>
         byte[] EditDrawRectangle (DrawRectangleRequest request);
 
@@ -161,7 +161,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw one or more rectangles, with customized visuals, onto an image
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Draw rectangle parameters</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditDrawRectangleWithHttpInfo (DrawRectangleRequest request);
         /// <summary>
@@ -171,7 +171,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw one or more pieces of text, with customized visuals, onto an image
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Draw text parameters</param>
         /// <returns>byte[]</returns>
         byte[] EditDrawText (DrawTextRequest request);
 
@@ -182,7 +182,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw one or more pieces of text, with customized visuals, onto an image
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Draw text parameters</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditDrawTextWithHttpInfo (DrawTextRequest request);
         /// <summary>
@@ -192,8 +192,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Add a customizeable drop shadow to the image
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="X"></param>
-        /// <param name="Y"></param>
+        /// <param name="X">Horizontal (X) offset of the drop shadow</param>
+        /// <param name="Y">Vertical (Y) offset of the drop shadow</param>
         /// <param name="sigma">Sigma (blur distance) of the drop shadow</param>
         /// <param name="opacity">Opacity of the drop shadow; 0 is 0% and 100 is 100%</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -207,8 +207,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Add a customizeable drop shadow to the image
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="X"></param>
-        /// <param name="Y"></param>
+        /// <param name="X">Horizontal (X) offset of the drop shadow</param>
+        /// <param name="Y">Vertical (Y) offset of the drop shadow</param>
         /// <param name="sigma">Sigma (blur distance) of the drop shadow</param>
         /// <param name="opacity">Opacity of the drop shadow; 0 is 0% and 100 is 100%</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -365,7 +365,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw one or more polygons, with customized visuals, onto an image
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Polygon drawing request parameters</param>
         /// <returns>Task of byte[]</returns>
         System.Threading.Tasks.Task<byte[]> EditDrawPolygonAsync (DrawPolygonRequest request);
 
@@ -376,7 +376,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw one or more polygons, with customized visuals, onto an image
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Polygon drawing request parameters</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDrawPolygonAsyncWithHttpInfo (DrawPolygonRequest request);
         /// <summary>
@@ -386,7 +386,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw one or more rectangles, with customized visuals, onto an image
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Draw rectangle parameters</param>
         /// <returns>Task of byte[]</returns>
         System.Threading.Tasks.Task<byte[]> EditDrawRectangleAsync (DrawRectangleRequest request);
 
@@ -397,7 +397,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw one or more rectangles, with customized visuals, onto an image
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Draw rectangle parameters</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDrawRectangleAsyncWithHttpInfo (DrawRectangleRequest request);
         /// <summary>
@@ -407,7 +407,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw one or more pieces of text, with customized visuals, onto an image
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Draw text parameters</param>
         /// <returns>Task of byte[]</returns>
         System.Threading.Tasks.Task<byte[]> EditDrawTextAsync (DrawTextRequest request);
 
@@ -418,7 +418,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw one or more pieces of text, with customized visuals, onto an image
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Draw text parameters</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDrawTextAsyncWithHttpInfo (DrawTextRequest request);
         /// <summary>
@@ -428,8 +428,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Add a customizeable drop shadow to the image
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="X"></param>
-        /// <param name="Y"></param>
+        /// <param name="X">Horizontal (X) offset of the drop shadow</param>
+        /// <param name="Y">Vertical (Y) offset of the drop shadow</param>
         /// <param name="sigma">Sigma (blur distance) of the drop shadow</param>
         /// <param name="opacity">Opacity of the drop shadow; 0 is 0% and 100 is 100%</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -443,8 +443,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Add a customizeable drop shadow to the image
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="X"></param>
-        /// <param name="Y"></param>
+        /// <param name="X">Horizontal (X) offset of the drop shadow</param>
+        /// <param name="Y">Vertical (Y) offset of the drop shadow</param>
         /// <param name="sigma">Sigma (blur distance) of the drop shadow</param>
         /// <param name="opacity">Opacity of the drop shadow; 0 is 0% and 100 is 100%</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -789,7 +789,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "image/png"
+                "application/octet-stream"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -874,7 +874,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "image/png"
+                "application/octet-stream"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -953,7 +953,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "image/png"
+                "application/octet-stream"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1032,7 +1032,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "image/png"
+                "application/octet-stream"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1262,7 +1262,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw a polygon onto an image Draw one or more polygons, with customized visuals, onto an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Polygon drawing request parameters</param>
         /// <returns>byte[]</returns>
         public byte[] EditDrawPolygon (DrawPolygonRequest request)
         {
@@ -1274,7 +1274,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw a polygon onto an image Draw one or more polygons, with customized visuals, onto an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Polygon drawing request parameters</param>
         /// <returns>ApiResponse of byte[]</returns>
         public ApiResponse< byte[] > EditDrawPolygonWithHttpInfo (DrawPolygonRequest request)
         {
@@ -1302,7 +1302,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "image/png"
+                "application/octet-stream"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1345,7 +1345,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw a polygon onto an image Draw one or more polygons, with customized visuals, onto an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Polygon drawing request parameters</param>
         /// <returns>Task of byte[]</returns>
         public async System.Threading.Tasks.Task<byte[]> EditDrawPolygonAsync (DrawPolygonRequest request)
         {
@@ -1358,7 +1358,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw a polygon onto an image Draw one or more polygons, with customized visuals, onto an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Polygon drawing request parameters</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDrawPolygonAsyncWithHttpInfo (DrawPolygonRequest request)
         {
@@ -1386,7 +1386,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "image/png"
+                "application/octet-stream"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1429,7 +1429,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw a rectangle onto an image Draw one or more rectangles, with customized visuals, onto an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Draw rectangle parameters</param>
         /// <returns>byte[]</returns>
         public byte[] EditDrawRectangle (DrawRectangleRequest request)
         {
@@ -1441,7 +1441,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw a rectangle onto an image Draw one or more rectangles, with customized visuals, onto an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Draw rectangle parameters</param>
         /// <returns>ApiResponse of byte[]</returns>
         public ApiResponse< byte[] > EditDrawRectangleWithHttpInfo (DrawRectangleRequest request)
         {
@@ -1469,7 +1469,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "image/png"
+                "application/octet-stream"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1512,7 +1512,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw a rectangle onto an image Draw one or more rectangles, with customized visuals, onto an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Draw rectangle parameters</param>
         /// <returns>Task of byte[]</returns>
         public async System.Threading.Tasks.Task<byte[]> EditDrawRectangleAsync (DrawRectangleRequest request)
         {
@@ -1525,7 +1525,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw a rectangle onto an image Draw one or more rectangles, with customized visuals, onto an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Draw rectangle parameters</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDrawRectangleAsyncWithHttpInfo (DrawRectangleRequest request)
         {
@@ -1553,7 +1553,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "image/png"
+                "application/octet-stream"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1596,7 +1596,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw text onto an image Draw one or more pieces of text, with customized visuals, onto an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Draw text parameters</param>
         /// <returns>byte[]</returns>
         public byte[] EditDrawText (DrawTextRequest request)
         {
@@ -1608,7 +1608,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw text onto an image Draw one or more pieces of text, with customized visuals, onto an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Draw text parameters</param>
         /// <returns>ApiResponse of byte[]</returns>
         public ApiResponse< byte[] > EditDrawTextWithHttpInfo (DrawTextRequest request)
         {
@@ -1636,7 +1636,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "image/png"
+                "application/octet-stream"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1679,7 +1679,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw text onto an image Draw one or more pieces of text, with customized visuals, onto an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Draw text parameters</param>
         /// <returns>Task of byte[]</returns>
         public async System.Threading.Tasks.Task<byte[]> EditDrawTextAsync (DrawTextRequest request)
         {
@@ -1692,7 +1692,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Draw text onto an image Draw one or more pieces of text, with customized visuals, onto an image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">Draw text parameters</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditDrawTextAsyncWithHttpInfo (DrawTextRequest request)
         {
@@ -1720,7 +1720,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "image/png"
+                "application/octet-stream"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1763,8 +1763,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Add a customizeable drop shadow to an image Add a customizeable drop shadow to the image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="X"></param>
-        /// <param name="Y"></param>
+        /// <param name="X">Horizontal (X) offset of the drop shadow</param>
+        /// <param name="Y">Vertical (Y) offset of the drop shadow</param>
         /// <param name="sigma">Sigma (blur distance) of the drop shadow</param>
         /// <param name="opacity">Opacity of the drop shadow; 0 is 0% and 100 is 100%</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -1779,8 +1779,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Add a customizeable drop shadow to an image Add a customizeable drop shadow to the image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="X"></param>
-        /// <param name="Y"></param>
+        /// <param name="X">Horizontal (X) offset of the drop shadow</param>
+        /// <param name="Y">Vertical (Y) offset of the drop shadow</param>
         /// <param name="sigma">Sigma (blur distance) of the drop shadow</param>
         /// <param name="opacity">Opacity of the drop shadow; 0 is 0% and 100 is 100%</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -1859,8 +1859,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Add a customizeable drop shadow to an image Add a customizeable drop shadow to the image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="X"></param>
-        /// <param name="Y"></param>
+        /// <param name="X">Horizontal (X) offset of the drop shadow</param>
+        /// <param name="Y">Vertical (Y) offset of the drop shadow</param>
         /// <param name="sigma">Sigma (blur distance) of the drop shadow</param>
         /// <param name="opacity">Opacity of the drop shadow; 0 is 0% and 100 is 100%</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -1876,8 +1876,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Add a customizeable drop shadow to an image Add a customizeable drop shadow to the image
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="X"></param>
-        /// <param name="Y"></param>
+        /// <param name="X">Horizontal (X) offset of the drop shadow</param>
+        /// <param name="Y">Vertical (Y) offset of the drop shadow</param>
         /// <param name="sigma">Sigma (blur distance) of the drop shadow</param>
         /// <param name="opacity">Opacity of the drop shadow; 0 is 0% and 100 is 100%</param>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
