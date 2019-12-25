@@ -75,6 +75,14 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
             // TODO unit test for the property 'Successful'
         }
         /// <summary>
+        /// Test the property 'IsValidImage'
+        /// </summary>
+        [Test]
+        public void IsValidImageTest()
+        {
+            // TODO unit test for the property 'IsValidImage'
+        }
+        /// <summary>
         /// Test the property 'FileFormat'
         /// </summary>
         [Test]
@@ -105,6 +113,14 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
         public void BitDepthTest()
         {
             // TODO unit test for the property 'BitDepth'
+        }
+        /// <summary>
+        /// Test the property 'HasTransparency'
+        /// </summary>
+        [Test]
+        public void HasTransparencyTest()
+        {
+            // TODO unit test for the property 'HasTransparency'
         }
         /// <summary>
         /// Test the property 'ColorSpace'
