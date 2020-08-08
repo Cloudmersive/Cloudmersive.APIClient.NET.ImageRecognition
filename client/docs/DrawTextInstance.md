@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Text** | **string** | Text string to draw | [optional] 
-**FontFamilyName** | **string** | Font Family to use.  Leave blank to default to \&quot;Arial\&quot;. | [optional] 
+**FontFamilyName** | **string** | Font Family to use.  Leave blank to default to \&quot;Arial\&quot;.  Supported fonts including Arial, Calibri, Cambria, Candara, Consolas, Constantia, Corbel, Courier New, Courier Regular, Georgia, Impact Regular, Lucida, Modern Regular, Tahoma, Times New Roman, Verdana | [optional] 
 **FontSize** | **double?** | Font size to use. | [optional] 
 **Color** | **string** | Color to use - can be a hex value (with #) or HTML common color name | [optional] 
 **X** | **double?** | Pixel location of the left edge of the text location | [optional] 

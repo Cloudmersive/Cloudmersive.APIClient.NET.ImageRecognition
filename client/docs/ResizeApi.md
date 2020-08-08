@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Resize an image while preserving aspect ratio
 
-Resize an image to a maximum width and maximum height, while preserving the image's original aspect ratio
+Resize an image to a maximum width and maximum height, while preserving the image's original aspect ratio.  Resize is EXIF-aware.
 
 ### Example
 ```csharp
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 Resize an image
 
-Resize an image to a specific width and specific height
+Resize an image to a specific width and specific height.  Resize is EXIF-aware.
 
 ### Example
 ```csharp

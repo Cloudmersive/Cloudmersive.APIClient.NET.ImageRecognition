@@ -27,7 +27,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Resize an image while preserving aspect ratio
         /// </summary>
         /// <remarks>
-        /// Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio
+        /// Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio.  Resize is EXIF-aware.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maxWidth">Maximum width of the output image - final image will be as large as possible while less than or equial to this width</param>
@@ -40,7 +40,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Resize an image while preserving aspect ratio
         /// </summary>
         /// <remarks>
-        /// Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio
+        /// Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio.  Resize is EXIF-aware.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maxWidth">Maximum width of the output image - final image will be as large as possible while less than or equial to this width</param>
@@ -52,7 +52,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Resize an image
         /// </summary>
         /// <remarks>
-        /// Resize an image to a specific width and specific height
+        /// Resize an image to a specific width and specific height.  Resize is EXIF-aware.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="width">Width of the output image - final image will be exactly this width</param>
@@ -65,7 +65,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Resize an image
         /// </summary>
         /// <remarks>
-        /// Resize an image to a specific width and specific height
+        /// Resize an image to a specific width and specific height.  Resize is EXIF-aware.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="width">Width of the output image - final image will be exactly this width</param>
@@ -79,7 +79,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Resize an image while preserving aspect ratio
         /// </summary>
         /// <remarks>
-        /// Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio
+        /// Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio.  Resize is EXIF-aware.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maxWidth">Maximum width of the output image - final image will be as large as possible while less than or equial to this width</param>
@@ -92,7 +92,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Resize an image while preserving aspect ratio
         /// </summary>
         /// <remarks>
-        /// Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio
+        /// Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio.  Resize is EXIF-aware.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maxWidth">Maximum width of the output image - final image will be as large as possible while less than or equial to this width</param>
@@ -104,7 +104,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Resize an image
         /// </summary>
         /// <remarks>
-        /// Resize an image to a specific width and specific height
+        /// Resize an image to a specific width and specific height.  Resize is EXIF-aware.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="width">Width of the output image - final image will be exactly this width</param>
@@ -117,7 +117,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Resize an image
         /// </summary>
         /// <remarks>
-        /// Resize an image to a specific width and specific height
+        /// Resize an image to a specific width and specific height.  Resize is EXIF-aware.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="width">Width of the output image - final image will be exactly this width</param>
@@ -226,7 +226,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Resize an image while preserving aspect ratio Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio
+        /// Resize an image while preserving aspect ratio Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio.  Resize is EXIF-aware.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maxWidth">Maximum width of the output image - final image will be as large as possible while less than or equial to this width</param>
@@ -240,7 +240,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Resize an image while preserving aspect ratio Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio
+        /// Resize an image while preserving aspect ratio Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio.  Resize is EXIF-aware.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maxWidth">Maximum width of the output image - final image will be as large as possible while less than or equial to this width</param>
@@ -310,7 +310,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Resize an image while preserving aspect ratio Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio
+        /// Resize an image while preserving aspect ratio Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio.  Resize is EXIF-aware.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maxWidth">Maximum width of the output image - final image will be as large as possible while less than or equial to this width</param>
@@ -325,7 +325,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Resize an image while preserving aspect ratio Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio
+        /// Resize an image while preserving aspect ratio Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio.  Resize is EXIF-aware.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="maxWidth">Maximum width of the output image - final image will be as large as possible while less than or equial to this width</param>
@@ -395,7 +395,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Resize an image Resize an image to a specific width and specific height
+        /// Resize an image Resize an image to a specific width and specific height.  Resize is EXIF-aware.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="width">Width of the output image - final image will be exactly this width</param>
@@ -409,7 +409,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Resize an image Resize an image to a specific width and specific height
+        /// Resize an image Resize an image to a specific width and specific height.  Resize is EXIF-aware.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="width">Width of the output image - final image will be exactly this width</param>
@@ -479,7 +479,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Resize an image Resize an image to a specific width and specific height
+        /// Resize an image Resize an image to a specific width and specific height.  Resize is EXIF-aware.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="width">Width of the output image - final image will be exactly this width</param>
@@ -494,7 +494,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Resize an image Resize an image to a specific width and specific height
+        /// Resize an image Resize an image to a specific width and specific height.  Resize is EXIF-aware.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="width">Width of the output image - final image will be exactly this width</param>

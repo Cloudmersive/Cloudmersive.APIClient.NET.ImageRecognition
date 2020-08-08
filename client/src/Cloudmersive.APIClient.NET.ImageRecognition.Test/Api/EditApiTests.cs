@@ -91,6 +91,25 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
         }
         
         /// <summary>
+        /// Test EditCompositePrecise
+        /// </summary>
+        [Test]
+        public void EditCompositePreciseTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream baseImage = null;
+            //System.IO.Stream layeredImage = null;
+            //int? top = null;
+            //int? bottom = null;
+            //int? left = null;
+            //int? right = null;
+            //int? width = null;
+            //int? height = null;
+            //var response = instance.EditCompositePrecise(baseImage, layeredImage, top, bottom, left, right, width, height);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test EditContrastAdaptive
         /// </summary>
         [Test]
@@ -100,6 +119,21 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
             //double? gamma = null;
             //System.IO.Stream imageFile = null;
             //var response = instance.EditContrastAdaptive(gamma, imageFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test EditCropCircle
+        /// </summary>
+        [Test]
+        public void EditCropCircleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? left = null;
+            //int? top = null;
+            //int? radius = null;
+            //System.IO.Stream imageFile = null;
+            //var response = instance.EditCropCircle(left, top, radius, imageFile);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
         }
         

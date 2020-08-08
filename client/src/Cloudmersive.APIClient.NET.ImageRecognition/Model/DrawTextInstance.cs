@@ -34,7 +34,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// Initializes a new instance of the <see cref="DrawTextInstance" /> class.
         /// </summary>
         /// <param name="text">Text string to draw.</param>
-        /// <param name="fontFamilyName">Font Family to use.  Leave blank to default to \&quot;Arial\&quot;..</param>
+        /// <param name="fontFamilyName">Font Family to use.  Leave blank to default to \&quot;Arial\&quot;.  Supported fonts including Arial, Calibri, Cambria, Candara, Consolas, Constantia, Corbel, Courier New, Courier Regular, Georgia, Impact Regular, Lucida, Modern Regular, Tahoma, Times New Roman, Verdana.</param>
         /// <param name="fontSize">Font size to use..</param>
         /// <param name="color">Color to use - can be a hex value (with #) or HTML common color name.</param>
         /// <param name="x">Pixel location of the left edge of the text location.</param>
@@ -61,9 +61,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         public string Text { get; set; }
 
         /// <summary>
-        /// Font Family to use.  Leave blank to default to \&quot;Arial\&quot;.
+        /// Font Family to use.  Leave blank to default to \&quot;Arial\&quot;.  Supported fonts including Arial, Calibri, Cambria, Candara, Consolas, Constantia, Corbel, Courier New, Courier Regular, Georgia, Impact Regular, Lucida, Modern Regular, Tahoma, Times New Roman, Verdana
         /// </summary>
-        /// <value>Font Family to use.  Leave blank to default to \&quot;Arial\&quot;.</value>
+        /// <value>Font Family to use.  Leave blank to default to \&quot;Arial\&quot;.  Supported fonts including Arial, Calibri, Cambria, Candara, Consolas, Constantia, Corbel, Courier New, Courier Regular, Georgia, Impact Regular, Lucida, Modern Regular, Tahoma, Times New Roman, Verdana</value>
         [DataMember(Name="FontFamilyName", EmitDefaultValue=false)]
         public string FontFamilyName { get; set; }
 

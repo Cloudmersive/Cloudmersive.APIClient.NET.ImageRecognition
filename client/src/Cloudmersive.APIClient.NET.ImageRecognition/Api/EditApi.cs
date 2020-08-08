@@ -71,6 +71,41 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditCompositeBasicWithHttpInfo (string location, System.IO.Stream baseImage, System.IO.Stream layeredImage);
         /// <summary>
+        /// Composite two images together precisely
+        /// </summary>
+        /// <remarks>
+        /// Composites two input images together; a layered image onto a base image. Position is based on distance in pixels from each side.  The first image you input is the base image.  The second image (the layered image) will be composited on top of this base image.  Supports PNG transparency.  To control padding you can include transparent pixels at the border(s) of your layered images as appropriate.  Providing multiple parameters in a single axis (for example top and bottom) is not recommended, since only one of the parameters will be used per axis.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="baseImage">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="layeredImage">Image to layer on top of the base image.</param>
+        /// <param name="top">Optional; Desired distance in pixels from the top of the base image to the top of the layered image. (optional)</param>
+        /// <param name="bottom">Optional; Desired distance in pixels from the bottom of the base image to the bottom of the layered image. (optional)</param>
+        /// <param name="left">Optional; Desired distance in pixels from the left side of the base image to the left side of the layered image. (optional)</param>
+        /// <param name="right">Optional; Desired distance in pixels from the right side of the base image to the right side of the layered image. (optional)</param>
+        /// <param name="width">Optional; Desired width of the layered image in pixels. Leave height empty or 0 to automatically scale the image proportionally. (optional)</param>
+        /// <param name="height">Optional; Desired height of the layered image in pixels. Leave width empty or 0 to automatically scale the image proportionally. (optional)</param>
+        /// <returns>byte[]</returns>
+        byte[] EditCompositePrecise (System.IO.Stream baseImage, System.IO.Stream layeredImage, int? top = null, int? bottom = null, int? left = null, int? right = null, int? width = null, int? height = null);
+
+        /// <summary>
+        /// Composite two images together precisely
+        /// </summary>
+        /// <remarks>
+        /// Composites two input images together; a layered image onto a base image. Position is based on distance in pixels from each side.  The first image you input is the base image.  The second image (the layered image) will be composited on top of this base image.  Supports PNG transparency.  To control padding you can include transparent pixels at the border(s) of your layered images as appropriate.  Providing multiple parameters in a single axis (for example top and bottom) is not recommended, since only one of the parameters will be used per axis.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="baseImage">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="layeredImage">Image to layer on top of the base image.</param>
+        /// <param name="top">Optional; Desired distance in pixels from the top of the base image to the top of the layered image. (optional)</param>
+        /// <param name="bottom">Optional; Desired distance in pixels from the bottom of the base image to the bottom of the layered image. (optional)</param>
+        /// <param name="left">Optional; Desired distance in pixels from the left side of the base image to the left side of the layered image. (optional)</param>
+        /// <param name="right">Optional; Desired distance in pixels from the right side of the base image to the right side of the layered image. (optional)</param>
+        /// <param name="width">Optional; Desired width of the layered image in pixels. Leave height empty or 0 to automatically scale the image proportionally. (optional)</param>
+        /// <param name="height">Optional; Desired height of the layered image in pixels. Leave width empty or 0 to automatically scale the image proportionally. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditCompositePreciseWithHttpInfo (System.IO.Stream baseImage, System.IO.Stream layeredImage, int? top = null, int? bottom = null, int? left = null, int? right = null, int? width = null, int? height = null);
+        /// <summary>
         /// Adaptively adjust the contrast of the image to be more appealing and easy to see
         /// </summary>
         /// <remarks>
@@ -93,6 +128,33 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> EditContrastAdaptiveWithHttpInfo (double? gamma, System.IO.Stream imageFile);
+        /// <summary>
+        /// Crop an image to an circular area
+        /// </summary>
+        /// <remarks>
+        /// Crop an image to a target circular area
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="left">The left edge of the circular crop area in pixels (X).</param>
+        /// <param name="top">The top edge of the circular crop area in pixels (Y).</param>
+        /// <param name="radius">The radius of the circular crop area in pixels.</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>byte[]</returns>
+        byte[] EditCropCircle (int? left, int? top, int? radius, System.IO.Stream imageFile);
+
+        /// <summary>
+        /// Crop an image to an circular area
+        /// </summary>
+        /// <remarks>
+        /// Crop an image to a target circular area
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="left">The left edge of the circular crop area in pixels (X).</param>
+        /// <param name="top">The top edge of the circular crop area in pixels (Y).</param>
+        /// <param name="radius">The radius of the circular crop area in pixels.</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> EditCropCircleWithHttpInfo (int? left, int? top, int? radius, System.IO.Stream imageFile);
         /// <summary>
         /// Crop an image to a rectangular area
         /// </summary>
@@ -349,6 +411,41 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditCompositeBasicAsyncWithHttpInfo (string location, System.IO.Stream baseImage, System.IO.Stream layeredImage);
         /// <summary>
+        /// Composite two images together precisely
+        /// </summary>
+        /// <remarks>
+        /// Composites two input images together; a layered image onto a base image. Position is based on distance in pixels from each side.  The first image you input is the base image.  The second image (the layered image) will be composited on top of this base image.  Supports PNG transparency.  To control padding you can include transparent pixels at the border(s) of your layered images as appropriate.  Providing multiple parameters in a single axis (for example top and bottom) is not recommended, since only one of the parameters will be used per axis.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="baseImage">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="layeredImage">Image to layer on top of the base image.</param>
+        /// <param name="top">Optional; Desired distance in pixels from the top of the base image to the top of the layered image. (optional)</param>
+        /// <param name="bottom">Optional; Desired distance in pixels from the bottom of the base image to the bottom of the layered image. (optional)</param>
+        /// <param name="left">Optional; Desired distance in pixels from the left side of the base image to the left side of the layered image. (optional)</param>
+        /// <param name="right">Optional; Desired distance in pixels from the right side of the base image to the right side of the layered image. (optional)</param>
+        /// <param name="width">Optional; Desired width of the layered image in pixels. Leave height empty or 0 to automatically scale the image proportionally. (optional)</param>
+        /// <param name="height">Optional; Desired height of the layered image in pixels. Leave width empty or 0 to automatically scale the image proportionally. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditCompositePreciseAsync (System.IO.Stream baseImage, System.IO.Stream layeredImage, int? top = null, int? bottom = null, int? left = null, int? right = null, int? width = null, int? height = null);
+
+        /// <summary>
+        /// Composite two images together precisely
+        /// </summary>
+        /// <remarks>
+        /// Composites two input images together; a layered image onto a base image. Position is based on distance in pixels from each side.  The first image you input is the base image.  The second image (the layered image) will be composited on top of this base image.  Supports PNG transparency.  To control padding you can include transparent pixels at the border(s) of your layered images as appropriate.  Providing multiple parameters in a single axis (for example top and bottom) is not recommended, since only one of the parameters will be used per axis.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="baseImage">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="layeredImage">Image to layer on top of the base image.</param>
+        /// <param name="top">Optional; Desired distance in pixels from the top of the base image to the top of the layered image. (optional)</param>
+        /// <param name="bottom">Optional; Desired distance in pixels from the bottom of the base image to the bottom of the layered image. (optional)</param>
+        /// <param name="left">Optional; Desired distance in pixels from the left side of the base image to the left side of the layered image. (optional)</param>
+        /// <param name="right">Optional; Desired distance in pixels from the right side of the base image to the right side of the layered image. (optional)</param>
+        /// <param name="width">Optional; Desired width of the layered image in pixels. Leave height empty or 0 to automatically scale the image proportionally. (optional)</param>
+        /// <param name="height">Optional; Desired height of the layered image in pixels. Leave width empty or 0 to automatically scale the image proportionally. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditCompositePreciseAsyncWithHttpInfo (System.IO.Stream baseImage, System.IO.Stream layeredImage, int? top = null, int? bottom = null, int? left = null, int? right = null, int? width = null, int? height = null);
+        /// <summary>
         /// Adaptively adjust the contrast of the image to be more appealing and easy to see
         /// </summary>
         /// <remarks>
@@ -371,6 +468,33 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> EditContrastAdaptiveAsyncWithHttpInfo (double? gamma, System.IO.Stream imageFile);
+        /// <summary>
+        /// Crop an image to an circular area
+        /// </summary>
+        /// <remarks>
+        /// Crop an image to a target circular area
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="left">The left edge of the circular crop area in pixels (X).</param>
+        /// <param name="top">The top edge of the circular crop area in pixels (Y).</param>
+        /// <param name="radius">The radius of the circular crop area in pixels.</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> EditCropCircleAsync (int? left, int? top, int? radius, System.IO.Stream imageFile);
+
+        /// <summary>
+        /// Crop an image to an circular area
+        /// </summary>
+        /// <remarks>
+        /// Crop an image to a target circular area
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="left">The left edge of the circular crop area in pixels (X).</param>
+        /// <param name="top">The top edge of the circular crop area in pixels (Y).</param>
+        /// <param name="radius">The radius of the circular crop area in pixels.</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> EditCropCircleAsyncWithHttpInfo (int? left, int? top, int? radius, System.IO.Stream imageFile);
         /// <summary>
         /// Crop an image to a rectangular area
         /// </summary>
@@ -993,6 +1117,199 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
+        /// Composite two images together precisely Composites two input images together; a layered image onto a base image. Position is based on distance in pixels from each side.  The first image you input is the base image.  The second image (the layered image) will be composited on top of this base image.  Supports PNG transparency.  To control padding you can include transparent pixels at the border(s) of your layered images as appropriate.  Providing multiple parameters in a single axis (for example top and bottom) is not recommended, since only one of the parameters will be used per axis.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="baseImage">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="layeredImage">Image to layer on top of the base image.</param>
+        /// <param name="top">Optional; Desired distance in pixels from the top of the base image to the top of the layered image. (optional)</param>
+        /// <param name="bottom">Optional; Desired distance in pixels from the bottom of the base image to the bottom of the layered image. (optional)</param>
+        /// <param name="left">Optional; Desired distance in pixels from the left side of the base image to the left side of the layered image. (optional)</param>
+        /// <param name="right">Optional; Desired distance in pixels from the right side of the base image to the right side of the layered image. (optional)</param>
+        /// <param name="width">Optional; Desired width of the layered image in pixels. Leave height empty or 0 to automatically scale the image proportionally. (optional)</param>
+        /// <param name="height">Optional; Desired height of the layered image in pixels. Leave width empty or 0 to automatically scale the image proportionally. (optional)</param>
+        /// <returns>byte[]</returns>
+        public byte[] EditCompositePrecise (System.IO.Stream baseImage, System.IO.Stream layeredImage, int? top = null, int? bottom = null, int? left = null, int? right = null, int? width = null, int? height = null)
+        {
+             ApiResponse<byte[]> localVarResponse = EditCompositePreciseWithHttpInfo(baseImage, layeredImage, top, bottom, left, right, width, height);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Composite two images together precisely Composites two input images together; a layered image onto a base image. Position is based on distance in pixels from each side.  The first image you input is the base image.  The second image (the layered image) will be composited on top of this base image.  Supports PNG transparency.  To control padding you can include transparent pixels at the border(s) of your layered images as appropriate.  Providing multiple parameters in a single axis (for example top and bottom) is not recommended, since only one of the parameters will be used per axis.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="baseImage">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="layeredImage">Image to layer on top of the base image.</param>
+        /// <param name="top">Optional; Desired distance in pixels from the top of the base image to the top of the layered image. (optional)</param>
+        /// <param name="bottom">Optional; Desired distance in pixels from the bottom of the base image to the bottom of the layered image. (optional)</param>
+        /// <param name="left">Optional; Desired distance in pixels from the left side of the base image to the left side of the layered image. (optional)</param>
+        /// <param name="right">Optional; Desired distance in pixels from the right side of the base image to the right side of the layered image. (optional)</param>
+        /// <param name="width">Optional; Desired width of the layered image in pixels. Leave height empty or 0 to automatically scale the image proportionally. (optional)</param>
+        /// <param name="height">Optional; Desired height of the layered image in pixels. Leave width empty or 0 to automatically scale the image proportionally. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditCompositePreciseWithHttpInfo (System.IO.Stream baseImage, System.IO.Stream layeredImage, int? top = null, int? bottom = null, int? left = null, int? right = null, int? width = null, int? height = null)
+        {
+            // verify the required parameter 'baseImage' is set
+            if (baseImage == null)
+                throw new ApiException(400, "Missing required parameter 'baseImage' when calling EditApi->EditCompositePrecise");
+            // verify the required parameter 'layeredImage' is set
+            if (layeredImage == null)
+                throw new ApiException(400, "Missing required parameter 'layeredImage' when calling EditApi->EditCompositePrecise");
+
+            var localVarPath = "/image/edit/composite/precise";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (top != null) localVarHeaderParams.Add("top", this.Configuration.ApiClient.ParameterToString(top)); // header parameter
+            if (bottom != null) localVarHeaderParams.Add("bottom", this.Configuration.ApiClient.ParameterToString(bottom)); // header parameter
+            if (left != null) localVarHeaderParams.Add("left", this.Configuration.ApiClient.ParameterToString(left)); // header parameter
+            if (right != null) localVarHeaderParams.Add("right", this.Configuration.ApiClient.ParameterToString(right)); // header parameter
+            if (width != null) localVarHeaderParams.Add("width", this.Configuration.ApiClient.ParameterToString(width)); // header parameter
+            if (height != null) localVarHeaderParams.Add("height", this.Configuration.ApiClient.ParameterToString(height)); // header parameter
+            if (baseImage != null) localVarFileParams.Add("baseImage", this.Configuration.ApiClient.ParameterToFile("baseImage", baseImage));
+            if (layeredImage != null) localVarFileParams.Add("layeredImage", this.Configuration.ApiClient.ParameterToFile("layeredImage", layeredImage));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditCompositePrecise", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Composite two images together precisely Composites two input images together; a layered image onto a base image. Position is based on distance in pixels from each side.  The first image you input is the base image.  The second image (the layered image) will be composited on top of this base image.  Supports PNG transparency.  To control padding you can include transparent pixels at the border(s) of your layered images as appropriate.  Providing multiple parameters in a single axis (for example top and bottom) is not recommended, since only one of the parameters will be used per axis.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="baseImage">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="layeredImage">Image to layer on top of the base image.</param>
+        /// <param name="top">Optional; Desired distance in pixels from the top of the base image to the top of the layered image. (optional)</param>
+        /// <param name="bottom">Optional; Desired distance in pixels from the bottom of the base image to the bottom of the layered image. (optional)</param>
+        /// <param name="left">Optional; Desired distance in pixels from the left side of the base image to the left side of the layered image. (optional)</param>
+        /// <param name="right">Optional; Desired distance in pixels from the right side of the base image to the right side of the layered image. (optional)</param>
+        /// <param name="width">Optional; Desired width of the layered image in pixels. Leave height empty or 0 to automatically scale the image proportionally. (optional)</param>
+        /// <param name="height">Optional; Desired height of the layered image in pixels. Leave width empty or 0 to automatically scale the image proportionally. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditCompositePreciseAsync (System.IO.Stream baseImage, System.IO.Stream layeredImage, int? top = null, int? bottom = null, int? left = null, int? right = null, int? width = null, int? height = null)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditCompositePreciseAsyncWithHttpInfo(baseImage, layeredImage, top, bottom, left, right, width, height);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Composite two images together precisely Composites two input images together; a layered image onto a base image. Position is based on distance in pixels from each side.  The first image you input is the base image.  The second image (the layered image) will be composited on top of this base image.  Supports PNG transparency.  To control padding you can include transparent pixels at the border(s) of your layered images as appropriate.  Providing multiple parameters in a single axis (for example top and bottom) is not recommended, since only one of the parameters will be used per axis.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="baseImage">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="layeredImage">Image to layer on top of the base image.</param>
+        /// <param name="top">Optional; Desired distance in pixels from the top of the base image to the top of the layered image. (optional)</param>
+        /// <param name="bottom">Optional; Desired distance in pixels from the bottom of the base image to the bottom of the layered image. (optional)</param>
+        /// <param name="left">Optional; Desired distance in pixels from the left side of the base image to the left side of the layered image. (optional)</param>
+        /// <param name="right">Optional; Desired distance in pixels from the right side of the base image to the right side of the layered image. (optional)</param>
+        /// <param name="width">Optional; Desired width of the layered image in pixels. Leave height empty or 0 to automatically scale the image proportionally. (optional)</param>
+        /// <param name="height">Optional; Desired height of the layered image in pixels. Leave width empty or 0 to automatically scale the image proportionally. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditCompositePreciseAsyncWithHttpInfo (System.IO.Stream baseImage, System.IO.Stream layeredImage, int? top = null, int? bottom = null, int? left = null, int? right = null, int? width = null, int? height = null)
+        {
+            // verify the required parameter 'baseImage' is set
+            if (baseImage == null)
+                throw new ApiException(400, "Missing required parameter 'baseImage' when calling EditApi->EditCompositePrecise");
+            // verify the required parameter 'layeredImage' is set
+            if (layeredImage == null)
+                throw new ApiException(400, "Missing required parameter 'layeredImage' when calling EditApi->EditCompositePrecise");
+
+            var localVarPath = "/image/edit/composite/precise";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (top != null) localVarHeaderParams.Add("top", this.Configuration.ApiClient.ParameterToString(top)); // header parameter
+            if (bottom != null) localVarHeaderParams.Add("bottom", this.Configuration.ApiClient.ParameterToString(bottom)); // header parameter
+            if (left != null) localVarHeaderParams.Add("left", this.Configuration.ApiClient.ParameterToString(left)); // header parameter
+            if (right != null) localVarHeaderParams.Add("right", this.Configuration.ApiClient.ParameterToString(right)); // header parameter
+            if (width != null) localVarHeaderParams.Add("width", this.Configuration.ApiClient.ParameterToString(width)); // header parameter
+            if (height != null) localVarHeaderParams.Add("height", this.Configuration.ApiClient.ParameterToString(height)); // header parameter
+            if (baseImage != null) localVarFileParams.Add("baseImage", this.Configuration.ApiClient.ParameterToFile("baseImage", baseImage));
+            if (layeredImage != null) localVarFileParams.Add("layeredImage", this.Configuration.ApiClient.ParameterToFile("layeredImage", layeredImage));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditCompositePrecise", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
         /// Adaptively adjust the contrast of the image to be more appealing and easy to see Uses Gamma to adjust the contrast adaptively the way the human eye sees the world.  Results significantly improve the viewability and visual appeal of the image.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1141,6 +1458,187 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("EditContrastAdaptive", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Crop an image to an circular area Crop an image to a target circular area
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="left">The left edge of the circular crop area in pixels (X).</param>
+        /// <param name="top">The top edge of the circular crop area in pixels (Y).</param>
+        /// <param name="radius">The radius of the circular crop area in pixels.</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>byte[]</returns>
+        public byte[] EditCropCircle (int? left, int? top, int? radius, System.IO.Stream imageFile)
+        {
+             ApiResponse<byte[]> localVarResponse = EditCropCircleWithHttpInfo(left, top, radius, imageFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Crop an image to an circular area Crop an image to a target circular area
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="left">The left edge of the circular crop area in pixels (X).</param>
+        /// <param name="top">The top edge of the circular crop area in pixels (Y).</param>
+        /// <param name="radius">The radius of the circular crop area in pixels.</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > EditCropCircleWithHttpInfo (int? left, int? top, int? radius, System.IO.Stream imageFile)
+        {
+            // verify the required parameter 'left' is set
+            if (left == null)
+                throw new ApiException(400, "Missing required parameter 'left' when calling EditApi->EditCropCircle");
+            // verify the required parameter 'top' is set
+            if (top == null)
+                throw new ApiException(400, "Missing required parameter 'top' when calling EditApi->EditCropCircle");
+            // verify the required parameter 'radius' is set
+            if (radius == null)
+                throw new ApiException(400, "Missing required parameter 'radius' when calling EditApi->EditCropCircle");
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling EditApi->EditCropCircle");
+
+            var localVarPath = "/image/edit/crop/circle/{left}/{top}/{radius}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (left != null) localVarPathParams.Add("left", this.Configuration.ApiClient.ParameterToString(left)); // path parameter
+            if (top != null) localVarPathParams.Add("top", this.Configuration.ApiClient.ParameterToString(top)); // path parameter
+            if (radius != null) localVarPathParams.Add("radius", this.Configuration.ApiClient.ParameterToString(radius)); // path parameter
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditCropCircle", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Crop an image to an circular area Crop an image to a target circular area
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="left">The left edge of the circular crop area in pixels (X).</param>
+        /// <param name="top">The top edge of the circular crop area in pixels (Y).</param>
+        /// <param name="radius">The radius of the circular crop area in pixels.</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> EditCropCircleAsync (int? left, int? top, int? radius, System.IO.Stream imageFile)
+        {
+             ApiResponse<byte[]> localVarResponse = await EditCropCircleAsyncWithHttpInfo(left, top, radius, imageFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Crop an image to an circular area Crop an image to a target circular area
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="left">The left edge of the circular crop area in pixels (X).</param>
+        /// <param name="top">The top edge of the circular crop area in pixels (Y).</param>
+        /// <param name="radius">The radius of the circular crop area in pixels.</param>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> EditCropCircleAsyncWithHttpInfo (int? left, int? top, int? radius, System.IO.Stream imageFile)
+        {
+            // verify the required parameter 'left' is set
+            if (left == null)
+                throw new ApiException(400, "Missing required parameter 'left' when calling EditApi->EditCropCircle");
+            // verify the required parameter 'top' is set
+            if (top == null)
+                throw new ApiException(400, "Missing required parameter 'top' when calling EditApi->EditCropCircle");
+            // verify the required parameter 'radius' is set
+            if (radius == null)
+                throw new ApiException(400, "Missing required parameter 'radius' when calling EditApi->EditCropCircle");
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling EditApi->EditCropCircle");
+
+            var localVarPath = "/image/edit/crop/circle/{left}/{top}/{radius}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/octet-stream"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (left != null) localVarPathParams.Add("left", this.Configuration.ApiClient.ParameterToString(left)); // path parameter
+            if (top != null) localVarPathParams.Add("top", this.Configuration.ApiClient.ParameterToString(top)); // path parameter
+            if (radius != null) localVarPathParams.Add("radius", this.Configuration.ApiClient.ParameterToString(radius)); // path parameter
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EditCropCircle", localVarResponse);
                 if (exception != null) throw exception;
             }
 
