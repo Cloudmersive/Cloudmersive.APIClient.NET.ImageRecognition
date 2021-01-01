@@ -5,7 +5,7 @@ Image Recognition and Processing APIs let you use Machine Learning to recognize 
 This C# SDK is:
 
 - API version: v1
-- SDK version: 3.0.4
+- SDK version: 3.0.5
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -152,6 +152,7 @@ Class | Method | HTTP request | Description
 *RecognizeApi* | [**RecognizeFindSymbol**](docs/RecognizeApi.md#recognizefindsymbol) | **POST** /image/recognize/find/symbol | Find the location of a symbol in an image
 *ResizeApi* | [**ResizePost**](docs/ResizeApi.md#resizepost) | **POST** /image/resize/preserveAspectRatio/{maxWidth}/{maxHeight} | Resize an image while preserving aspect ratio
 *ResizeApi* | [**ResizeResizeSimple**](docs/ResizeApi.md#resizeresizesimple) | **POST** /image/resize/target/{width}/{height} | Resize an image
+*TextGenerationApi* | [**TextGenerationCreateHandwritingPng**](docs/TextGenerationApi.md#textgenerationcreatehandwritingpng) | **POST** /image/text/create/handwriting/png | Create an image of handwriting in PNG format
 
 
 <a name="documentation-for-models"></a>
@@ -159,6 +160,7 @@ Class | Method | HTTP request | Description
 
  - [Model.AgeDetectionResult](docs/AgeDetectionResult.md)
  - [Model.ColorResult](docs/ColorResult.md)
+ - [Model.CreateHandwritingRequest](docs/CreateHandwritingRequest.md)
  - [Model.DetectedLicensePlate](docs/DetectedLicensePlate.md)
  - [Model.DetectedObject](docs/DetectedObject.md)
  - [Model.DominantColorResult](docs/DominantColorResult.md)
