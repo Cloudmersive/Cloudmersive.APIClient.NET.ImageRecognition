@@ -162,6 +162,45 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
             //Assert.IsInstanceOf<FindSymbolResult> (response, "response is FindSymbolResult");
         }
         
+        /// <summary>
+        /// Test RecognizeSimilarityCompare
+        /// </summary>
+        [Test]
+        public void RecognizeSimilarityCompareTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream baseImage = null;
+            //System.IO.Stream comparisonImage = null;
+            //string recognitionMode = null;
+            //var response = instance.RecognizeSimilarityCompare(baseImage, comparisonImage, recognitionMode);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
+        /// Test RecognizeSimilarityHash
+        /// </summary>
+        [Test]
+        public void RecognizeSimilarityHashTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream imageFile = null;
+            //string recognitionMode = null;
+            //var response = instance.RecognizeSimilarityHash(imageFile, recognitionMode);
+            //Assert.IsInstanceOf<ImageSimilarityHashResponse> (response, "response is ImageSimilarityHashResponse");
+        }
+        
+        /// <summary>
+        /// Test RecognizeSimilarityHashDistance
+        /// </summary>
+        [Test]
+        public void RecognizeSimilarityHashDistanceTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ImageSimilarityHashDistanceRequest request = null;
+            //var response = instance.RecognizeSimilarityHashDistance(request);
+            //Assert.IsInstanceOf<ImageSimilarityHashDistanceResponse> (response, "response is ImageSimilarityHashDistanceResponse");
+        }
+        
     }
 
 }

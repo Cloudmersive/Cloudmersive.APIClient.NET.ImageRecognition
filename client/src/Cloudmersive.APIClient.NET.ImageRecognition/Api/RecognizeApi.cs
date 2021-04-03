@@ -196,6 +196,75 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="targetImage">Image to find in the input image.</param>
         /// <returns>ApiResponse of FindSymbolResult</returns>
         ApiResponse<FindSymbolResult> RecognizeFindSymbolWithHttpInfo (System.IO.Stream inputImage, System.IO.Stream targetImage);
+        /// <summary>
+        /// Compare two images for similarity
+        /// </summary>
+        /// <remarks>
+        /// Generates an image similarity score using Deep Learning between 0.0 and 1.0, values closer to 1.0 indicate greater similarity
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="baseImage">Image file to compare against.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="comparisonImage">Image to compare to the base image.</param>
+        /// <param name="recognitionMode">Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. (optional)</param>
+        /// <returns>byte[]</returns>
+        byte[] RecognizeSimilarityCompare (System.IO.Stream baseImage, System.IO.Stream comparisonImage, string recognitionMode = null);
+
+        /// <summary>
+        /// Compare two images for similarity
+        /// </summary>
+        /// <remarks>
+        /// Generates an image similarity score using Deep Learning between 0.0 and 1.0, values closer to 1.0 indicate greater similarity
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="baseImage">Image file to compare against.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="comparisonImage">Image to compare to the base image.</param>
+        /// <param name="recognitionMode">Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        ApiResponse<byte[]> RecognizeSimilarityCompareWithHttpInfo (System.IO.Stream baseImage, System.IO.Stream comparisonImage, string recognitionMode = null);
+        /// <summary>
+        /// Generate a perceptual image hash
+        /// </summary>
+        /// <remarks>
+        /// Generates a hash value for the image; hash values that are closer together in terms of Hamming Distance are more similar.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="recognitionMode">Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. (optional)</param>
+        /// <returns>ImageSimilarityHashResponse</returns>
+        ImageSimilarityHashResponse RecognizeSimilarityHash (System.IO.Stream imageFile, string recognitionMode = null);
+
+        /// <summary>
+        /// Generate a perceptual image hash
+        /// </summary>
+        /// <remarks>
+        /// Generates a hash value for the image; hash values that are closer together in terms of Hamming Distance are more similar.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="recognitionMode">Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. (optional)</param>
+        /// <returns>ApiResponse of ImageSimilarityHashResponse</returns>
+        ApiResponse<ImageSimilarityHashResponse> RecognizeSimilarityHashWithHttpInfo (System.IO.Stream imageFile, string recognitionMode = null);
+        /// <summary>
+        /// Calculates the similarity between two perceptual image hashes
+        /// </summary>
+        /// <remarks>
+        /// Calculates the similarity between two perceptual image hashes by computing the Hamming Distance between them.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>ImageSimilarityHashDistanceResponse</returns>
+        ImageSimilarityHashDistanceResponse RecognizeSimilarityHashDistance (ImageSimilarityHashDistanceRequest request);
+
+        /// <summary>
+        /// Calculates the similarity between two perceptual image hashes
+        /// </summary>
+        /// <remarks>
+        /// Calculates the similarity between two perceptual image hashes by computing the Hamming Distance between them.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of ImageSimilarityHashDistanceResponse</returns>
+        ApiResponse<ImageSimilarityHashDistanceResponse> RecognizeSimilarityHashDistanceWithHttpInfo (ImageSimilarityHashDistanceRequest request);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -370,6 +439,75 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// <param name="targetImage">Image to find in the input image.</param>
         /// <returns>Task of ApiResponse (FindSymbolResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<FindSymbolResult>> RecognizeFindSymbolAsyncWithHttpInfo (System.IO.Stream inputImage, System.IO.Stream targetImage);
+        /// <summary>
+        /// Compare two images for similarity
+        /// </summary>
+        /// <remarks>
+        /// Generates an image similarity score using Deep Learning between 0.0 and 1.0, values closer to 1.0 indicate greater similarity
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="baseImage">Image file to compare against.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="comparisonImage">Image to compare to the base image.</param>
+        /// <param name="recognitionMode">Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        System.Threading.Tasks.Task<byte[]> RecognizeSimilarityCompareAsync (System.IO.Stream baseImage, System.IO.Stream comparisonImage, string recognitionMode = null);
+
+        /// <summary>
+        /// Compare two images for similarity
+        /// </summary>
+        /// <remarks>
+        /// Generates an image similarity score using Deep Learning between 0.0 and 1.0, values closer to 1.0 indicate greater similarity
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="baseImage">Image file to compare against.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="comparisonImage">Image to compare to the base image.</param>
+        /// <param name="recognitionMode">Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        System.Threading.Tasks.Task<ApiResponse<byte[]>> RecognizeSimilarityCompareAsyncWithHttpInfo (System.IO.Stream baseImage, System.IO.Stream comparisonImage, string recognitionMode = null);
+        /// <summary>
+        /// Generate a perceptual image hash
+        /// </summary>
+        /// <remarks>
+        /// Generates a hash value for the image; hash values that are closer together in terms of Hamming Distance are more similar.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="recognitionMode">Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. (optional)</param>
+        /// <returns>Task of ImageSimilarityHashResponse</returns>
+        System.Threading.Tasks.Task<ImageSimilarityHashResponse> RecognizeSimilarityHashAsync (System.IO.Stream imageFile, string recognitionMode = null);
+
+        /// <summary>
+        /// Generate a perceptual image hash
+        /// </summary>
+        /// <remarks>
+        /// Generates a hash value for the image; hash values that are closer together in terms of Hamming Distance are more similar.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="recognitionMode">Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. (optional)</param>
+        /// <returns>Task of ApiResponse (ImageSimilarityHashResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ImageSimilarityHashResponse>> RecognizeSimilarityHashAsyncWithHttpInfo (System.IO.Stream imageFile, string recognitionMode = null);
+        /// <summary>
+        /// Calculates the similarity between two perceptual image hashes
+        /// </summary>
+        /// <remarks>
+        /// Calculates the similarity between two perceptual image hashes by computing the Hamming Distance between them.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of ImageSimilarityHashDistanceResponse</returns>
+        System.Threading.Tasks.Task<ImageSimilarityHashDistanceResponse> RecognizeSimilarityHashDistanceAsync (ImageSimilarityHashDistanceRequest request);
+
+        /// <summary>
+        /// Calculates the similarity between two perceptual image hashes
+        /// </summary>
+        /// <remarks>
+        /// Calculates the similarity between two perceptual image hashes by computing the Hamming Distance between them.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (ImageSimilarityHashDistanceResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ImageSimilarityHashDistanceResponse>> RecognizeSimilarityHashDistanceAsyncWithHttpInfo (ImageSimilarityHashDistanceRequest request);
         #endregion Asynchronous Operations
     }
 
@@ -1694,6 +1832,505 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
             return new ApiResponse<FindSymbolResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (FindSymbolResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FindSymbolResult)));
+        }
+
+        /// <summary>
+        /// Compare two images for similarity Generates an image similarity score using Deep Learning between 0.0 and 1.0, values closer to 1.0 indicate greater similarity
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="baseImage">Image file to compare against.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="comparisonImage">Image to compare to the base image.</param>
+        /// <param name="recognitionMode">Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. (optional)</param>
+        /// <returns>byte[]</returns>
+        public byte[] RecognizeSimilarityCompare (System.IO.Stream baseImage, System.IO.Stream comparisonImage, string recognitionMode = null)
+        {
+             ApiResponse<byte[]> localVarResponse = RecognizeSimilarityCompareWithHttpInfo(baseImage, comparisonImage, recognitionMode);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Compare two images for similarity Generates an image similarity score using Deep Learning between 0.0 and 1.0, values closer to 1.0 indicate greater similarity
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="baseImage">Image file to compare against.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="comparisonImage">Image to compare to the base image.</param>
+        /// <param name="recognitionMode">Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. (optional)</param>
+        /// <returns>ApiResponse of byte[]</returns>
+        public ApiResponse< byte[] > RecognizeSimilarityCompareWithHttpInfo (System.IO.Stream baseImage, System.IO.Stream comparisonImage, string recognitionMode = null)
+        {
+            // verify the required parameter 'baseImage' is set
+            if (baseImage == null)
+                throw new ApiException(400, "Missing required parameter 'baseImage' when calling RecognizeApi->RecognizeSimilarityCompare");
+            // verify the required parameter 'comparisonImage' is set
+            if (comparisonImage == null)
+                throw new ApiException(400, "Missing required parameter 'comparisonImage' when calling RecognizeApi->RecognizeSimilarityCompare");
+
+            var localVarPath = "/image/recognize/similarity/compare";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (recognitionMode != null) localVarHeaderParams.Add("recognitionMode", this.Configuration.ApiClient.ParameterToString(recognitionMode)); // header parameter
+            if (baseImage != null) localVarFileParams.Add("baseImage", this.Configuration.ApiClient.ParameterToFile("baseImage", baseImage));
+            if (comparisonImage != null) localVarFileParams.Add("comparisonImage", this.Configuration.ApiClient.ParameterToFile("comparisonImage", comparisonImage));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RecognizeSimilarityCompare", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Compare two images for similarity Generates an image similarity score using Deep Learning between 0.0 and 1.0, values closer to 1.0 indicate greater similarity
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="baseImage">Image file to compare against.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="comparisonImage">Image to compare to the base image.</param>
+        /// <param name="recognitionMode">Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. (optional)</param>
+        /// <returns>Task of byte[]</returns>
+        public async System.Threading.Tasks.Task<byte[]> RecognizeSimilarityCompareAsync (System.IO.Stream baseImage, System.IO.Stream comparisonImage, string recognitionMode = null)
+        {
+             ApiResponse<byte[]> localVarResponse = await RecognizeSimilarityCompareAsyncWithHttpInfo(baseImage, comparisonImage, recognitionMode);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Compare two images for similarity Generates an image similarity score using Deep Learning between 0.0 and 1.0, values closer to 1.0 indicate greater similarity
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="baseImage">Image file to compare against.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="comparisonImage">Image to compare to the base image.</param>
+        /// <param name="recognitionMode">Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. (optional)</param>
+        /// <returns>Task of ApiResponse (byte[])</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<byte[]>> RecognizeSimilarityCompareAsyncWithHttpInfo (System.IO.Stream baseImage, System.IO.Stream comparisonImage, string recognitionMode = null)
+        {
+            // verify the required parameter 'baseImage' is set
+            if (baseImage == null)
+                throw new ApiException(400, "Missing required parameter 'baseImage' when calling RecognizeApi->RecognizeSimilarityCompare");
+            // verify the required parameter 'comparisonImage' is set
+            if (comparisonImage == null)
+                throw new ApiException(400, "Missing required parameter 'comparisonImage' when calling RecognizeApi->RecognizeSimilarityCompare");
+
+            var localVarPath = "/image/recognize/similarity/compare";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (recognitionMode != null) localVarHeaderParams.Add("recognitionMode", this.Configuration.ApiClient.ParameterToString(recognitionMode)); // header parameter
+            if (baseImage != null) localVarFileParams.Add("baseImage", this.Configuration.ApiClient.ParameterToFile("baseImage", baseImage));
+            if (comparisonImage != null) localVarFileParams.Add("comparisonImage", this.Configuration.ApiClient.ParameterToFile("comparisonImage", comparisonImage));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RecognizeSimilarityCompare", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<byte[]>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (byte[]) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
+        }
+
+        /// <summary>
+        /// Generate a perceptual image hash Generates a hash value for the image; hash values that are closer together in terms of Hamming Distance are more similar.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="recognitionMode">Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. (optional)</param>
+        /// <returns>ImageSimilarityHashResponse</returns>
+        public ImageSimilarityHashResponse RecognizeSimilarityHash (System.IO.Stream imageFile, string recognitionMode = null)
+        {
+             ApiResponse<ImageSimilarityHashResponse> localVarResponse = RecognizeSimilarityHashWithHttpInfo(imageFile, recognitionMode);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Generate a perceptual image hash Generates a hash value for the image; hash values that are closer together in terms of Hamming Distance are more similar.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="recognitionMode">Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. (optional)</param>
+        /// <returns>ApiResponse of ImageSimilarityHashResponse</returns>
+        public ApiResponse< ImageSimilarityHashResponse > RecognizeSimilarityHashWithHttpInfo (System.IO.Stream imageFile, string recognitionMode = null)
+        {
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling RecognizeApi->RecognizeSimilarityHash");
+
+            var localVarPath = "/image/recognize/similarity/hash";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (recognitionMode != null) localVarHeaderParams.Add("recognitionMode", this.Configuration.ApiClient.ParameterToString(recognitionMode)); // header parameter
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RecognizeSimilarityHash", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ImageSimilarityHashResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ImageSimilarityHashResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImageSimilarityHashResponse)));
+        }
+
+        /// <summary>
+        /// Generate a perceptual image hash Generates a hash value for the image; hash values that are closer together in terms of Hamming Distance are more similar.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="recognitionMode">Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. (optional)</param>
+        /// <returns>Task of ImageSimilarityHashResponse</returns>
+        public async System.Threading.Tasks.Task<ImageSimilarityHashResponse> RecognizeSimilarityHashAsync (System.IO.Stream imageFile, string recognitionMode = null)
+        {
+             ApiResponse<ImageSimilarityHashResponse> localVarResponse = await RecognizeSimilarityHashAsyncWithHttpInfo(imageFile, recognitionMode);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Generate a perceptual image hash Generates a hash value for the image; hash values that are closer together in terms of Hamming Distance are more similar.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
+        /// <param name="recognitionMode">Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. (optional)</param>
+        /// <returns>Task of ApiResponse (ImageSimilarityHashResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ImageSimilarityHashResponse>> RecognizeSimilarityHashAsyncWithHttpInfo (System.IO.Stream imageFile, string recognitionMode = null)
+        {
+            // verify the required parameter 'imageFile' is set
+            if (imageFile == null)
+                throw new ApiException(400, "Missing required parameter 'imageFile' when calling RecognizeApi->RecognizeSimilarityHash");
+
+            var localVarPath = "/image/recognize/similarity/hash";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (recognitionMode != null) localVarHeaderParams.Add("recognitionMode", this.Configuration.ApiClient.ParameterToString(recognitionMode)); // header parameter
+            if (imageFile != null) localVarFileParams.Add("imageFile", this.Configuration.ApiClient.ParameterToFile("imageFile", imageFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RecognizeSimilarityHash", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ImageSimilarityHashResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ImageSimilarityHashResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImageSimilarityHashResponse)));
+        }
+
+        /// <summary>
+        /// Calculates the similarity between two perceptual image hashes Calculates the similarity between two perceptual image hashes by computing the Hamming Distance between them.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>ImageSimilarityHashDistanceResponse</returns>
+        public ImageSimilarityHashDistanceResponse RecognizeSimilarityHashDistance (ImageSimilarityHashDistanceRequest request)
+        {
+             ApiResponse<ImageSimilarityHashDistanceResponse> localVarResponse = RecognizeSimilarityHashDistanceWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Calculates the similarity between two perceptual image hashes Calculates the similarity between two perceptual image hashes by computing the Hamming Distance between them.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>ApiResponse of ImageSimilarityHashDistanceResponse</returns>
+        public ApiResponse< ImageSimilarityHashDistanceResponse > RecognizeSimilarityHashDistanceWithHttpInfo (ImageSimilarityHashDistanceRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling RecognizeApi->RecognizeSimilarityHashDistance");
+
+            var localVarPath = "/image/recognize/similarity/hash/distance";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RecognizeSimilarityHashDistance", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ImageSimilarityHashDistanceResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ImageSimilarityHashDistanceResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImageSimilarityHashDistanceResponse)));
+        }
+
+        /// <summary>
+        /// Calculates the similarity between two perceptual image hashes Calculates the similarity between two perceptual image hashes by computing the Hamming Distance between them.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of ImageSimilarityHashDistanceResponse</returns>
+        public async System.Threading.Tasks.Task<ImageSimilarityHashDistanceResponse> RecognizeSimilarityHashDistanceAsync (ImageSimilarityHashDistanceRequest request)
+        {
+             ApiResponse<ImageSimilarityHashDistanceResponse> localVarResponse = await RecognizeSimilarityHashDistanceAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Calculates the similarity between two perceptual image hashes Calculates the similarity between two perceptual image hashes by computing the Hamming Distance between them.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request"></param>
+        /// <returns>Task of ApiResponse (ImageSimilarityHashDistanceResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ImageSimilarityHashDistanceResponse>> RecognizeSimilarityHashDistanceAsyncWithHttpInfo (ImageSimilarityHashDistanceRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling RecognizeApi->RecognizeSimilarityHashDistance");
+
+            var localVarPath = "/image/recognize/similarity/hash/distance";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RecognizeSimilarityHashDistance", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ImageSimilarityHashDistanceResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ImageSimilarityHashDistanceResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImageSimilarityHashDistanceResponse)));
         }
 
     }

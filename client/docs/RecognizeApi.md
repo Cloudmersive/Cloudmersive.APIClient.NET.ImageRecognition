@@ -12,6 +12,9 @@ Method | HTTP request | Description
 [**RecognizeDetectTextLarge**](RecognizeApi.md#recognizedetecttextlarge) | **POST** /image/recognize/detect-text/large | Detect large text in a photo
 [**RecognizeDetectVehicleLicensePlates**](RecognizeApi.md#recognizedetectvehiclelicenseplates) | **POST** /image/recognize/detect-vehicle-license-plates | Detect vehicle license plates in an image
 [**RecognizeFindSymbol**](RecognizeApi.md#recognizefindsymbol) | **POST** /image/recognize/find/symbol | Find the location of a symbol in an image
+[**RecognizeSimilarityCompare**](RecognizeApi.md#recognizesimilaritycompare) | **POST** /image/recognize/similarity/compare | Compare two images for similarity
+[**RecognizeSimilarityHash**](RecognizeApi.md#recognizesimilarityhash) | **POST** /image/recognize/similarity/hash | Generate a perceptual image hash
+[**RecognizeSimilarityHashDistance**](RecognizeApi.md#recognizesimilarityhashdistance) | **POST** /image/recognize/similarity/hash/distance | Calculates the similarity between two perceptual image hashes
 
 
 <a name="recognizedescribe"></a>
@@ -542,6 +545,210 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="recognizesimilaritycompare"></a>
+# **RecognizeSimilarityCompare**
+> byte[] RecognizeSimilarityCompare (System.IO.Stream baseImage, System.IO.Stream comparisonImage, string recognitionMode = null)
+
+Compare two images for similarity
+
+Generates an image similarity score using Deep Learning between 0.0 and 1.0, values closer to 1.0 indicate greater similarity
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.ImageRecognition.Api;
+using Cloudmersive.APIClient.NET.ImageRecognition.Client;
+using Cloudmersive.APIClient.NET.ImageRecognition.Model;
+
+namespace Example
+{
+    public class RecognizeSimilarityCompareExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new RecognizeApi();
+            var baseImage = new System.IO.Stream(); // System.IO.Stream | Image file to compare against.  Common file formats such as PNG, JPEG are supported.
+            var comparisonImage = new System.IO.Stream(); // System.IO.Stream | Image to compare to the base image.
+            var recognitionMode = recognitionMode_example;  // string | Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. (optional) 
+
+            try
+            {
+                // Compare two images for similarity
+                byte[] result = apiInstance.RecognizeSimilarityCompare(baseImage, comparisonImage, recognitionMode);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecognizeApi.RecognizeSimilarityCompare: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **baseImage** | **System.IO.Stream**| Image file to compare against.  Common file formats such as PNG, JPEG are supported. | 
+ **comparisonImage** | **System.IO.Stream**| Image to compare to the base image. | 
+ **recognitionMode** | **string**| Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. | [optional] 
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="recognizesimilarityhash"></a>
+# **RecognizeSimilarityHash**
+> ImageSimilarityHashResponse RecognizeSimilarityHash (System.IO.Stream imageFile, string recognitionMode = null)
+
+Generate a perceptual image hash
+
+Generates a hash value for the image; hash values that are closer together in terms of Hamming Distance are more similar.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.ImageRecognition.Api;
+using Cloudmersive.APIClient.NET.ImageRecognition.Client;
+using Cloudmersive.APIClient.NET.ImageRecognition.Model;
+
+namespace Example
+{
+    public class RecognizeSimilarityHashExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new RecognizeApi();
+            var imageFile = new System.IO.Stream(); // System.IO.Stream | Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.
+            var recognitionMode = recognitionMode_example;  // string | Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. (optional) 
+
+            try
+            {
+                // Generate a perceptual image hash
+                ImageSimilarityHashResponse result = apiInstance.RecognizeSimilarityHash(imageFile, recognitionMode);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecognizeApi.RecognizeSimilarityHash: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **imageFile** | **System.IO.Stream**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | 
+ **recognitionMode** | **string**| Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. | [optional] 
+
+### Return type
+
+[**ImageSimilarityHashResponse**](ImageSimilarityHashResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="recognizesimilarityhashdistance"></a>
+# **RecognizeSimilarityHashDistance**
+> ImageSimilarityHashDistanceResponse RecognizeSimilarityHashDistance (ImageSimilarityHashDistanceRequest request)
+
+Calculates the similarity between two perceptual image hashes
+
+Calculates the similarity between two perceptual image hashes by computing the Hamming Distance between them.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.ImageRecognition.Api;
+using Cloudmersive.APIClient.NET.ImageRecognition.Client;
+using Cloudmersive.APIClient.NET.ImageRecognition.Model;
+
+namespace Example
+{
+    public class RecognizeSimilarityHashDistanceExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new RecognizeApi();
+            var request = new ImageSimilarityHashDistanceRequest(); // ImageSimilarityHashDistanceRequest | 
+
+            try
+            {
+                // Calculates the similarity between two perceptual image hashes
+                ImageSimilarityHashDistanceResponse result = apiInstance.RecognizeSimilarityHashDistance(request);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecognizeApi.RecognizeSimilarityHashDistance: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**ImageSimilarityHashDistanceRequest**](ImageSimilarityHashDistanceRequest.md)|  | 
+
+### Return type
+
+[**ImageSimilarityHashDistanceResponse**](ImageSimilarityHashDistanceResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
  - **Accept**: application/json, text/json, application/xml, text/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

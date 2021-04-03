@@ -5,7 +5,7 @@ Image Recognition and Processing APIs let you use Machine Learning to recognize 
 This C# SDK is:
 
 - API version: v1
-- SDK version: 3.0.5
+- SDK version: 3.0.6
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -150,6 +150,9 @@ Class | Method | HTTP request | Description
 *RecognizeApi* | [**RecognizeDetectTextLarge**](docs/RecognizeApi.md#recognizedetecttextlarge) | **POST** /image/recognize/detect-text/large | Detect large text in a photo
 *RecognizeApi* | [**RecognizeDetectVehicleLicensePlates**](docs/RecognizeApi.md#recognizedetectvehiclelicenseplates) | **POST** /image/recognize/detect-vehicle-license-plates | Detect vehicle license plates in an image
 *RecognizeApi* | [**RecognizeFindSymbol**](docs/RecognizeApi.md#recognizefindsymbol) | **POST** /image/recognize/find/symbol | Find the location of a symbol in an image
+*RecognizeApi* | [**RecognizeSimilarityCompare**](docs/RecognizeApi.md#recognizesimilaritycompare) | **POST** /image/recognize/similarity/compare | Compare two images for similarity
+*RecognizeApi* | [**RecognizeSimilarityHash**](docs/RecognizeApi.md#recognizesimilarityhash) | **POST** /image/recognize/similarity/hash | Generate a perceptual image hash
+*RecognizeApi* | [**RecognizeSimilarityHashDistance**](docs/RecognizeApi.md#recognizesimilarityhashdistance) | **POST** /image/recognize/similarity/hash/distance | Calculates the similarity between two perceptual image hashes
 *ResizeApi* | [**ResizePost**](docs/ResizeApi.md#resizepost) | **POST** /image/resize/preserveAspectRatio/{maxWidth}/{maxHeight} | Resize an image while preserving aspect ratio
 *ResizeApi* | [**ResizeResizeSimple**](docs/ResizeApi.md#resizeresizesimple) | **POST** /image/resize/target/{width}/{height} | Resize an image
 *TextGenerationApi* | [**TextGenerationCreateHandwritingPng**](docs/TextGenerationApi.md#textgenerationcreatehandwritingpng) | **POST** /image/text/create/handwriting/png | Create an image of handwriting in PNG format
@@ -184,6 +187,10 @@ Class | Method | HTTP request | Description
  - [Model.ImageDescriptionResponse](docs/ImageDescriptionResponse.md)
  - [Model.ImageMetadata](docs/ImageMetadata.md)
  - [Model.ImageMetadataExifValue](docs/ImageMetadataExifValue.md)
+ - [Model.ImageSimilarityComparisonResponse](docs/ImageSimilarityComparisonResponse.md)
+ - [Model.ImageSimilarityHashDistanceRequest](docs/ImageSimilarityHashDistanceRequest.md)
+ - [Model.ImageSimilarityHashDistanceResponse](docs/ImageSimilarityHashDistanceResponse.md)
+ - [Model.ImageSimilarityHashResponse](docs/ImageSimilarityHashResponse.md)
  - [Model.NsfwResult](docs/NsfwResult.md)
  - [Model.ObjectDetectionResult](docs/ObjectDetectionResult.md)
  - [Model.PersonWithAge](docs/PersonWithAge.md)
