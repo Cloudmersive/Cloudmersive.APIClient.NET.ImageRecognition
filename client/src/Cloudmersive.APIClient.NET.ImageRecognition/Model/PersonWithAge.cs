@@ -36,13 +36,19 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <param name="faceLocation">Location and other information about the person&#39;s face corresponding to this age classification.</param>
         /// <param name="ageClassificationConfidence">Confidence level of age classification; possible values are between 0.0 and 1.0; higher is better, with values &amp;gt; 0.50 being high confidence results.</param>
         /// <param name="ageClass">The person&#39;s age range classification result in years; possible values are \&quot;0-2\&quot;, \&quot;4-6\&quot;, \&quot;8-13\&quot;, \&quot;15-20\&quot;, \&quot;25-32\&quot;, \&quot;38-43\&quot;, \&quot;48-53\&quot;, \&quot;60+\&quot;.</param>
-        /// <param name="age">age.</param>
-        public PersonWithAge(Face faceLocation = default(Face), double? ageClassificationConfidence = default(double?), string ageClass = default(string), double? age = default(double?))
+        /// <param name="age">The specific estimated age of the person.</param>
+        /// <param name="genderClassification">Gender estimation classification as Female or Male.</param>
+        /// <param name="genderFemaleConfidence">Confidence level of classification as female; possible values are between 0.0 and 1.0.</param>
+        /// <param name="genderMaleConfidence">Confidence level of classification as male; possible values are between 0.0 and 1.0.</param>
+        public PersonWithAge(Face faceLocation = default(Face), double? ageClassificationConfidence = default(double?), string ageClass = default(string), double? age = default(double?), string genderClassification = default(string), double? genderFemaleConfidence = default(double?), double? genderMaleConfidence = default(double?))
         {
             this.FaceLocation = faceLocation;
             this.AgeClassificationConfidence = ageClassificationConfidence;
             this.AgeClass = ageClass;
             this.Age = age;
+            this.GenderClassification = genderClassification;
+            this.GenderFemaleConfidence = genderFemaleConfidence;
+            this.GenderMaleConfidence = genderMaleConfidence;
         }
         
         /// <summary>
@@ -67,10 +73,32 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         public string AgeClass { get; set; }
 
         /// <summary>
-        /// Gets or Sets Age
+        /// The specific estimated age of the person
         /// </summary>
+        /// <value>The specific estimated age of the person</value>
         [DataMember(Name="Age", EmitDefaultValue=false)]
         public double? Age { get; set; }
+
+        /// <summary>
+        /// Gender estimation classification as Female or Male
+        /// </summary>
+        /// <value>Gender estimation classification as Female or Male</value>
+        [DataMember(Name="GenderClassification", EmitDefaultValue=false)]
+        public string GenderClassification { get; set; }
+
+        /// <summary>
+        /// Confidence level of classification as female; possible values are between 0.0 and 1.0
+        /// </summary>
+        /// <value>Confidence level of classification as female; possible values are between 0.0 and 1.0</value>
+        [DataMember(Name="GenderFemaleConfidence", EmitDefaultValue=false)]
+        public double? GenderFemaleConfidence { get; set; }
+
+        /// <summary>
+        /// Confidence level of classification as male; possible values are between 0.0 and 1.0
+        /// </summary>
+        /// <value>Confidence level of classification as male; possible values are between 0.0 and 1.0</value>
+        [DataMember(Name="GenderMaleConfidence", EmitDefaultValue=false)]
+        public double? GenderMaleConfidence { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -84,6 +112,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
             sb.Append("  AgeClassificationConfidence: ").Append(AgeClassificationConfidence).Append("\n");
             sb.Append("  AgeClass: ").Append(AgeClass).Append("\n");
             sb.Append("  Age: ").Append(Age).Append("\n");
+            sb.Append("  GenderClassification: ").Append(GenderClassification).Append("\n");
+            sb.Append("  GenderFemaleConfidence: ").Append(GenderFemaleConfidence).Append("\n");
+            sb.Append("  GenderMaleConfidence: ").Append(GenderMaleConfidence).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -137,6 +168,21 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
                     this.Age == input.Age ||
                     (this.Age != null &&
                     this.Age.Equals(input.Age))
+                ) && 
+                (
+                    this.GenderClassification == input.GenderClassification ||
+                    (this.GenderClassification != null &&
+                    this.GenderClassification.Equals(input.GenderClassification))
+                ) && 
+                (
+                    this.GenderFemaleConfidence == input.GenderFemaleConfidence ||
+                    (this.GenderFemaleConfidence != null &&
+                    this.GenderFemaleConfidence.Equals(input.GenderFemaleConfidence))
+                ) && 
+                (
+                    this.GenderMaleConfidence == input.GenderMaleConfidence ||
+                    (this.GenderMaleConfidence != null &&
+                    this.GenderMaleConfidence.Equals(input.GenderMaleConfidence))
                 );
         }
 
@@ -157,6 +203,12 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
                     hashCode = hashCode * 59 + this.AgeClass.GetHashCode();
                 if (this.Age != null)
                     hashCode = hashCode * 59 + this.Age.GetHashCode();
+                if (this.GenderClassification != null)
+                    hashCode = hashCode * 59 + this.GenderClassification.GetHashCode();
+                if (this.GenderFemaleConfidence != null)
+                    hashCode = hashCode * 59 + this.GenderFemaleConfidence.GetHashCode();
+                if (this.GenderMaleConfidence != null)
+                    hashCode = hashCode * 59 + this.GenderMaleConfidence.GetHashCode();
                 return hashCode;
             }
         }

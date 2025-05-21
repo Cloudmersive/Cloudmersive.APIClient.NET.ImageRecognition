@@ -78,6 +78,18 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
         }
         
         /// <summary>
+        /// Test ResizeResizeAISuperSampling
+        /// </summary>
+        [Test]
+        public void ResizeResizeAISuperSamplingTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream imageFile = null;
+            //var response = instance.ResizeResizeAISuperSampling(imageFile);
+            //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
+        }
+        
+        /// <summary>
         /// Test ResizeResizeSimple
         /// </summary>
         [Test]

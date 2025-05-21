@@ -1,19 +1,20 @@
 # Cloudmersive.APIClient.NET.ImageRecognition.Api.NsfwApi
 
-All URIs are relative to *https://api.cloudmersive.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**NsfwClassify**](NsfwApi.md#nsfwclassify) | **POST** /image/nsfw/classify | Not safe for work NSFW racy content classification
+[**NsfwClassify**](NsfwApi.md#nsfwclassify) | **POST** /image/nsfw/classify | Not safe for work (NSFW) content classification for Images
+[**NsfwClassifyVideo**](NsfwApi.md#nsfwclassifyvideo) | **POST** /image/nsfw/classify/video | Not safe for work (NSFW) content classification for Video
 
 
 <a name="nsfwclassify"></a>
 # **NsfwClassify**
 > NsfwResult NsfwClassify (System.IO.Stream imageFile)
 
-Not safe for work NSFW racy content classification
+Not safe for work (NSFW) content classification for Images
 
-Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
+Classify an image into Not Safe For Work (NSFW)/Pornographic/Nudity/Racy content and Safe Content.  Helpful for filtering out unsafe content when processing user images.  Input image should be JPG, PNG or GIF.  Consumes 20 API calls.
 
 ### Example
 ```csharp
@@ -39,7 +40,7 @@ namespace Example
 
             try
             {
-                // Not safe for work NSFW racy content classification
+                // Not safe for work (NSFW) content classification for Images
                 NsfwResult result = apiInstance.NsfwClassify(imageFile);
                 Debug.WriteLine(result);
             }
@@ -57,6 +58,72 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **imageFile** | **System.IO.Stream**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | 
+
+### Return type
+
+[**NsfwResult**](NsfwResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="nsfwclassifyvideo"></a>
+# **NsfwClassifyVideo**
+> NsfwResult NsfwClassifyVideo (System.IO.Stream videoFile)
+
+Not safe for work (NSFW) content classification for Video
+
+Classify a video into Not Safe For Work (NSFW)/Pornographic/Nudity/Racy content and Safe Content.  Helpful for filtering out unsafe content when processing user images.  Input image should be MP4, MOV, WEBM, MKV, AVI, FLV, MPG, GIF.  Consumes 20 API calls per frame analyzed.  Requires Cloudmersive Managed Instance or Private Cloud deployment.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.ImageRecognition.Api;
+using Cloudmersive.APIClient.NET.ImageRecognition.Client;
+using Cloudmersive.APIClient.NET.ImageRecognition.Model;
+
+namespace Example
+{
+    public class NsfwClassifyVideoExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new NsfwApi();
+            var videoFile = new System.IO.Stream(); // System.IO.Stream | Video file to perform the operation on.  Common file formats such as MP4, MPG are supported.
+
+            try
+            {
+                // Not safe for work (NSFW) content classification for Video
+                NsfwResult result = apiInstance.NsfwClassifyVideo(videoFile);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling NsfwApi.NsfwClassifyVideo: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **videoFile** | **System.IO.Stream**| Video file to perform the operation on.  Common file formats such as MP4, MPG are supported. | 
 
 ### Return type
 

@@ -76,6 +76,18 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
             //Assert.IsInstanceOf<NsfwResult> (response, "response is NsfwResult");
         }
         
+        /// <summary>
+        /// Test NsfwClassifyVideo
+        /// </summary>
+        [Test]
+        public void NsfwClassifyVideoTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //System.IO.Stream videoFile = null;
+            //var response = instance.NsfwClassifyVideo(videoFile);
+            //Assert.IsInstanceOf<NsfwResult> (response, "response is NsfwResult");
+        }
+        
     }
 
 }

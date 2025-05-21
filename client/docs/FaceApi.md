@@ -1,6 +1,6 @@
 # Cloudmersive.APIClient.NET.ImageRecognition.Api.FaceApi
 
-All URIs are relative to *https://api.cloudmersive.com*
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 
 Detect the age of people in an image
 
-Identify the age, position, and size of human faces in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
+Identify the age, position, and size of human faces in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.  Input image should be a PNG or JPG.  Consumes 20 API calls.
 
 ### Example
 ```csharp
@@ -281,11 +281,11 @@ Name | Type | Description  | Notes
 
 <a name="facedetectgender"></a>
 # **FaceDetectGender**
-> GenderDetectionResult FaceDetectGender (System.IO.Stream imageFile)
+> AgeDetectionResult FaceDetectGender (System.IO.Stream imageFile)
 
 Detect the gender of people in an image
 
-Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.
+Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.  Input image should be a PNG or JPG.  Consumes 20 API calls.
 
 ### Example
 ```csharp
@@ -312,7 +312,7 @@ namespace Example
             try
             {
                 // Detect the gender of people in an image
-                GenderDetectionResult result = apiInstance.FaceDetectGender(imageFile);
+                AgeDetectionResult result = apiInstance.FaceDetectGender(imageFile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GenderDetectionResult**](GenderDetectionResult.md)
+[**AgeDetectionResult**](AgeDetectionResult.md)
 
 ### Authorization
 

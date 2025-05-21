@@ -25,10 +25,10 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Not safe for work NSFW racy content classification
+        /// Not safe for work (NSFW) content classification for Images
         /// </summary>
         /// <remarks>
-        /// Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
+        /// Classify an image into Not Safe For Work (NSFW)/Pornographic/Nudity/Racy content and Safe Content.  Helpful for filtering out unsafe content when processing user images.  Input image should be JPG, PNG or GIF.  Consumes 20 API calls.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -36,22 +36,43 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         NsfwResult NsfwClassify (System.IO.Stream imageFile);
 
         /// <summary>
-        /// Not safe for work NSFW racy content classification
+        /// Not safe for work (NSFW) content classification for Images
         /// </summary>
         /// <remarks>
-        /// Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
+        /// Classify an image into Not Safe For Work (NSFW)/Pornographic/Nudity/Racy content and Safe Content.  Helpful for filtering out unsafe content when processing user images.  Input image should be JPG, PNG or GIF.  Consumes 20 API calls.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>ApiResponse of NsfwResult</returns>
         ApiResponse<NsfwResult> NsfwClassifyWithHttpInfo (System.IO.Stream imageFile);
+        /// <summary>
+        /// Not safe for work (NSFW) content classification for Video
+        /// </summary>
+        /// <remarks>
+        /// Classify a video into Not Safe For Work (NSFW)/Pornographic/Nudity/Racy content and Safe Content.  Helpful for filtering out unsafe content when processing user images.  Input image should be MP4, MOV, WEBM, MKV, AVI, FLV, MPG, GIF.  Consumes 20 API calls per frame analyzed.  Requires Cloudmersive Managed Instance or Private Cloud deployment.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="videoFile">Video file to perform the operation on.  Common file formats such as MP4, MPG are supported.</param>
+        /// <returns>NsfwResult</returns>
+        NsfwResult NsfwClassifyVideo (System.IO.Stream videoFile);
+
+        /// <summary>
+        /// Not safe for work (NSFW) content classification for Video
+        /// </summary>
+        /// <remarks>
+        /// Classify a video into Not Safe For Work (NSFW)/Pornographic/Nudity/Racy content and Safe Content.  Helpful for filtering out unsafe content when processing user images.  Input image should be MP4, MOV, WEBM, MKV, AVI, FLV, MPG, GIF.  Consumes 20 API calls per frame analyzed.  Requires Cloudmersive Managed Instance or Private Cloud deployment.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="videoFile">Video file to perform the operation on.  Common file formats such as MP4, MPG are supported.</param>
+        /// <returns>ApiResponse of NsfwResult</returns>
+        ApiResponse<NsfwResult> NsfwClassifyVideoWithHttpInfo (System.IO.Stream videoFile);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Not safe for work NSFW racy content classification
+        /// Not safe for work (NSFW) content classification for Images
         /// </summary>
         /// <remarks>
-        /// Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
+        /// Classify an image into Not Safe For Work (NSFW)/Pornographic/Nudity/Racy content and Safe Content.  Helpful for filtering out unsafe content when processing user images.  Input image should be JPG, PNG or GIF.  Consumes 20 API calls.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -59,15 +80,36 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         System.Threading.Tasks.Task<NsfwResult> NsfwClassifyAsync (System.IO.Stream imageFile);
 
         /// <summary>
-        /// Not safe for work NSFW racy content classification
+        /// Not safe for work (NSFW) content classification for Images
         /// </summary>
         /// <remarks>
-        /// Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
+        /// Classify an image into Not Safe For Work (NSFW)/Pornographic/Nudity/Racy content and Safe Content.  Helpful for filtering out unsafe content when processing user images.  Input image should be JPG, PNG or GIF.  Consumes 20 API calls.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
         /// <returns>Task of ApiResponse (NsfwResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<NsfwResult>> NsfwClassifyAsyncWithHttpInfo (System.IO.Stream imageFile);
+        /// <summary>
+        /// Not safe for work (NSFW) content classification for Video
+        /// </summary>
+        /// <remarks>
+        /// Classify a video into Not Safe For Work (NSFW)/Pornographic/Nudity/Racy content and Safe Content.  Helpful for filtering out unsafe content when processing user images.  Input image should be MP4, MOV, WEBM, MKV, AVI, FLV, MPG, GIF.  Consumes 20 API calls per frame analyzed.  Requires Cloudmersive Managed Instance or Private Cloud deployment.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="videoFile">Video file to perform the operation on.  Common file formats such as MP4, MPG are supported.</param>
+        /// <returns>Task of NsfwResult</returns>
+        System.Threading.Tasks.Task<NsfwResult> NsfwClassifyVideoAsync (System.IO.Stream videoFile);
+
+        /// <summary>
+        /// Not safe for work (NSFW) content classification for Video
+        /// </summary>
+        /// <remarks>
+        /// Classify a video into Not Safe For Work (NSFW)/Pornographic/Nudity/Racy content and Safe Content.  Helpful for filtering out unsafe content when processing user images.  Input image should be MP4, MOV, WEBM, MKV, AVI, FLV, MPG, GIF.  Consumes 20 API calls per frame analyzed.  Requires Cloudmersive Managed Instance or Private Cloud deployment.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="videoFile">Video file to perform the operation on.  Common file formats such as MP4, MPG are supported.</param>
+        /// <returns>Task of ApiResponse (NsfwResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<NsfwResult>> NsfwClassifyVideoAsyncWithHttpInfo (System.IO.Stream videoFile);
         #endregion Asynchronous Operations
     }
 
@@ -169,7 +211,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Not safe for work NSFW racy content classification Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
+        /// Not safe for work (NSFW) content classification for Images Classify an image into Not Safe For Work (NSFW)/Pornographic/Nudity/Racy content and Safe Content.  Helpful for filtering out unsafe content when processing user images.  Input image should be JPG, PNG or GIF.  Consumes 20 API calls.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -181,7 +223,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Not safe for work NSFW racy content classification Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
+        /// Not safe for work (NSFW) content classification for Images Classify an image into Not Safe For Work (NSFW)/Pornographic/Nudity/Racy content and Safe Content.  Helpful for filtering out unsafe content when processing user images.  Input image should be JPG, PNG or GIF.  Consumes 20 API calls.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -244,7 +286,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Not safe for work NSFW racy content classification Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
+        /// Not safe for work (NSFW) content classification for Images Classify an image into Not Safe For Work (NSFW)/Pornographic/Nudity/Racy content and Safe Content.  Helpful for filtering out unsafe content when processing user images.  Input image should be JPG, PNG or GIF.  Consumes 20 API calls.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -257,7 +299,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Not safe for work NSFW racy content classification Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
+        /// Not safe for work (NSFW) content classification for Images Classify an image into Not Safe For Work (NSFW)/Pornographic/Nudity/Racy content and Safe Content.  Helpful for filtering out unsafe content when processing user images.  Input image should be JPG, PNG or GIF.  Consumes 20 API calls.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -311,6 +353,157 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("NsfwClassify", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<NsfwResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (NsfwResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NsfwResult)));
+        }
+
+        /// <summary>
+        /// Not safe for work (NSFW) content classification for Video Classify a video into Not Safe For Work (NSFW)/Pornographic/Nudity/Racy content and Safe Content.  Helpful for filtering out unsafe content when processing user images.  Input image should be MP4, MOV, WEBM, MKV, AVI, FLV, MPG, GIF.  Consumes 20 API calls per frame analyzed.  Requires Cloudmersive Managed Instance or Private Cloud deployment.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="videoFile">Video file to perform the operation on.  Common file formats such as MP4, MPG are supported.</param>
+        /// <returns>NsfwResult</returns>
+        public NsfwResult NsfwClassifyVideo (System.IO.Stream videoFile)
+        {
+             ApiResponse<NsfwResult> localVarResponse = NsfwClassifyVideoWithHttpInfo(videoFile);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Not safe for work (NSFW) content classification for Video Classify a video into Not Safe For Work (NSFW)/Pornographic/Nudity/Racy content and Safe Content.  Helpful for filtering out unsafe content when processing user images.  Input image should be MP4, MOV, WEBM, MKV, AVI, FLV, MPG, GIF.  Consumes 20 API calls per frame analyzed.  Requires Cloudmersive Managed Instance or Private Cloud deployment.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="videoFile">Video file to perform the operation on.  Common file formats such as MP4, MPG are supported.</param>
+        /// <returns>ApiResponse of NsfwResult</returns>
+        public ApiResponse< NsfwResult > NsfwClassifyVideoWithHttpInfo (System.IO.Stream videoFile)
+        {
+            // verify the required parameter 'videoFile' is set
+            if (videoFile == null)
+                throw new ApiException(400, "Missing required parameter 'videoFile' when calling NsfwApi->NsfwClassifyVideo");
+
+            var localVarPath = "/image/nsfw/classify/video";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (videoFile != null) localVarFileParams.Add("videoFile", this.Configuration.ApiClient.ParameterToFile("videoFile", videoFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("NsfwClassifyVideo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<NsfwResult>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (NsfwResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NsfwResult)));
+        }
+
+        /// <summary>
+        /// Not safe for work (NSFW) content classification for Video Classify a video into Not Safe For Work (NSFW)/Pornographic/Nudity/Racy content and Safe Content.  Helpful for filtering out unsafe content when processing user images.  Input image should be MP4, MOV, WEBM, MKV, AVI, FLV, MPG, GIF.  Consumes 20 API calls per frame analyzed.  Requires Cloudmersive Managed Instance or Private Cloud deployment.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="videoFile">Video file to perform the operation on.  Common file formats such as MP4, MPG are supported.</param>
+        /// <returns>Task of NsfwResult</returns>
+        public async System.Threading.Tasks.Task<NsfwResult> NsfwClassifyVideoAsync (System.IO.Stream videoFile)
+        {
+             ApiResponse<NsfwResult> localVarResponse = await NsfwClassifyVideoAsyncWithHttpInfo(videoFile);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Not safe for work (NSFW) content classification for Video Classify a video into Not Safe For Work (NSFW)/Pornographic/Nudity/Racy content and Safe Content.  Helpful for filtering out unsafe content when processing user images.  Input image should be MP4, MOV, WEBM, MKV, AVI, FLV, MPG, GIF.  Consumes 20 API calls per frame analyzed.  Requires Cloudmersive Managed Instance or Private Cloud deployment.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="videoFile">Video file to perform the operation on.  Common file formats such as MP4, MPG are supported.</param>
+        /// <returns>Task of ApiResponse (NsfwResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<NsfwResult>> NsfwClassifyVideoAsyncWithHttpInfo (System.IO.Stream videoFile)
+        {
+            // verify the required parameter 'videoFile' is set
+            if (videoFile == null)
+                throw new ApiException(400, "Missing required parameter 'videoFile' when calling NsfwApi->NsfwClassifyVideo");
+
+            var localVarPath = "/image/nsfw/classify/video";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (videoFile != null) localVarFileParams.Add("videoFile", this.Configuration.ApiClient.ParameterToFile("videoFile", videoFile));
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("NsfwClassifyVideo", localVarResponse);
                 if (exception != null) throw exception;
             }
 

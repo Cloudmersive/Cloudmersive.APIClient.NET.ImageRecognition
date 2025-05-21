@@ -98,6 +98,30 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
         {
             // TODO unit test for the property 'Age'
         }
+        /// <summary>
+        /// Test the property 'GenderClassification'
+        /// </summary>
+        [Test]
+        public void GenderClassificationTest()
+        {
+            // TODO unit test for the property 'GenderClassification'
+        }
+        /// <summary>
+        /// Test the property 'GenderFemaleConfidence'
+        /// </summary>
+        [Test]
+        public void GenderFemaleConfidenceTest()
+        {
+            // TODO unit test for the property 'GenderFemaleConfidence'
+        }
+        /// <summary>
+        /// Test the property 'GenderMaleConfidence'
+        /// </summary>
+        [Test]
+        public void GenderMaleConfidenceTest()
+        {
+            // TODO unit test for the property 'GenderMaleConfidence'
+        }
 
     }
 

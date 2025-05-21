@@ -5,7 +5,7 @@ Image Recognition and Processing APIs let you use Machine Learning to recognize 
 This C# SDK is:
 
 - API version: v1
-- SDK version: 3.0.7
+- SDK version: 3.0.8
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -98,7 +98,7 @@ namespace Example
 <a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.cloudmersive.com*
+All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -141,7 +141,8 @@ Class | Method | HTTP request | Description
 *FilterApi* | [**FilterSwirl**](docs/FilterApi.md#filterswirl) | **POST** /image/filter/swirl | Swirl distort the image
 *InfoApi* | [**InfoGetDominantColor**](docs/InfoApi.md#infogetdominantcolor) | **POST** /image/get-info/dominant-color | Returns the dominant colors of the image
 *InfoApi* | [**InfoGetMetadata**](docs/InfoApi.md#infogetmetadata) | **POST** /image/get-info/metadata | Returns the image metadata including EXIF and resolution
-*NsfwApi* | [**NsfwClassify**](docs/NsfwApi.md#nsfwclassify) | **POST** /image/nsfw/classify | Not safe for work NSFW racy content classification
+*NsfwApi* | [**NsfwClassify**](docs/NsfwApi.md#nsfwclassify) | **POST** /image/nsfw/classify | Not safe for work (NSFW) content classification for Images
+*NsfwApi* | [**NsfwClassifyVideo**](docs/NsfwApi.md#nsfwclassifyvideo) | **POST** /image/nsfw/classify/video | Not safe for work (NSFW) content classification for Video
 *RecognizeApi* | [**RecognizeDescribe**](docs/RecognizeApi.md#recognizedescribe) | **POST** /image/recognize/describe | Describe an image in natural language
 *RecognizeApi* | [**RecognizeDetectAndUnskewDocument**](docs/RecognizeApi.md#recognizedetectandunskewdocument) | **POST** /image/recognize/detect-document/unskew | Detect and unskew a photo of a document
 *RecognizeApi* | [**RecognizeDetectObjects**](docs/RecognizeApi.md#recognizedetectobjects) | **POST** /image/recognize/detect-objects | Detect objects including types and locations in an image
@@ -154,6 +155,7 @@ Class | Method | HTTP request | Description
 *RecognizeApi* | [**RecognizeSimilarityHash**](docs/RecognizeApi.md#recognizesimilarityhash) | **POST** /image/recognize/similarity/hash | Generate a perceptual image hash
 *RecognizeApi* | [**RecognizeSimilarityHashDistance**](docs/RecognizeApi.md#recognizesimilarityhashdistance) | **POST** /image/recognize/similarity/hash/distance | Calculates the similarity between two perceptual image hashes
 *ResizeApi* | [**ResizePost**](docs/ResizeApi.md#resizepost) | **POST** /image/resize/preserveAspectRatio/{maxWidth}/{maxHeight} | Resize an image while preserving aspect ratio
+*ResizeApi* | [**ResizeResizeAISuperSampling**](docs/ResizeApi.md#resizeresizeaisupersampling) | **POST** /image/resize/ai/target | Resize an image with AI super sampling
 *ResizeApi* | [**ResizeResizeSimple**](docs/ResizeApi.md#resizeresizesimple) | **POST** /image/resize/target/{width}/{height} | Resize an image
 *TextGenerationApi* | [**TextGenerationCreateHandwritingPng**](docs/TextGenerationApi.md#textgenerationcreatehandwritingpng) | **POST** /image/text/create/handwriting/png | Create an image of handwriting in PNG format
 
@@ -183,7 +185,6 @@ Class | Method | HTTP request | Description
  - [Model.FindSymbolResult](docs/FindSymbolResult.md)
  - [Model.FineTextDetectionResult](docs/FineTextDetectionResult.md)
  - [Model.FineTextItem](docs/FineTextItem.md)
- - [Model.GenderDetectionResult](docs/GenderDetectionResult.md)
  - [Model.ImageDescriptionResponse](docs/ImageDescriptionResponse.md)
  - [Model.ImageMetadata](docs/ImageMetadata.md)
  - [Model.ImageMetadataExifValue](docs/ImageMetadataExifValue.md)
@@ -194,7 +195,6 @@ Class | Method | HTTP request | Description
  - [Model.NsfwResult](docs/NsfwResult.md)
  - [Model.ObjectDetectionResult](docs/ObjectDetectionResult.md)
  - [Model.PersonWithAge](docs/PersonWithAge.md)
- - [Model.PersonWithGender](docs/PersonWithGender.md)
  - [Model.PolygonPoint](docs/PolygonPoint.md)
  - [Model.RecognitionOutcome](docs/RecognitionOutcome.md)
  - [Model.TextDetectionResult](docs/TextDetectionResult.md)

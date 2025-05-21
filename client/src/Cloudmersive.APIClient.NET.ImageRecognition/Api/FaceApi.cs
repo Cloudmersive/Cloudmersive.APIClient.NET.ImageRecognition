@@ -93,7 +93,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Detect the age of people in an image
         /// </summary>
         /// <remarks>
-        /// Identify the age, position, and size of human faces in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
+        /// Identify the age, position, and size of human faces in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.  Input image should be a PNG or JPG.  Consumes 20 API calls.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -104,7 +104,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Detect the age of people in an image
         /// </summary>
         /// <remarks>
-        /// Identify the age, position, and size of human faces in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
+        /// Identify the age, position, and size of human faces in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.  Input image should be a PNG or JPG.  Consumes 20 API calls.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -114,23 +114,23 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Detect the gender of people in an image
         /// </summary>
         /// <remarks>
-        /// Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.
+        /// Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.  Input image should be a PNG or JPG.  Consumes 20 API calls.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>GenderDetectionResult</returns>
-        GenderDetectionResult FaceDetectGender (System.IO.Stream imageFile);
+        /// <returns>AgeDetectionResult</returns>
+        AgeDetectionResult FaceDetectGender (System.IO.Stream imageFile);
 
         /// <summary>
         /// Detect the gender of people in an image
         /// </summary>
         /// <remarks>
-        /// Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.
+        /// Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.  Input image should be a PNG or JPG.  Consumes 20 API calls.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>ApiResponse of GenderDetectionResult</returns>
-        ApiResponse<GenderDetectionResult> FaceDetectGenderWithHttpInfo (System.IO.Stream imageFile);
+        /// <returns>ApiResponse of AgeDetectionResult</returns>
+        ApiResponse<AgeDetectionResult> FaceDetectGenderWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
         /// Detect and find faces in an image
         /// </summary>
@@ -244,7 +244,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Detect the age of people in an image
         /// </summary>
         /// <remarks>
-        /// Identify the age, position, and size of human faces in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
+        /// Identify the age, position, and size of human faces in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.  Input image should be a PNG or JPG.  Consumes 20 API calls.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -255,7 +255,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Detect the age of people in an image
         /// </summary>
         /// <remarks>
-        /// Identify the age, position, and size of human faces in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
+        /// Identify the age, position, and size of human faces in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.  Input image should be a PNG or JPG.  Consumes 20 API calls.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -265,23 +265,23 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         /// Detect the gender of people in an image
         /// </summary>
         /// <remarks>
-        /// Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.
+        /// Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.  Input image should be a PNG or JPG.  Consumes 20 API calls.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Task of GenderDetectionResult</returns>
-        System.Threading.Tasks.Task<GenderDetectionResult> FaceDetectGenderAsync (System.IO.Stream imageFile);
+        /// <returns>Task of AgeDetectionResult</returns>
+        System.Threading.Tasks.Task<AgeDetectionResult> FaceDetectGenderAsync (System.IO.Stream imageFile);
 
         /// <summary>
         /// Detect the gender of people in an image
         /// </summary>
         /// <remarks>
-        /// Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.
+        /// Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.  Input image should be a PNG or JPG.  Consumes 20 API calls.
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Task of ApiResponse (GenderDetectionResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GenderDetectionResult>> FaceDetectGenderAsyncWithHttpInfo (System.IO.Stream imageFile);
+        /// <returns>Task of ApiResponse (AgeDetectionResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AgeDetectionResult>> FaceDetectGenderAsyncWithHttpInfo (System.IO.Stream imageFile);
         /// <summary>
         /// Detect and find faces in an image
         /// </summary>
@@ -878,7 +878,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Detect the age of people in an image Identify the age, position, and size of human faces in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
+        /// Detect the age of people in an image Identify the age, position, and size of human faces in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.  Input image should be a PNG or JPG.  Consumes 20 API calls.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -890,7 +890,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Detect the age of people in an image Identify the age, position, and size of human faces in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
+        /// Detect the age of people in an image Identify the age, position, and size of human faces in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.  Input image should be a PNG or JPG.  Consumes 20 API calls.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -953,7 +953,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Detect the age of people in an image Identify the age, position, and size of human faces in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
+        /// Detect the age of people in an image Identify the age, position, and size of human faces in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.  Input image should be a PNG or JPG.  Consumes 20 API calls.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -966,7 +966,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Detect the age of people in an image Identify the age, position, and size of human faces in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
+        /// Detect the age of people in an image Identify the age, position, and size of human faces in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.  Input image should be a PNG or JPG.  Consumes 20 API calls.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
@@ -1029,24 +1029,24 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
         }
 
         /// <summary>
-        /// Detect the gender of people in an image Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.
+        /// Detect the gender of people in an image Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.  Input image should be a PNG or JPG.  Consumes 20 API calls.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>GenderDetectionResult</returns>
-        public GenderDetectionResult FaceDetectGender (System.IO.Stream imageFile)
+        /// <returns>AgeDetectionResult</returns>
+        public AgeDetectionResult FaceDetectGender (System.IO.Stream imageFile)
         {
-             ApiResponse<GenderDetectionResult> localVarResponse = FaceDetectGenderWithHttpInfo(imageFile);
+             ApiResponse<AgeDetectionResult> localVarResponse = FaceDetectGenderWithHttpInfo(imageFile);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Detect the gender of people in an image Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.
+        /// Detect the gender of people in an image Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.  Input image should be a PNG or JPG.  Consumes 20 API calls.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>ApiResponse of GenderDetectionResult</returns>
-        public ApiResponse< GenderDetectionResult > FaceDetectGenderWithHttpInfo (System.IO.Stream imageFile)
+        /// <returns>ApiResponse of AgeDetectionResult</returns>
+        public ApiResponse< AgeDetectionResult > FaceDetectGenderWithHttpInfo (System.IO.Stream imageFile)
         {
             // verify the required parameter 'imageFile' is set
             if (imageFile == null)
@@ -1098,31 +1098,31 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GenderDetectionResult>(localVarStatusCode,
+            return new ApiResponse<AgeDetectionResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GenderDetectionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GenderDetectionResult)));
+                (AgeDetectionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgeDetectionResult)));
         }
 
         /// <summary>
-        /// Detect the gender of people in an image Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.
+        /// Detect the gender of people in an image Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.  Input image should be a PNG or JPG.  Consumes 20 API calls.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Task of GenderDetectionResult</returns>
-        public async System.Threading.Tasks.Task<GenderDetectionResult> FaceDetectGenderAsync (System.IO.Stream imageFile)
+        /// <returns>Task of AgeDetectionResult</returns>
+        public async System.Threading.Tasks.Task<AgeDetectionResult> FaceDetectGenderAsync (System.IO.Stream imageFile)
         {
-             ApiResponse<GenderDetectionResult> localVarResponse = await FaceDetectGenderAsyncWithHttpInfo(imageFile);
+             ApiResponse<AgeDetectionResult> localVarResponse = await FaceDetectGenderAsyncWithHttpInfo(imageFile);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Detect the gender of people in an image Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.
+        /// Detect the gender of people in an image Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.  Input image should be a PNG or JPG.  Consumes 20 API calls.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.ImageRecognition.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="imageFile">Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.</param>
-        /// <returns>Task of ApiResponse (GenderDetectionResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GenderDetectionResult>> FaceDetectGenderAsyncWithHttpInfo (System.IO.Stream imageFile)
+        /// <returns>Task of ApiResponse (AgeDetectionResult)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AgeDetectionResult>> FaceDetectGenderAsyncWithHttpInfo (System.IO.Stream imageFile)
         {
             // verify the required parameter 'imageFile' is set
             if (imageFile == null)
@@ -1174,9 +1174,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<GenderDetectionResult>(localVarStatusCode,
+            return new ApiResponse<AgeDetectionResult>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (GenderDetectionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GenderDetectionResult)));
+                (AgeDetectionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgeDetectionResult)));
         }
 
         /// <summary>
