@@ -5,7 +5,7 @@ Image Recognition and Processing APIs let you use Machine Learning to recognize 
 This C# SDK is:
 
 - API version: v1
-- SDK version: 3.0.9
+- SDK version: 3.1.0
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -142,6 +142,7 @@ Class | Method | HTTP request | Description
 *InfoApi* | [**InfoGetDominantColor**](docs/InfoApi.md#infogetdominantcolor) | **POST** /image/get-info/dominant-color | Returns the dominant colors of the image
 *InfoApi* | [**InfoGetMetadata**](docs/InfoApi.md#infogetmetadata) | **POST** /image/get-info/metadata | Returns the image metadata including EXIF and resolution
 *NsfwApi* | [**NsfwClassify**](docs/NsfwApi.md#nsfwclassify) | **POST** /image/nsfw/classify | Not safe for work (NSFW) content classification for Images
+*NsfwApi* | [**NsfwClassifyAdvanced**](docs/NsfwApi.md#nsfwclassifyadvanced) | **POST** /image/nsfw/classify/advanced | Advanced content moderation and not safe for work (NSFW) content classification for Images
 *NsfwApi* | [**NsfwClassifyDocument**](docs/NsfwApi.md#nsfwclassifydocument) | **POST** /image/nsfw/classify/document | Not safe for work (NSFW) content classification for Documents
 *NsfwApi* | [**NsfwClassifyVideo**](docs/NsfwApi.md#nsfwclassifyvideo) | **POST** /image/nsfw/classify/video | Not safe for work (NSFW) content classification for Video
 *RecognizeApi* | [**RecognizeDescribe**](docs/RecognizeApi.md#recognizedescribe) | **POST** /image/recognize/describe | Describe an image in natural language
@@ -193,6 +194,7 @@ Class | Method | HTTP request | Description
  - [Model.ImageSimilarityHashDistanceRequest](docs/ImageSimilarityHashDistanceRequest.md)
  - [Model.ImageSimilarityHashDistanceResponse](docs/ImageSimilarityHashDistanceResponse.md)
  - [Model.ImageSimilarityHashResponse](docs/ImageSimilarityHashResponse.md)
+ - [Model.NsfwAdvancedResult](docs/NsfwAdvancedResult.md)
  - [Model.NsfwResult](docs/NsfwResult.md)
  - [Model.ObjectDetectionResult](docs/ObjectDetectionResult.md)
  - [Model.PersonWithAge](docs/PersonWithAge.md)
