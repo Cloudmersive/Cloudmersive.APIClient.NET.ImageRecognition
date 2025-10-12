@@ -1,7 +1,7 @@
 /* 
  * imageapi
  *
- * Image Recognition and Processing APIs let you use Machine Learning to recognize and process images, and also perform useful image modification operations.
+ * Image Recognition and Processing APIs let you use Artificial Intelligence and Machine Learning to recognize and process images, and also perform useful image modification operations.
  *
  * OpenAPI spec version: v1
  * 
@@ -53,12 +53,12 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Client
         public ApiClient()
         {
             Configuration = Cloudmersive.APIClient.NET.ImageRecognition.Client.Configuration.Default;
-            RestClient = new RestClient("http://localhost");
+            RestClient = new RestClient("https://api.cloudmersive.com");
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" /> class
-        /// with default base path (http://localhost).
+        /// with default base path (https://api.cloudmersive.com).
         /// </summary>
         /// <param name="config">An instance of Configuration.</param>
         public ApiClient(Configuration config)
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Client
         /// with default configuration.
         /// </summary>
         /// <param name="basePath">The base path.</param>
-        public ApiClient(String basePath = "http://localhost")
+        public ApiClient(String basePath = "https://api.cloudmersive.com")
         {
            if (String.IsNullOrEmpty(basePath))
                 throw new ArgumentException("basePath cannot be empty");

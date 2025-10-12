@@ -1,5 +1,10 @@
 ﻿Remove-Item –path ./client –recurse
-& java -jar swagger-codegen-cli-2.4.10.jar generate -i https://api.cloudmersive.com/image/docs/v1/swagger -l csharp -o client -c packageconfig.json
+
+Invoke-WebRequest -Uri 'https://api.cloudmersive.com/image/docs/v1/swagger' -OutFile '.\image-api-swagger.json'
+(Get-Content .\image-api-swagger.json).replace('localhost', "api.cloudmersive.com") | Set-Content .\image-api-swagger.json
+(Get-Content .\image-api-swagger.json).replace('"http"', '"https"') | Set-Content .\image-api-swagger.json
+
+& java -jar swagger-codegen-cli-2.4.10.jar generate -i .\image-api-swagger.json -l csharp -o client -c packageconfig.json
 #(Get-Content ./client/src/api/ConvertDocumentApi.js).replace('var returnType = Object;', "var returnType = 'Blob';") | Set-Content ./client/src/api/ConvertDocumentApi.js
 #(Get-Content ./client/src/api/ConvertWebApi.js).replace('var returnType = Object;', "var returnType = 'Blob';") | Set-Content ./client/src/api/ConvertWebApi.js
 #& npm build ./client
@@ -72,7 +77,7 @@ $nuspecpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.ImageRecognit
 
 C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe ./client/Cloudmersive.APIClient.NET.ImageRecognition.sln /t:rebuild 
 
-& C:\CodeSigning\sign.ps1 ./client/src/Cloudmersive.ApiClient.NET.ImageRecognition/bin/Debug/Cloudmersive.APIClient.NET.ImageRecognition.dll
+#& C:\CodeSigning\sign.ps1 ./client/src/Cloudmersive.ApiClient.NET.ImageRecognition/bin/Debug/Cloudmersive.APIClient.NET.ImageRecognition.dll
 
 ./nuget.exe pack ./client/src/Cloudmersive.APIClient.NET.ImageRecognition/Cloudmersive.APIClient.NET.ImageRecognition.csproj
 

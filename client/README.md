@@ -1,11 +1,11 @@
 # Cloudmersive.APIClient.NET.ImageRecognition - the C# library for the imageapi
 
-Image Recognition and Processing APIs let you use Machine Learning to recognize and process images, and also perform useful image modification operations.
+Image Recognition and Processing APIs let you use Artificial Intelligence and Machine Learning to recognize and process images, and also perform useful image modification operations.
 
 This C# SDK is:
 
 - API version: v1
-- SDK version: 3.1.0
+- SDK version: 3.2.0
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -75,19 +75,18 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // Configuration.Default.ApiKeyPrefix.Add("Apikey", "Bearer");
 
-            var apiInstance = new ArtisticApi();
-            var style = style_example;  // string | The style of the painting to apply.  To start, try \"udnie\" a painting style.  Possible values are: \"udnie\", \"wave\", \"la_muse\", \"rain_princess\".
+            var apiInstance = new AiImageDetectionApi();
             var imageFile = new System.IO.Stream(); // System.IO.Stream | Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.
 
             try
             {
-                // Transform an image into an artistic painting automatically
-                byte[] result = apiInstance.ArtisticPainting(style, imageFile);
+                // Detect if an input image was generated using AI
+                ImageAiDetectionResult result = apiInstance.AiImageDetectionDetectFile(imageFile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ArtisticApi.ArtisticPainting: " + e.Message );
+                Debug.Print("Exception when calling AiImageDetectionApi.AiImageDetectionDetectFile: " + e.Message );
             }
 
         }
@@ -98,14 +97,16 @@ namespace Example
 <a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://api.cloudmersive.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AiImageDetectionApi* | [**AiImageDetectionDetectFile**](docs/AiImageDetectionApi.md#aiimagedetectiondetectfile) | **POST** /image/ai-detection/file | Detect if an input image was generated using AI
 *ArtisticApi* | [**ArtisticPainting**](docs/ArtisticApi.md#artisticpainting) | **POST** /image/artistic/painting/{style} | Transform an image into an artistic painting automatically
 *ConvertApi* | [**ConvertToBmp**](docs/ConvertApi.md#converttobmp) | **POST** /image/convert/to/bmp | Convert input image to Bitmap BMP format
 *ConvertApi* | [**ConvertToGif**](docs/ConvertApi.md#converttogif) | **POST** /image/convert/to/gif | Convert input image to GIF format
-*ConvertApi* | [**ConvertToJpg**](docs/ConvertApi.md#converttojpg) | **POST** /image/convert/to/jpg/{quality} | Convert input image to JPG, JPEG format
+*ConvertApi* | [**ConvertToJpg**](docs/ConvertApi.md#converttojpg) | **POST** /image/convert/to/jpg/{quality} | Convert input image to JPG, JPEG format at specific quality
+*ConvertApi* | [**ConvertToJpgDefaultQuality**](docs/ConvertApi.md#converttojpgdefaultquality) | **POST** /image/convert/to/jpg | Convert input image to JPG, JPEG format
 *ConvertApi* | [**ConvertToPhotoshop**](docs/ConvertApi.md#converttophotoshop) | **POST** /image/convert/to/psd | Convert input image to Photoshop PSD format
 *ConvertApi* | [**ConvertToPng**](docs/ConvertApi.md#converttopng) | **POST** /image/convert/to/png | Convert input image to PNG format
 *ConvertApi* | [**ConvertToTiff**](docs/ConvertApi.md#converttotiff) | **POST** /image/convert/to/tiff | Convert input image to TIFF format
@@ -147,8 +148,6 @@ Class | Method | HTTP request | Description
 *NsfwApi* | [**NsfwClassifyVideo**](docs/NsfwApi.md#nsfwclassifyvideo) | **POST** /image/nsfw/classify/video | Not safe for work (NSFW) content classification for Video
 *RecognizeApi* | [**RecognizeDescribe**](docs/RecognizeApi.md#recognizedescribe) | **POST** /image/recognize/describe | Describe an image in natural language
 *RecognizeApi* | [**RecognizeDetectAndUnskewDocument**](docs/RecognizeApi.md#recognizedetectandunskewdocument) | **POST** /image/recognize/detect-document/unskew | Detect and unskew a photo of a document
-*RecognizeApi* | [**RecognizeDetectObjects**](docs/RecognizeApi.md#recognizedetectobjects) | **POST** /image/recognize/detect-objects | Detect objects including types and locations in an image
-*RecognizeApi* | [**RecognizeDetectPeople**](docs/RecognizeApi.md#recognizedetectpeople) | **POST** /image/recognize/detect-people | Detect people including locations in an image
 *RecognizeApi* | [**RecognizeDetectTextFine**](docs/RecognizeApi.md#recognizedetecttextfine) | **POST** /image/recognize/detect-text/fine | Detect fine text in a photo of a document
 *RecognizeApi* | [**RecognizeDetectTextLarge**](docs/RecognizeApi.md#recognizedetecttextlarge) | **POST** /image/recognize/detect-text/large | Detect large text in a photo
 *RecognizeApi* | [**RecognizeDetectVehicleLicensePlates**](docs/RecognizeApi.md#recognizedetectvehiclelicenseplates) | **POST** /image/recognize/detect-vehicle-license-plates | Detect vehicle license plates in an image
@@ -169,7 +168,6 @@ Class | Method | HTTP request | Description
  - [Model.ColorResult](docs/ColorResult.md)
  - [Model.CreateHandwritingRequest](docs/CreateHandwritingRequest.md)
  - [Model.DetectedLicensePlate](docs/DetectedLicensePlate.md)
- - [Model.DetectedObject](docs/DetectedObject.md)
  - [Model.DominantColorResult](docs/DominantColorResult.md)
  - [Model.DrawPolygonInstance](docs/DrawPolygonInstance.md)
  - [Model.DrawPolygonRequest](docs/DrawPolygonRequest.md)
@@ -187,6 +185,7 @@ Class | Method | HTTP request | Description
  - [Model.FindSymbolResult](docs/FindSymbolResult.md)
  - [Model.FineTextDetectionResult](docs/FineTextDetectionResult.md)
  - [Model.FineTextItem](docs/FineTextItem.md)
+ - [Model.ImageAiDetectionResult](docs/ImageAiDetectionResult.md)
  - [Model.ImageDescriptionResponse](docs/ImageDescriptionResponse.md)
  - [Model.ImageMetadata](docs/ImageMetadata.md)
  - [Model.ImageMetadataExifValue](docs/ImageMetadataExifValue.md)
@@ -196,7 +195,6 @@ Class | Method | HTTP request | Description
  - [Model.ImageSimilarityHashResponse](docs/ImageSimilarityHashResponse.md)
  - [Model.NsfwAdvancedResult](docs/NsfwAdvancedResult.md)
  - [Model.NsfwResult](docs/NsfwResult.md)
- - [Model.ObjectDetectionResult](docs/ObjectDetectionResult.md)
  - [Model.PersonWithAge](docs/PersonWithAge.md)
  - [Model.PolygonPoint](docs/PolygonPoint.md)
  - [Model.RecognitionOutcome](docs/RecognitionOutcome.md)

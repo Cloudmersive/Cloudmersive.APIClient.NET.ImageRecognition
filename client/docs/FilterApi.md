@@ -1,6 +1,6 @@
 # Cloudmersive.APIClient.NET.ImageRecognition.Api.FilterApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

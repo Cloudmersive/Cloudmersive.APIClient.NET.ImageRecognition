@@ -1,7 +1,7 @@
 /* 
  * imageapi
  *
- * Image Recognition and Processing APIs let you use Machine Learning to recognize and process images, and also perform useful image modification operations.
+ * Image Recognition and Processing APIs let you use Artificial Intelligence and Machine Learning to recognize and process images, and also perform useful image modification operations.
  *
  * OpenAPI spec version: v1
  * 
@@ -87,30 +87,6 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Test
             //string postProcessingEffect = null;
             //var response = instance.RecognizeDetectAndUnskewDocument(imageFile, postProcessingEffect);
             //Assert.IsInstanceOf<byte[]> (response, "response is byte[]");
-        }
-        
-        /// <summary>
-        /// Test RecognizeDetectObjects
-        /// </summary>
-        [Test]
-        public void RecognizeDetectObjectsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //System.IO.Stream imageFile = null;
-            //var response = instance.RecognizeDetectObjects(imageFile);
-            //Assert.IsInstanceOf<ObjectDetectionResult> (response, "response is ObjectDetectionResult");
-        }
-        
-        /// <summary>
-        /// Test RecognizeDetectPeople
-        /// </summary>
-        [Test]
-        public void RecognizeDetectPeopleTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //System.IO.Stream imageFile = null;
-            //var response = instance.RecognizeDetectPeople(imageFile);
-            //Assert.IsInstanceOf<ObjectDetectionResult> (response, "response is ObjectDetectionResult");
         }
         
         /// <summary>

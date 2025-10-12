@@ -1,7 +1,7 @@
 /* 
  * imageapi
  *
- * Image Recognition and Processing APIs let you use Machine Learning to recognize and process images, and also perform useful image modification operations.
+ * Image Recognition and Processing APIs let you use Artificial Intelligence and Machine Learning to recognize and process images, and also perform useful image modification operations.
  *
  * OpenAPI spec version: v1
  * 
@@ -33,6 +33,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FineTextItem" /> class.
         /// </summary>
+        /// <param name="detectedText">Detected text in the image.</param>
         /// <param name="topLeftX">X coordinate of the top/left text location; 0 represents the left edge of the input image.</param>
         /// <param name="topLeftY">Y coordinate of the top/left text location; 0 represents the top edge of the input image.</param>
         /// <param name="topRightX">X coordinate of the top/right text location; 0 represents the left edge of the input image.</param>
@@ -44,8 +45,9 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <param name="width">Width in pixels of the text.</param>
         /// <param name="height">Height in pixels of the text.</param>
         /// <param name="angle">Rotation Angle in radians of the text.</param>
-        public FineTextItem(int? topLeftX = default(int?), int? topLeftY = default(int?), int? topRightX = default(int?), int? topRightY = default(int?), int? bottomLeftX = default(int?), int? bottomLeftY = default(int?), int? bottomRightX = default(int?), int? bottomRightY = default(int?), int? width = default(int?), int? height = default(int?), double? angle = default(double?))
+        public FineTextItem(string detectedText = default(string), int? topLeftX = default(int?), int? topLeftY = default(int?), int? topRightX = default(int?), int? topRightY = default(int?), int? bottomLeftX = default(int?), int? bottomLeftY = default(int?), int? bottomRightX = default(int?), int? bottomRightY = default(int?), int? width = default(int?), int? height = default(int?), double? angle = default(double?))
         {
+            this.DetectedText = detectedText;
             this.TopLeftX = topLeftX;
             this.TopLeftY = topLeftY;
             this.TopRightX = topRightX;
@@ -59,6 +61,13 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
             this.Angle = angle;
         }
         
+        /// <summary>
+        /// Detected text in the image
+        /// </summary>
+        /// <value>Detected text in the image</value>
+        [DataMember(Name="DetectedText", EmitDefaultValue=false)]
+        public string DetectedText { get; set; }
+
         /// <summary>
         /// X coordinate of the top/left text location; 0 represents the left edge of the input image
         /// </summary>
@@ -144,6 +153,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FineTextItem {\n");
+            sb.Append("  DetectedText: ").Append(DetectedText).Append("\n");
             sb.Append("  TopLeftX: ").Append(TopLeftX).Append("\n");
             sb.Append("  TopLeftY: ").Append(TopLeftY).Append("\n");
             sb.Append("  TopRightX: ").Append(TopRightX).Append("\n");
@@ -189,6 +199,11 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
                 return false;
 
             return 
+                (
+                    this.DetectedText == input.DetectedText ||
+                    (this.DetectedText != null &&
+                    this.DetectedText.Equals(input.DetectedText))
+                ) && 
                 (
                     this.TopLeftX == input.TopLeftX ||
                     (this.TopLeftX != null &&
@@ -255,6 +270,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.DetectedText != null)
+                    hashCode = hashCode * 59 + this.DetectedText.GetHashCode();
                 if (this.TopLeftX != null)
                     hashCode = hashCode * 59 + this.TopLeftX.GetHashCode();
                 if (this.TopLeftY != null)

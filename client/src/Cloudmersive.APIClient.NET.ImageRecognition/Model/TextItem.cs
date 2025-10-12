@@ -1,7 +1,7 @@
 /* 
  * imageapi
  *
- * Image Recognition and Processing APIs let you use Machine Learning to recognize and process images, and also perform useful image modification operations.
+ * Image Recognition and Processing APIs let you use Artificial Intelligence and Machine Learning to recognize and process images, and also perform useful image modification operations.
  *
  * OpenAPI spec version: v1
  * 
@@ -33,18 +33,27 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TextItem" /> class.
         /// </summary>
+        /// <param name="detectedText">Text detected in the image.</param>
         /// <param name="leftX">Left X coordinate of the text location; 0 represents the left edge of the input image.</param>
         /// <param name="topY">Top Y coordinate of the text location; 0 represents the top edge of the input image.</param>
         /// <param name="width">Width in pixels of the text item.</param>
         /// <param name="height">Height in pixels of the text item.</param>
-        public TextItem(int? leftX = default(int?), int? topY = default(int?), int? width = default(int?), int? height = default(int?))
+        public TextItem(string detectedText = default(string), int? leftX = default(int?), int? topY = default(int?), int? width = default(int?), int? height = default(int?))
         {
+            this.DetectedText = detectedText;
             this.LeftX = leftX;
             this.TopY = topY;
             this.Width = width;
             this.Height = height;
         }
         
+        /// <summary>
+        /// Text detected in the image
+        /// </summary>
+        /// <value>Text detected in the image</value>
+        [DataMember(Name="DetectedText", EmitDefaultValue=false)]
+        public string DetectedText { get; set; }
+
         /// <summary>
         /// Left X coordinate of the text location; 0 represents the left edge of the input image
         /// </summary>
@@ -81,6 +90,7 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TextItem {\n");
+            sb.Append("  DetectedText: ").Append(DetectedText).Append("\n");
             sb.Append("  LeftX: ").Append(LeftX).Append("\n");
             sb.Append("  TopY: ").Append(TopY).Append("\n");
             sb.Append("  Width: ").Append(Width).Append("\n");
@@ -120,6 +130,11 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
 
             return 
                 (
+                    this.DetectedText == input.DetectedText ||
+                    (this.DetectedText != null &&
+                    this.DetectedText.Equals(input.DetectedText))
+                ) && 
+                (
                     this.LeftX == input.LeftX ||
                     (this.LeftX != null &&
                     this.LeftX.Equals(input.LeftX))
@@ -150,6 +165,8 @@ namespace Cloudmersive.APIClient.NET.ImageRecognition.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.DetectedText != null)
+                    hashCode = hashCode * 59 + this.DetectedText.GetHashCode();
                 if (this.LeftX != null)
                     hashCode = hashCode * 59 + this.LeftX.GetHashCode();
                 if (this.TopY != null)

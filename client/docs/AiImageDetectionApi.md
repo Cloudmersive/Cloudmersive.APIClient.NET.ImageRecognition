@@ -1,19 +1,19 @@
-# Cloudmersive.APIClient.NET.ImageRecognition.Api.ArtisticApi
+# Cloudmersive.APIClient.NET.ImageRecognition.Api.AiImageDetectionApi
 
 All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ArtisticPainting**](ArtisticApi.md#artisticpainting) | **POST** /image/artistic/painting/{style} | Transform an image into an artistic painting automatically
+[**AiImageDetectionDetectFile**](AiImageDetectionApi.md#aiimagedetectiondetectfile) | **POST** /image/ai-detection/file | Detect if an input image was generated using AI
 
 
-<a name="artisticpainting"></a>
-# **ArtisticPainting**
-> byte[] ArtisticPainting (string style, System.IO.Stream imageFile)
+<a name="aiimagedetectiondetectfile"></a>
+# **AiImageDetectionDetectFile**
+> ImageAiDetectionResult AiImageDetectionDetectFile (System.IO.Stream imageFile)
 
-Transform an image into an artistic painting automatically
+Detect if an input image was generated using AI
 
-Uses machine learning to automatically transform an image into an artistic painting.  Due to depth of AI processing, depending on image size this operation can take up to 20 seconds.
+Detects if the input image was generated using AI tools.
 
 ### Example
 ```csharp
@@ -25,7 +25,7 @@ using Cloudmersive.APIClient.NET.ImageRecognition.Model;
 
 namespace Example
 {
-    public class ArtisticPaintingExample
+    public class AiImageDetectionDetectFileExample
     {
         public void main()
         {
@@ -34,19 +34,18 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
-            var apiInstance = new ArtisticApi();
-            var style = style_example;  // string | The style of the painting to apply.  To start, try \"udnie\" a painting style.  Possible values are: \"udnie\", \"wave\", \"la_muse\", \"rain_princess\".
+            var apiInstance = new AiImageDetectionApi();
             var imageFile = new System.IO.Stream(); // System.IO.Stream | Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported.
 
             try
             {
-                // Transform an image into an artistic painting automatically
-                byte[] result = apiInstance.ArtisticPainting(style, imageFile);
+                // Detect if an input image was generated using AI
+                ImageAiDetectionResult result = apiInstance.AiImageDetectionDetectFile(imageFile);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ArtisticApi.ArtisticPainting: " + e.Message );
+                Debug.Print("Exception when calling AiImageDetectionApi.AiImageDetectionDetectFile: " + e.Message );
             }
         }
     }
@@ -57,12 +56,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **style** | **string**| The style of the painting to apply.  To start, try \&quot;udnie\&quot; a painting style.  Possible values are: \&quot;udnie\&quot;, \&quot;wave\&quot;, \&quot;la_muse\&quot;, \&quot;rain_princess\&quot;. | 
  **imageFile** | **System.IO.Stream**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | 
 
 ### Return type
 
-**byte[]**
+[**ImageAiDetectionResult**](ImageAiDetectionResult.md)
 
 ### Authorization
 
