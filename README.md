@@ -5,7 +5,7 @@ Image Recognition and Processing APIs let you use Artificial Intelligence and Ma
 This C# SDK is:
 
 - API version: v1
-- SDK version: 3.2.0
+- SDK version: 3.2.1
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
